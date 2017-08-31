@@ -101,6 +101,9 @@ public class BattleSituation {
                 for (int i = 0; i < mPlayers.length; i++) {
                     mPlayers[i].analyzeName(i);
                 }
+                // 增强识别效果，对于错误数据单独请求，直到正确
+
+                ResolveUtil.optimizeData();
             }
         }.start();
         return scrollView;

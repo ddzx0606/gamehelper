@@ -6,6 +6,7 @@ import android.os.Environment;
 import android.support.annotation.NonNull;
 
 import com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys;
+import com.youtu.Youtu;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,10 +31,10 @@ public class ResolveUtil {
     private static Bitmap[] mPerPlayer = new Bitmap[NUMBER];
     private static Bitmap mTotalPlayer;
 
-    private static MyYoutu faceYoutu;
-    public static MyYoutu getYoutuInstance() {
+    private static Youtu faceYoutu;
+    public static Youtu getYoutuInstance() {
         if (faceYoutu == null) {
-            faceYoutu = new MyYoutu(APP_ID, SECRET_ID, SECRET_KEY, MyYoutu.API_YOUTU_END_POINT,USER_ID);
+            faceYoutu = new Youtu(APP_ID, SECRET_ID, SECRET_KEY, Youtu.API_YOUTU_END_POINT,USER_ID);
         }
         return faceYoutu;
     }
@@ -54,7 +55,8 @@ public class ResolveUtil {
     public static void getData() {
         try {
             System.out.println("=============结果================");
-            JSONObject res = ResolveUtil.getYoutuInstance().GneneralOcr(path);
+            //JSONObject res = ResolveUtil.getYoutuInstance().GneneralOcr(path);
+            JSONObject res = faceYoutu.GeneralOcrWithBitmap(mTotalPlayer);
             handle(res);
         } catch (IOException | JSONException | KeyManagementException | NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -112,6 +114,9 @@ public class ResolveUtil {
         }
     }
 
+    public static void optimizeData() {
+
+    }
     public static String[] getItem(int index) {
         return data[index];
     }
