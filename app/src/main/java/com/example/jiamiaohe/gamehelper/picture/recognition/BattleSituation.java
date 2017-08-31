@@ -8,21 +8,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
-import com.qcloud.image.ImageClient;
-import com.qcloud.image.common_utils.CommonFileUtils;
-import com.qcloud.image.demo.Demo;
-import com.qcloud.image.request.TagDetectRequest;
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
 import com.youtu.Youtu;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Created by jiamiaohe on 2017/8/27.
@@ -77,6 +72,10 @@ public class BattleSituation {
             Log.i(TAG, "start to analys mPlayers[i] = "+mPlayers[i]+", mPlayesRect[i] = "+mPlayesRect[i]+", mPlayersIndex[i] = "+mPlayersIndex[i]);
             mPlayers[i].analys(bitmap, mPlayesRect[i], mPlayersIndex[i]);
         }
+        // 解析
+        Toast.makeText(MyApplication.getContext(), "识别中...", Toast.LENGTH_SHORT).show();
+        ResolveUtil.resolve(mPlayers);
+
     }
 
     public View getView() {
@@ -86,14 +85,24 @@ public class BattleSituation {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         scrollView.addView(linearLayout);
 
-        for(PlayerAnalys player : mPlayers) {
-            linearLayout.addView(player.getView());
-            player.analyzeName();
+        for (int i = 0; i < mPlayers.length; i++) {
+            linearLayout.addView(mPlayers[i].getView());
         }
 
 //        analysWholePic();
 //        mPlayers[5].analyzeName();
 
+        // 在此开一个线程填充数据，网络请求一次，效率更高,请求完成再遍历修改
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                ResolveUtil.getData();
+                for (int i = 0; i < mPlayers.length; i++) {
+                    mPlayers[i].analyzeName(i);
+                }
+            }
+        }.start();
         return scrollView;
     }
 
@@ -138,35 +147,4 @@ public class BattleSituation {
             }
         }).start();
     }
-
-//    private void anlysFromWanxiangYoutu() {
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//// 设置用户属性, 包括appid, secretId和SecretKey
-//                // 这些属性可以通过万象优图控制台获取(https://console.qcloud.com/ci)
-//                int appId = 0000000;//      YOUR_APPID
-//                String secretId = "YOUR_SECRETID";
-//                String secretKey = "YOUR_SECRETKEY";
-//                String bucketName = "YOUR_BUCKET";
-//                String ret ;
-//                TagDetectRequest tagReq = null;
-//                // ImageClient
-//                ImageClient imageClient = new ImageClient(appId, secretId, secretKey);
-//                // 2. 图片内容方式
-//                System.out.println("====================================================");
-//                byte[] tagImage = {0};
-//                try {
-//                    tagImage = CommonFileUtils.getFileContentByte("F:\\pic\\test.jpg");
-//                } catch (Exception ex) {
-//                    Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//
-//                tagReq = new TagDetectRequest(bucketName, tagImage);
-//                ret = imageClient.tagDetect(tagReq);
-//                System.out.println("tag detect ret:" + ret);
-//            }
-//        }).start();
-//
-//    }
 }

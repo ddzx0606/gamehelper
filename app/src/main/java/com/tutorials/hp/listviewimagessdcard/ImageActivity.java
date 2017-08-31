@@ -63,6 +63,13 @@ public class ImageActivity extends AppCompatActivity {
 
                 spacecrafts.add(s);
             }
+            File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath().concat("/demo.png"));
+
+            s=new Spacecraft();
+            s.setName(file.getName());
+            s.setUri(Uri.fromFile(file));
+
+            spacecrafts.add(s);
         }
 
 

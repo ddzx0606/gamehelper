@@ -1,14 +1,11 @@
 package com.example.jiamiaohe.gamehelper.picture.recognition;
 
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.drawable.ColorDrawable;
-import android.media.Image;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -17,20 +14,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.os.Handler;
 import com.example.jiamiaohe.gamehelper.MyApplication;
-import com.example.jiamiaohe.gamehelper.R;
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
 import com.youtu.Youtu;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by jiamiaohe on 2017/8/27.
@@ -43,7 +36,7 @@ public class PlayerAnalys {
     String mPlayerIndex = null;
 
     Bitmap mNameBitmap = null;
-    Bitmap nRoleNameBitmap = null;
+    Bitmap mRoleNameBitmap = null;
     Bitmap mNumKillBitmap = null;
     Bitmap mNumDeadBitmap = null;
     Bitmap mNumHelpBitmap = null;
@@ -61,7 +54,7 @@ public class PlayerAnalys {
         mPlayerIndex = index;
 
         mNameBitmap = Bitmap.createBitmap(mPlayerBitmap, NAME_RECT.left, NAME_RECT.top, NAME_RECT.right-NAME_RECT.left, NAME_RECT.bottom-NAME_RECT.top);
-        nRoleNameBitmap = Bitmap.createBitmap(mPlayerBitmap, NAME_ROLE.left, NAME_ROLE.top, NAME_ROLE.right-NAME_ROLE.left, NAME_ROLE.bottom-NAME_ROLE.top);
+        mRoleNameBitmap = Bitmap.createBitmap(mPlayerBitmap, NAME_ROLE.left, NAME_ROLE.top, NAME_ROLE.right-NAME_ROLE.left, NAME_ROLE.bottom-NAME_ROLE.top);
         mNumKillBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_KILL.left, NUM_KILL.top, NUM_KILL.right-NUM_KILL.left, NUM_KILL.bottom-NUM_KILL.top);
         mNumDeadBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_DEAD.left, NUM_DEAD.top, NUM_DEAD.right-NUM_DEAD.left, NUM_DEAD.bottom-NUM_DEAD.top);
         mNumHelpBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_HELP.left, NUM_HELP.top, NUM_HELP.right-NUM_HELP.left, NUM_HELP.bottom-NUM_HELP.top);
@@ -88,7 +81,7 @@ public class PlayerAnalys {
             name.setPadding(0,0,2,0);
             sub.addView(name);
             ImageView roleName = new ImageView(MyApplication.getContext());
-            roleName.setImageBitmap(nRoleNameBitmap);
+            roleName.setImageBitmap(mRoleNameBitmap);
             roleName.setPadding(0,0,2,0);
             sub.addView(roleName);
             ImageView killNum = new ImageView(MyApplication.getContext());
@@ -112,31 +105,37 @@ public class PlayerAnalys {
             textLinear.setOrientation(LinearLayout.HORIZONTAL);
             sub.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             mNameText = new TextView(MyApplication.getContext());
+            mNameText.setTextColor(Color.BLACK);
             mNameText.setPadding(0,0,2,0);
             mNameText.setTextSize(10);
             mNameText.setText("name:");
             textLinear.addView(mNameText);
             mRoleNameText = new TextView(MyApplication.getContext());
+            mRoleNameText.setTextColor(Color.BLACK);
             mRoleNameText.setPadding(0,0,2,0);
             mRoleNameText.setTextSize(10);
             mRoleNameText.setText("role:");
             textLinear.addView(mRoleNameText);
             mKillText = new TextView(MyApplication.getContext());
+            mKillText.setTextColor(Color.BLACK);
             mKillText.setPadding(0,0,2,0);
             mKillText.setTextSize(10);
             mKillText.setText("kill:");
             textLinear.addView(mKillText);
             mDeadText = new TextView(MyApplication.getContext());
+            mDeadText.setTextColor(Color.BLACK);
             mDeadText.setPadding(0,0,2,0);
             mDeadText.setTextSize(10);
             mDeadText.setText("dead:");
             textLinear.addView(mDeadText);
             mHelpText = new TextView(MyApplication.getContext());
+            mHelpText.setTextColor(Color.BLACK);
             mHelpText.setPadding(0,0,2,0);
             mHelpText.setTextSize(10);
             mHelpText.setText("help:");
             textLinear.addView(mHelpText);
             mMoneyText = new TextView(MyApplication.getContext());
+            mMoneyText.setTextColor(Color.BLACK);
             mMoneyText.setPadding(0,0,2,0);
             mMoneyText.setTextSize(10);
             mMoneyText.setText("money:");
@@ -192,7 +191,7 @@ public class PlayerAnalys {
             @Override
             public void run() {
                 final String name = getStringFromBitmap(mNameBitmap);
-                final String roleName = getStringFromBitmap(nRoleNameBitmap);
+                final String roleName = getStringFromBitmap(mRoleNameBitmap);
                 final String killNum = getStringFromBitmap(mNumKillBitmap);
                 final String deadNum = getStringFromBitmap(mNumDeadBitmap);
                 final String helpNum = getStringFromBitmap(mNumHelpBitmap);
@@ -212,6 +211,62 @@ public class PlayerAnalys {
             }
         }).start();
 
+    }
+
+    /**
+     * 获取数据，不需要在这个方法开线程，否则需要网络请求10次
+     * @param index
+     */
+    public void analyzeName(final int index) {
+        String[] res;
+
+        // 每个线程请求一次虽然可以即时更新，但是效率太低
+        //ResolveUtil.getData();
+
+        res = ResolveUtil.getItem(index);
+
+        final String name = res[0];
+        final String roleName = res[1];
+        final String killNum = res[2];
+        final String deadNum = res[3];
+        final String helpNum = res[4];
+        final String moneyNum = res[5];
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                mNameText.setText(name);
+                mRoleNameText.setText("--"+roleName);
+                mKillText.setText("--"+killNum);
+                mDeadText.setText("--"+deadNum);
+                mHelpText.setText("--"+helpNum);
+                mMoneyText.setText("--"+moneyNum);
+            }
+        });
+
+    }
+
+    public void setNameText(String str) {
+        mNameText.setText(str);
+    }
+
+    public void setRoleNameText(String str) {
+        mRoleNameText.setText(str);
+    }
+
+    public void setKillText(String str) {
+        mKillText.setText(str);
+    }
+
+    public void setDeadText(String str) {
+        mDeadText.setText(str);
+    }
+
+    public void setHelpText(TextView helpText) {
+        mHelpText = helpText;
+    }
+
+    public void setMoneyText(TextView moneyText) {
+        mMoneyText = moneyText;
     }
 
     public static void saveBitmap(Bitmap bm, String name) {
@@ -309,5 +364,75 @@ public class PlayerAnalys {
         expand.recycle();
 
         return result;
+    }
+
+    // 参数决定识别效果
+    private static final Rect BREAK = new Rect(130, 45, 250, 97);
+    Bitmap mHorizontalBreak = null;
+    static Bitmap mVerticalBreak = null;
+    private static int totalWidth = 0;
+    
+    public Bitmap getmPlayerBitmap() {
+        return mPlayerBitmap;
+    }
+    public void setBreak(Bitmap source) {
+        mHorizontalBreak = Bitmap.createBitmap(source, BREAK.left, BREAK.top, BREAK.right-BREAK.left, BREAK.bottom-BREAK.top);
+        // 垂直方向也需要一个，否则识别有问题
+        if (mVerticalBreak == null && totalWidth != 0) {
+            int n = BattleSituation.PLAYER_WIDTH/(BREAK.right - BREAK.left);
+            Bitmap[] tmp = new Bitmap[n];
+            for (int i = 0; i < tmp.length; i++) tmp[i] = mHorizontalBreak;
+            mVerticalBreak = combineHorizontal(tmp);
+            mVerticalBreak = Bitmap.createBitmap(mVerticalBreak, 0, 0, totalWidth, BREAK.bottom - BREAK.top);
+        }
+    }
+
+    public Bitmap combineHorizontal() {
+        return  combineHorizontal(mNameBitmap, mRoleNameBitmap, mNumKillBitmap, mNumDeadBitmap, mNumHelpBitmap, mNumMoneyBitmap);
+    }
+    public Bitmap combineHorizontal(Bitmap...bitmaps) {
+        if (bitmaps.length <= 0) return null;
+
+        int height = bitmaps[0].getHeight();
+        int width = 0;
+        for (Bitmap tmp: bitmaps) {
+            System.out.println(tmp.getWidth());
+            width += tmp.getWidth();
+            width += mHorizontalBreak.getWidth();
+        }
+        if (totalWidth == 0) totalWidth = width;
+        System.out.println("结果"+width);
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        int cur = 0;
+
+        for (Bitmap tmp: bitmaps) {
+            canvas.drawBitmap(tmp, cur, 0, null);
+            cur += tmp.getWidth();
+            canvas.drawBitmap(mHorizontalBreak, cur, 0, null);
+            cur += mHorizontalBreak.getWidth();
+        }
+        return bitmap;
+    }
+
+    public static Bitmap combineVertical(Bitmap...bitmaps) {
+        if (bitmaps.length <= 0) return null;
+        int width = bitmaps[0].getWidth();
+        int height = 0;
+        for (Bitmap tmp: bitmaps) {
+            height += tmp.getHeight();
+            height += mVerticalBreak.getHeight();
+        }
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        int cur = 0;
+
+        for (Bitmap tmp: bitmaps) {
+            canvas.drawBitmap(tmp, 0, cur,null);
+            cur += tmp.getHeight();
+            canvas.drawBitmap(mVerticalBreak, 0, cur, null);
+            cur += mVerticalBreak.getHeight();
+        }
+        return bitmap;
     }
 }

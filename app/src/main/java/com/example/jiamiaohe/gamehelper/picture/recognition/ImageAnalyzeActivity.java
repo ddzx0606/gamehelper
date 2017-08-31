@@ -10,6 +10,8 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.LinearLayout;
 
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
+
 /**
  * Created by jiamiaohe on 2017/8/27.
  */
@@ -26,6 +28,8 @@ public class ImageAnalyzeActivity extends Activity {
 
         Log.i(TAG, "onCreate = "+path);
 
+        // 初始化
+        ResolveUtil.getYoutuInstance();
         BattleSituation.getInstance().analys(BitmapFactory.decodeFile(path));
         setContentView(BattleSituation.getInstance().getView());
 
