@@ -2,9 +2,15 @@ package com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao;
 
 
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.Paint;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 
+import com.example.jiamiaohe.gamehelper.picture.recognition.BattleSituation;
 import com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys;
 import com.youtu.Youtu;
 
@@ -42,6 +48,7 @@ public class ResolveUtil {
     private static  String[][] data = new String[NUMBER][ITEM_COUNT];
 
     static String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/tmp.png");
+
     public static void resolve(PlayerAnalys[] players) {
         for (int i = 0; i < players.length; i++) {
             players[i].setBreak(players[players.length-2].getmPlayerBitmap());
@@ -49,9 +56,14 @@ public class ResolveUtil {
             System.out.println(i+"<<<<<<<<<<<");
         }
         mTotalPlayer = PlayerAnalys.combineVertical(mPerPlayer);
-        writeBitmap(path, mTotalPlayer);
+
+        // 锐化之后准确率反而下降？？
+        // mTotalPlayer = sharpBitmap(mTotalPlayer);
+        // 需要调试是写到存储卡上
+        //writeBitmap(path, mTotalPlayer);
 
     }
+
     public static void getData() {
         try {
             System.out.println("=============结果================");
@@ -64,7 +76,6 @@ public class ResolveUtil {
     }
 
     private static void handle(JSONObject res) throws JSONException {
-
         final int ITEM_COUNT = ResolveUtil.ITEM_COUNT;
         JSONArray array = res.getJSONArray("items");
         ReturnData[] returnDatas = new ReturnData[ITEM_COUNT];
@@ -76,7 +87,6 @@ public class ResolveUtil {
 
         for (int i = 0; i < array.length(); i++) {
             //每行个，识别顺序可能变化，所以需要根据x大小排序，y轴顺序较为稳定，所以暂时不做排序
-
             if (i!=0 && i%ITEM_COUNT== 0) {
                 Arrays.sort(returnDatas);
 
@@ -92,6 +102,7 @@ public class ResolveUtil {
 
         }
     }
+
     private static void writeBitmap(String path, Bitmap bitmap) {
         File file = new File(path);
         try {
@@ -114,9 +125,34 @@ public class ResolveUtil {
         }
     }
 
-    public static void optimizeData() {
+    //锐化
+    public static Bitmap sharpBitmap(Bitmap bitmap) {
+        int width, height;
+        height = bitmap.getHeight();
+        width = bitmap.getWidth();
+        int[] pix = new int[width * height];
+        bitmap.getPixels(pix, 0, width, 0, 0, width, height);
 
+
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                int index = y * width+ x;
+                int R = (pix[index] >> 16) & 0xff;     //bitwise shifting
+                int G = (pix[index] >> 8) & 0xff;
+                int B = pix[index] & 0xff;
+                if (R < 100 && G < 100 && B < 100 ) {
+                    R = G = B = 0;
+                } else if (R > 200 && G > 200 && B > 200 ) {
+                    R = G = B = 255;
+                }
+                pix[index] = 0xff000000 | (R << 16) | (G << 8) | B;
+            }
+        }
+        bitmap.setPixels(pix, 0, width, 0, 0, width, height);
+
+        return bitmap;
     }
+
     public static String[] getItem(int index) {
         return data[index];
     }

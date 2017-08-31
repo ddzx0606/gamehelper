@@ -69,6 +69,7 @@ public class PlayerAnalys {
     TextView mMoneyText = null;
 
     Handler mHandler = new Handler();
+
     public View getView() {
         if (mPlayerBitmap != null) {
 
@@ -245,29 +246,6 @@ public class PlayerAnalys {
 
     }
 
-    public void setNameText(String str) {
-        mNameText.setText(str);
-    }
-
-    public void setRoleNameText(String str) {
-        mRoleNameText.setText(str);
-    }
-
-    public void setKillText(String str) {
-        mKillText.setText(str);
-    }
-
-    public void setDeadText(String str) {
-        mDeadText.setText(str);
-    }
-
-    public void setHelpText(TextView helpText) {
-        mHelpText = helpText;
-    }
-
-    public void setMoneyText(TextView moneyText) {
-        mMoneyText = moneyText;
-    }
 
     public static void saveBitmap(Bitmap bm, String name) {
         Log.e(TAG, "保存图片");
@@ -368,13 +346,14 @@ public class PlayerAnalys {
 
     // 参数决定识别效果
     private static final Rect BREAK = new Rect(130, 45, 250, 97);
-    Bitmap mHorizontalBreak = null;
-    static Bitmap mVerticalBreak = null;
+    public static Bitmap mHorizontalBreak = null;
+    public static Bitmap mVerticalBreak = null;
     private static int totalWidth = 0;
     
     public Bitmap getmPlayerBitmap() {
         return mPlayerBitmap;
     }
+
     public void setBreak(Bitmap source) {
         mHorizontalBreak = Bitmap.createBitmap(source, BREAK.left, BREAK.top, BREAK.right-BREAK.left, BREAK.bottom-BREAK.top);
         // 垂直方向也需要一个，否则识别有问题
@@ -390,18 +369,16 @@ public class PlayerAnalys {
     public Bitmap combineHorizontal() {
         return  combineHorizontal(mNameBitmap, mRoleNameBitmap, mNumKillBitmap, mNumDeadBitmap, mNumHelpBitmap, mNumMoneyBitmap);
     }
-    public Bitmap combineHorizontal(Bitmap...bitmaps) {
+    public static Bitmap combineHorizontal(Bitmap...bitmaps) {
         if (bitmaps.length <= 0) return null;
 
         int height = bitmaps[0].getHeight();
         int width = 0;
         for (Bitmap tmp: bitmaps) {
-            System.out.println(tmp.getWidth());
             width += tmp.getWidth();
             width += mHorizontalBreak.getWidth();
         }
         if (totalWidth == 0) totalWidth = width;
-        System.out.println("结果"+width);
         Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         int cur = 0;

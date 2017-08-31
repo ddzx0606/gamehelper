@@ -103,7 +103,6 @@ public class BattleSituation {
                 }
                 // 增强识别效果，对于错误数据单独请求，直到正确
 
-                ResolveUtil.optimizeData();
             }
         }.start();
         return scrollView;
@@ -150,4 +149,5 @@ public class BattleSituation {
             }
         }).start();
     }
+
 }
