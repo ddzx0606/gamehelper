@@ -45,9 +45,12 @@ public class PlayerAnalys {
     private static final int FRAGMENT_HEIGHT = 42;
     private static final Rect NAME_RECT = new Rect(270, 0, 490, FRAGMENT_HEIGHT);
     private static final Rect NAME_ROLE = new Rect(125, 0, 254, FRAGMENT_HEIGHT);
-    private static final Rect NUM_KILL = new Rect(514, 0, 569, FRAGMENT_HEIGHT);   //width = 55
-    private static final Rect NUM_DEAD = new Rect(592, 0, 650, FRAGMENT_HEIGHT);   //width = 52
-    private static final Rect NUM_HELP = new Rect(673, 0, 733, FRAGMENT_HEIGHT);   //width = 60
+    //private static final Rect NUM_KILL = new Rect(514, 0, 569, FRAGMENT_HEIGHT);   //width = 55
+    //private static final Rect NUM_DEAD = new Rect(592, 0, 650, FRAGMENT_HEIGHT);   //width = 52
+    //private static final Rect NUM_HELP = new Rect(673, 0, 733, FRAGMENT_HEIGHT);   //width = 60
+    private static final Rect NUM_KILL = new Rect(523, 0, 556, FRAGMENT_HEIGHT);   //width = 55
+    private static final Rect NUM_DEAD = new Rect(605, 0, 637, FRAGMENT_HEIGHT);   //width = 52
+    private static final Rect NUM_HELP = new Rect(690, 0, 723, FRAGMENT_HEIGHT);   //width = 60
     private static final Rect NUM_MONEY = new Rect(747, 0, 850, FRAGMENT_HEIGHT);
 
     public void analys(@NotNull Bitmap bitmap, @NotNull Rect rect, @NotNull String index) {
@@ -346,17 +349,14 @@ public class PlayerAnalys {
     }
 
     // 参数决定识别效果
-    private static final Rect BREAK = new Rect(130, 45, 250, 97);
+    private static final Rect BREAK = new Rect(0, 0, 120, 42);
     public static Bitmap mHorizontalBreak = null;
     public static Bitmap mVerticalBreak = null;
     public static int HEIGHT_DELTA =  FRAGMENT_HEIGHT + (BREAK.bottom-BREAK.top);
     private static int totalWidth = 0;
 
-    public Bitmap getmPlayerBitmap() {
-        return mPlayerBitmap;
-    }
-
     public void setBreak(Bitmap source) {
+        System.out.println(source.getWidth());
         mHorizontalBreak = Bitmap.createBitmap(source, BREAK.left, BREAK.top, BREAK.right-BREAK.left, BREAK.bottom-BREAK.top);
         // 垂直方向也需要一个，否则识别有问题
         if (mVerticalBreak == null && totalWidth != 0) {
@@ -369,11 +369,35 @@ public class PlayerAnalys {
     }
 
     public Bitmap combineHorizontal() {
+        // TODO:根据使用的优化方法设置
+        boolean useRepeat = true;
+        Bitmap newNumDeadBitmap, newNumKillBitmap, newNumHelpBitmap;
+        if (useRepeat) {
+
+            newNumDeadBitmap = horizondDouble(mNumDeadBitmap);
+            newNumKillBitmap = horizondDouble(mNumKillBitmap);
+            newNumHelpBitmap = horizondDouble(mNumHelpBitmap);
+        } else {
+            newNumDeadBitmap = mNumDeadBitmap;
+            newNumKillBitmap = mNumKillBitmap;
+            newNumHelpBitmap = mNumHelpBitmap;
+        }
         return  combineHorizontal(mNameBitmap, mRoleNameBitmap,
-                mNumKillBitmap,
-                mNumDeadBitmap,
-                mNumHelpBitmap,
+                newNumKillBitmap,
+                newNumDeadBitmap,
+                newNumHelpBitmap,
                 mNumMoneyBitmap);
+    }
+
+    private Bitmap horizondDouble(Bitmap originBitmap) {
+        int width = originBitmap.getWidth();
+        int height =originBitmap.getHeight();
+        Bitmap bitmap = Bitmap.createBitmap(width*2, height, Bitmap.Config.ARGB_8888);
+
+        Canvas canvas = new Canvas(bitmap);
+        canvas.drawBitmap(originBitmap, 0, 0, null);
+        canvas.drawBitmap(originBitmap, width, 0, null);
+        return bitmap;
     }
     public static Bitmap combineHorizontal(Bitmap...bitmaps) {
         if (bitmaps.length <= 0) return null;

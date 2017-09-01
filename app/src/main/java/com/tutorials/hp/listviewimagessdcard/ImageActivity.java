@@ -60,14 +60,18 @@ public class ImageActivity extends AppCompatActivity {
 
                 spacecrafts.add(s);
             }
-            // 测试
-            File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath().concat("/demo.png"));
-            if (file.exists()) {
-                s=new Spacecraft();
-                s.setName(file.getName());
-                s.setUri(Uri.fromFile(file));
-                spacecrafts.add(s);
+
+            for (int i = 0; i < 10; i++) {
+                String name = "/" + i+".png";
+                File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath().concat(name));
+                if (file.exists()) {
+                    s=new Spacecraft();
+                    s.setName(file.getName());
+                    s.setUri(Uri.fromFile(file));
+                    spacecrafts.add(s);
+                }
             }
+            // 测试
         }
 
         return spacecrafts;
