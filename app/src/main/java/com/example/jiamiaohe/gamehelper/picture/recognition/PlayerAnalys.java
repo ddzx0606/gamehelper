@@ -42,12 +42,13 @@ public class PlayerAnalys {
     Bitmap mNumHelpBitmap = null;
     Bitmap mNumMoneyBitmap = null;
 
-    private static final Rect NAME_RECT = new Rect(270, 0, 490, 42);
-    private static final Rect NAME_ROLE = new Rect(125, 0, 254, 42);
-    private static final Rect NUM_KILL = new Rect(514, 0, 569, 42);   //width = 55
-    private static final Rect NUM_DEAD = new Rect(592, 0, 650, 42);   //width = 52
-    private static final Rect NUM_HELP = new Rect(673, 0, 733, 42);   //width = 60
-    private static final Rect NUM_MONEY = new Rect(747, 0, 850, 42);
+    private static final int FRAGMENT_HEIGHT = 42;
+    private static final Rect NAME_RECT = new Rect(270, 0, 490, FRAGMENT_HEIGHT);
+    private static final Rect NAME_ROLE = new Rect(125, 0, 254, FRAGMENT_HEIGHT);
+    private static final Rect NUM_KILL = new Rect(514, 0, 569, FRAGMENT_HEIGHT);   //width = 55
+    private static final Rect NUM_DEAD = new Rect(592, 0, 650, FRAGMENT_HEIGHT);   //width = 52
+    private static final Rect NUM_HELP = new Rect(673, 0, 733, FRAGMENT_HEIGHT);   //width = 60
+    private static final Rect NUM_MONEY = new Rect(747, 0, 850, FRAGMENT_HEIGHT);
 
     public void analys(@NotNull Bitmap bitmap, @NotNull Rect rect, @NotNull String index) {
         mPlayerBitmap = Bitmap.createBitmap(bitmap, rect.left, rect.top, rect.right-rect.left, rect.bottom-rect.top);
@@ -348,8 +349,9 @@ public class PlayerAnalys {
     private static final Rect BREAK = new Rect(130, 45, 250, 97);
     public static Bitmap mHorizontalBreak = null;
     public static Bitmap mVerticalBreak = null;
+    public static int HEIGHT_DELTA =  FRAGMENT_HEIGHT + (BREAK.bottom-BREAK.top);
     private static int totalWidth = 0;
-    
+
     public Bitmap getmPlayerBitmap() {
         return mPlayerBitmap;
     }

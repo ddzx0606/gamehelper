@@ -2,15 +2,10 @@ package com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao;
 
 
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
-import android.graphics.Paint;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
-import com.example.jiamiaohe.gamehelper.picture.recognition.BattleSituation;
 import com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys;
 import com.youtu.Youtu;
 
@@ -26,18 +21,21 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
+import static com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys.HEIGHT_DELTA;
+
 public class ResolveUtil {
 
     public static final String APP_ID = "10096521";
     public static final String SECRET_ID = "AKIDpZBev3Nz3AD6oKvZyEJCxWt4FLKC6Qlu";
     public static final String SECRET_KEY = "FUbaNF0ayAAzUpxgmifXD3kHfsz3LYaV";
     public static final String USER_ID = "1769898935";
-    private final static int NUMBER = 10;
+    public final static int NUMBER = 10;
     private final static int ITEM_COUNT = 6;
     private static Bitmap[] mPerPlayer = new Bitmap[NUMBER];
     private static Bitmap mTotalPlayer;
 
     private static Youtu faceYoutu;
+
     public static Youtu getYoutuInstance() {
         if (faceYoutu == null) {
             faceYoutu = new Youtu(APP_ID, SECRET_ID, SECRET_KEY, Youtu.API_YOUTU_END_POINT,USER_ID);
@@ -60,7 +58,7 @@ public class ResolveUtil {
         // 锐化之后准确率反而下降？？
         // mTotalPlayer = sharpBitmap(mTotalPlayer);
         // 需要调试是写到存储卡上
-        //writeBitmap(path, mTotalPlayer);
+        writeBitmap(path, mTotalPlayer);
 
     }
 
@@ -75,6 +73,8 @@ public class ResolveUtil {
         }
     }
 
+    private static ReturnData[] sTempData = new ReturnData[ITEM_COUNT*NUMBER];
+
     private static void handle(JSONObject res) throws JSONException {
         final int ITEM_COUNT = ResolveUtil.ITEM_COUNT;
         JSONArray array = res.getJSONArray("items");
@@ -82,7 +82,13 @@ public class ResolveUtil {
         for (int i = 0; i < returnDatas.length; i++) {
             returnDatas[i] = new ReturnData();
         }
+        for (int i = 0; i < sTempData.length; i++) {
+            sTempData[i] = new ReturnData();
 
+            sTempData[i].data = null;
+            sTempData[i].xLoc = Integer.MAX_VALUE;
+            sTempData[i].yLoc = Integer.MAX_VALUE;
+        }
         int count = 0;
 
         for (int i = 0; i < array.length(); i++) {
@@ -93,15 +99,65 @@ public class ResolveUtil {
                 System.out.printf("%d: ", ++count);
                 for (int k = 0; k < returnDatas.length; k++) {
                     data[count-1][k] = returnDatas[k].data;
-                    System.out.printf("%s--", returnDatas[k].data);
                 }
-                System.out.println();
             }
             returnDatas[i%ITEM_COUNT].data = (String) ((JSONObject)array.get(i)).get("itemstring");
             returnDatas[i%ITEM_COUNT].xLoc = Integer.parseInt(((JSONObject)((JSONObject)array.get(i)).get("itemcoord")).get("x").toString());
+            returnDatas[i%ITEM_COUNT].yLoc = Integer.parseInt(((JSONObject)((JSONObject)array.get(i)).get("itemcoord")).get("y").toString());
+
+            sTempData[i].data = (String) ((JSONObject)array.get(i)).get("itemstring");
+            sTempData[i].xLoc = Integer.parseInt(((JSONObject)((JSONObject)array.get(i)).get("itemcoord")).get("x").toString());
+            sTempData[i].yLoc = Integer.parseInt(((JSONObject)((JSONObject)array.get(i)).get("itemcoord")).get("y").toString());
 
         }
+
+        correctData();
     }
+
+    private static int[] mLocationFlag = new int[NUMBER];
+    private static String[][] sReturnData = new String[NUMBER][ITEM_COUNT];
+    static {
+        mLocationFlag[0] = 0;
+        for (int i = 1; i < mLocationFlag.length; i++) {
+            mLocationFlag[i] = mLocationFlag[i-1] + HEIGHT_DELTA;
+        }
+    }
+    /**
+     * 修正数据，保证排版为10行6列，每行两个字符串，4个数字
+     */
+    private static void correctData() {
+        // 思路，先看一下y的浮动范围，消除浮动在先按照y排序，在按照x排序
+        Arrays.sort(sTempData);
+        // 经过排序，如果不是“名字，名字，数字，数字，数字，数字”就需要修正
+
+        int iCount = 0;
+        // 默认文字能识别出来
+        for (int i = 0; i < sTempData.length;) {
+            if (iCount >= 10) break;
+
+            int jCount = 0;
+            sReturnData[iCount][jCount++] = sTempData[i++].data;
+            sReturnData[iCount][jCount++] = sTempData[i++].data;
+            for (int k = 0; k < 4;  k++) {
+                // 这里有一种情况十分棘手，就是识别出来了，但成了字母
+                // 暂时用长度为1定位
+                // TODO: 其实需要处理的就是 中间3个较小的数字
+                if (sTempData[i].data != null) {
+                    if (TextUtils.isDigitsOnly(sTempData[i].data)) {
+                        sReturnData[iCount][jCount++] = sTempData[i++].data;
+                    } else if (sTempData[i].data.length() == 1) {
+                        sReturnData[iCount][jCount++] = sTempData[i++].data;
+                    }
+                } else {
+                    sReturnData[iCount][jCount++]= "?";
+                }
+            }
+
+            iCount++;
+        }
+
+    }
+
 
     private static void writeBitmap(String path, Bitmap bitmap) {
         File file = new File(path);
@@ -119,8 +175,18 @@ public class ResolveUtil {
     private static class ReturnData implements  Comparable<ReturnData> {
         String data;
         int xLoc;
+        int yLoc;
+
+        @Override
+        public String toString() {
+            return data + "--" + xLoc + "--" + yLoc;
+        }
+
         @Override
         public int compareTo(@NonNull ReturnData o) {
+            if (Math.abs(this.yLoc - o.yLoc) > 20) {
+                return this.yLoc - o.yLoc;
+            }
             return this.xLoc - o.xLoc;
         }
     }
@@ -154,6 +220,6 @@ public class ResolveUtil {
     }
 
     public static String[] getItem(int index) {
-        return data[index];
+        return sReturnData[index];
     }
 }
