@@ -5,7 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="267111d8-cd36-4783-a736-a3a1b0677206" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/fileContent/fileContent.lock" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-31-17-23-24-157.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-11-12-433.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-12-02-574.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-12-54-642.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-14-36-549.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-15-15-143.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-19-59-494.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-24-45-657.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-30-09-997.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-30-42-052.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-42-54-834.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-48-27-572.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-53-51-009.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-54-24-008.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-54-40-623.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-13-55-44-045.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-34-58-008.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-36-20-605.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-41-30-650.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-54-03-285.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-54-14-121.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-54-29-315.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-55-31-121.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-55-52-322.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-57-52-651.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-14-59-28-742.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-01-20-736.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-05-40-301.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-07-03-146.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-11-25-206.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-13-56-678.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-22-40-921.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-24-32-694.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-09-01-15-26-01-432.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/javaCompile/classAnalysis.bin" />
@@ -14,12 +48,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1-milestone-1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1-milestone-1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-26.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-26.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/PlayerAnalys.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/PlayerAnalys.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/tutorials/hp/listviewimagessdcard/ImageActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tutorials/hp/listviewimagessdcard/ImageActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,13 +92,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/BattleSituation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
                 <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
-                <element signature="e#3487#3816#0" expanded="true" />
-                <element signature="e#3815#3816#0" expanded="true" />
                 <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
               </folding>
             </state>
@@ -76,21 +106,20 @@
       <file leaf-file-name="ImageActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tutorials/hp/listviewimagessdcard/ImageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="336">
+              <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
               <folding>
-                <element signature="e#986#1186#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageAnalyzeActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageAnalyzeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/ImageAnalyzeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="528">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,24 +128,34 @@
       <file leaf-file-name="PlayerAnalys.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/PlayerAnalys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="221" column="28" lean-forward="false" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
+            <state relative-caret-position="516">
+              <caret line="375" column="24" lean-forward="false" selection-start-line="375" selection-start-column="24" selection-end-line="375" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#analys#0;class#PlayerAnalys#0" expanded="false" />
                 <element signature="method#getView#0;class#PlayerAnalys#0" expanded="false" />
                 <element signature="method#analyzeName#0;class#PlayerAnalys#0" expanded="false" />
-                <element signature="e#9195#9686#0" expanded="true" />
-                <element signature="e#9685#9686#0" expanded="true" />
                 <element signature="method#analyzeName#1;class#PlayerAnalys#0" expanded="false" />
-                <element signature="e#10240#10627#0" expanded="true" />
-                <element signature="e#10626#10627#0" expanded="true" />
                 <element signature="method#saveBitmap#0;class#PlayerAnalys#0" expanded="false" />
                 <element signature="method#expandBitmap#0;class#PlayerAnalys#0" expanded="false" />
                 <element signature="method#getStringFromBitmap#0;class#PlayerAnalys#0" expanded="false" />
-                <element signature="method#setBreak#0;class#PlayerAnalys#0" expanded="false" />
                 <element signature="method#combineHorizontal#1;class#PlayerAnalys#0" expanded="false" />
                 <element signature="method#combineVertical#0;class#PlayerAnalys#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResolveUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1005">
+              <caret line="192" column="52" lean-forward="false" selection-start-line="192" selection-start-column="52" selection-end-line="192" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getYoutuInstance#0;class#ResolveUtil#0" expanded="false" />
+                <element signature="method#writeBitmap#0;class#ResolveUtil#0" expanded="false" />
+                <element signature="method#sharpBitmap#0;class#ResolveUtil#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1965,7 +2004,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -1978,190 +2017,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jiamiaohe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jiamiaohe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="picture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recognition" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jiamiaohe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="picture" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recognition" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vimerzhao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamehelper" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/install/AndroidSdk" />
@@ -2169,7 +2025,7 @@
     <property name="show.do.not.ask.upgrade.gradle.plugin" value="2.3.3" />
     <property name="sync.plugin.last.upgrade.timestamp" value="1504237583496" />
     <property name="device.picker.selection" value="A10ABNMSXWLQ" />
-    <property name="SearchEverywhereHistoryKey" value="Ima&#9;PSI&#9;JAVA://com.tutorials.hp.listviewimagessdcard.ImageActivity&#10;Pla&#9;PSI&#9;JAVA://com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys" />
+    <property name="SearchEverywhereHistoryKey" value="U&#9;FILE&#9;file:///home/zhaoyu/Tencent/gamehelper/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java&#10;Ima&#9;PSI&#9;JAVA://com.tutorials.hp.listviewimagessdcard.ImageActivity&#10;Pla&#9;PSI&#9;JAVA://com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys" />
     <property name="last_opened_file_path" value="$USER_HOME$/图片" />
     <property name="ScreenshotViewer.SavePath" value="$USER_HOME$/图片" />
   </component>
@@ -2332,27 +2188,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
@@ -2506,6 +2341,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="267111d8-cd36-4783-a736-a3a1b0677206" name="Default" comment="" />
@@ -2518,6 +2356,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="900" height="1440" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2530,7 +2369,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299373" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.3299373" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="900" y="1160" width="1366" height="732" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.3299373" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="900" y="1167" width="1366" height="726" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2538,9 +2377,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4262295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.39968652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="900" y="1160" width="1366" height="732" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.39968652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="900" y="1160" width="1366" height="732" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2571,13 +2410,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java</url>
-          <line>132</line>
+          <line>140</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java</url>
-          <line>135</line>
+          <line>143</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -2593,14 +2432,62 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/BattleSituation.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
+            <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
+            <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tutorials/hp/listviewimagessdcard/ImageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/PlayerAnalys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1752">
+          <caret line="221" column="28" lean-forward="false" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#analys#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#getView#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#analyzeName#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#analyzeName#1;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#saveBitmap#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#expandBitmap#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#getStringFromBitmap#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#combineHorizontal#1;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#combineVertical#0;class#PlayerAnalys#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/ImageAnalyzeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/BattleSituation.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
             <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
-            <element signature="e#3487#3816#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
             <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
           </folding>
         </state>
@@ -2615,15 +2502,10 @@
             <element signature="method#analys#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#getView#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#analyzeName#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="e#9195#9686#0" expanded="true" />
-            <element signature="e#9685#9686#0" expanded="true" />
             <element signature="method#analyzeName#1;class#PlayerAnalys#0" expanded="false" />
-            <element signature="e#10240#10627#0" expanded="true" />
-            <element signature="e#10626#10627#0" expanded="true" />
             <element signature="method#saveBitmap#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#expandBitmap#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#getStringFromBitmap#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#setBreak#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#combineHorizontal#1;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#combineVertical#0;class#PlayerAnalys#0" expanded="false" />
           </folding>
@@ -2635,8 +2517,7 @@
         <state relative-caret-position="1224">
           <caret line="67" column="16" lean-forward="false" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
           <folding>
-            <element signature="e#986#1186#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2649,8 +2530,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
             <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
-            <element signature="e#3487#3816#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
             <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
           </folding>
         </state>
@@ -2665,15 +2544,10 @@
             <element signature="method#analys#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#getView#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#analyzeName#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="e#9195#9686#0" expanded="true" />
-            <element signature="e#9685#9686#0" expanded="true" />
             <element signature="method#analyzeName#1;class#PlayerAnalys#0" expanded="false" />
-            <element signature="e#10240#10627#0" expanded="true" />
-            <element signature="e#10626#10627#0" expanded="true" />
             <element signature="method#saveBitmap#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#expandBitmap#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#getStringFromBitmap#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#setBreak#0;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#combineHorizontal#1;class#PlayerAnalys#0" expanded="false" />
             <element signature="method#combineVertical#0;class#PlayerAnalys#0" expanded="false" />
           </folding>
@@ -2688,8 +2562,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
             <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
-            <element signature="e#3487#3816#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
             <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
           </folding>
         </state>
@@ -2711,83 +2583,76 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/MyYoutu.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tutorials/hp/listviewimagessdcard/ImageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="e#986#1186#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/BattleSituation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
-            <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
-            <element signature="e#3487#3816#0" expanded="true" />
-            <element signature="e#3815#3816#0" expanded="true" />
-            <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/图片/device-2017-09-01-154141.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/PlayerAnalys.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tutorials/hp/listviewimagessdcard/ImageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="221" column="28" lean-forward="false" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
+        <state relative-caret-position="336">
+          <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#analys#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#getView#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#analyzeName#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="e#9195#9686#0" expanded="true" />
-            <element signature="e#9685#9686#0" expanded="true" />
-            <element signature="method#analyzeName#1;class#PlayerAnalys#0" expanded="false" />
-            <element signature="e#10240#10627#0" expanded="true" />
-            <element signature="e#10626#10627#0" expanded="true" />
-            <element signature="method#saveBitmap#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#expandBitmap#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#getStringFromBitmap#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#setBreak#0;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#combineHorizontal#1;class#PlayerAnalys#0" expanded="false" />
-            <element signature="method#combineVertical#0;class#PlayerAnalys#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getYoutuInstance#0;class#ResolveUtil#0" expanded="false" />
-            <element signature="method#writeBitmap#0;class#ResolveUtil#0" expanded="false" />
-            <element signature="e#6594#6595#0" expanded="true" />
-            <element signature="e#6657#6658#0" expanded="true" />
-            <element signature="method#sharpBitmap#0;class#ResolveUtil#0" expanded="false" />
-            <element signature="e#7903#7904#0" expanded="true" />
-            <element signature="e#7944#7945#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/ImageAnalyzeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="528">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/BattleSituation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#BattleSituation#0" expanded="false" />
+            <element signature="method#BattleSituation#0;class#BattleSituation#0" expanded="false" />
+            <element signature="method#analysWholePic#0;class#BattleSituation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/PlayerAnalys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="375" column="24" lean-forward="false" selection-start-line="375" selection-start-column="24" selection-end-line="375" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#analys#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#getView#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#analyzeName#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#analyzeName#1;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#saveBitmap#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#expandBitmap#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#getStringFromBitmap#0;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#combineHorizontal#1;class#PlayerAnalys#0" expanded="false" />
+            <element signature="method#combineVertical#0;class#PlayerAnalys#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/图片/device-2017-09-01-164846.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jiamiaohe/gamehelper/picture/recognition/vimerzhao/ResolveUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="192" column="52" lean-forward="false" selection-start-line="192" selection-start-column="52" selection-end-line="192" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getYoutuInstance#0;class#ResolveUtil#0" expanded="false" />
+            <element signature="method#writeBitmap#0;class#ResolveUtil#0" expanded="false" />
+            <element signature="method#sharpBitmap#0;class#ResolveUtil#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

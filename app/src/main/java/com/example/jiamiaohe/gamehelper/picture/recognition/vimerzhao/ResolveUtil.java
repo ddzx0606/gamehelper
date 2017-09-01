@@ -43,8 +43,6 @@ public class ResolveUtil {
         return faceYoutu;
     }
 
-    private static  String[][] data = new String[NUMBER][ITEM_COUNT];
-
     static String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/tmp.png");
 
     public static void resolve(PlayerAnalys[] players) {
@@ -115,7 +113,8 @@ public class ResolveUtil {
     }
 
     private static int[] mLocationFlag = new int[NUMBER];
-    private static String[][] sReturnData = new String[NUMBER][ITEM_COUNT];
+    private static ReturnData[][] sReturnData = new ReturnData[NUMBER][ITEM_COUNT];
+    private static String[][] data = new String[NUMBER][ITEM_COUNT];
     static {
         mLocationFlag[0] = 0;
         for (int i = 1; i < mLocationFlag.length; i++) {
@@ -128,32 +127,71 @@ public class ResolveUtil {
     private static void correctData() {
         // 思路，先看一下y的浮动范围，消除浮动在先按照y排序，在按照x排序
         Arrays.sort(sTempData);
+
+        for (int i = 0; i < sTempData.length; i++) {
+            System.out.println(sTempData[i].toString());
+        }
         // 经过排序，如果不是“名字，名字，数字，数字，数字，数字”就需要修正
 
+        for (int i = 0; i < sReturnData.length; i++) {
+            for (int j = 0; j < sReturnData[0].length; j++) {
+                sReturnData[i][j] = new ReturnData();
+            }
+        }
         int iCount = 0;
         // 默认文字能识别出来
         for (int i = 0; i < sTempData.length;) {
             if (iCount >= 10) break;
 
             int jCount = 0;
-            sReturnData[iCount][jCount++] = sTempData[i++].data;
-            sReturnData[iCount][jCount++] = sTempData[i++].data;
+            sReturnData[iCount][jCount].data = sTempData[i].data;
+            sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+            sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
+
+            sReturnData[iCount][jCount].data = sTempData[i].data;
+            sReturnData[iCount][jCount].xLoc= sTempData[i].xLoc;
+            sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
+
             for (int k = 0; k < 4;  k++) {
                 // 这里有一种情况十分棘手，就是识别出来了，但成了字母
                 // 暂时用长度为1定位
                 // TODO: 其实需要处理的就是 中间3个较小的数字
                 if (sTempData[i].data != null) {
                     if (TextUtils.isDigitsOnly(sTempData[i].data)) {
-                        sReturnData[iCount][jCount++] = sTempData[i++].data;
+                        sReturnData[iCount][jCount].xLoc= sTempData[i].xLoc;
+                        sReturnData[iCount][jCount].yLoc= sTempData[i].yLoc;
+                        sReturnData[iCount][jCount++].data = sTempData[i++].data;
                     } else if (sTempData[i].data.length() == 1) {
-                        sReturnData[iCount][jCount++] = sTempData[i++].data;
+                        sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                        sReturnData[iCount][jCount].yLoc = sTempData[i].yLoc;
+                        sReturnData[iCount][jCount++].data = sTempData[i++].data;
                     }
                 } else {
-                    sReturnData[iCount][jCount++]= "?";
+                    sReturnData[iCount][jCount++].xLoc = Integer.MAX_VALUE;
+                    sReturnData[iCount][jCount++].yLoc = Integer.MAX_VALUE;
+                    sReturnData[iCount][jCount++].data = "?";
                 }
             }
 
             iCount++;
+        }
+        // 调整位置,硬编码后期需要优化
+        int[] arverageLoc = new int[]{12, 342, 600, 790, 970, 1140};
+        for (int i = 0; i < sReturnData.length; i++) {
+            for (int j = 0; j < sReturnData[i].length; j++) {
+                if (Math.abs(sReturnData[i][j].xLoc - arverageLoc[j]) > 50) {
+                    for (int k = sReturnData[i].length-1; k > j; k--) {
+                        sReturnData[i][k].data = sReturnData[i][k-1].data;
+                        sReturnData[i][k].xLoc = sReturnData[i][k-1].xLoc;
+                    }
+                    sReturnData[i][j].data = "?";
+                }
+            }
+        }
+        for (int i = 0; i < sReturnData.length; i++) {
+            for (int j = 0; j < sReturnData[i].length; j++) {
+                data[i][j] = sReturnData[i][j].data;
+            }
         }
 
     }
@@ -220,6 +258,7 @@ public class ResolveUtil {
     }
 
     public static String[] getItem(int index) {
-        return sReturnData[index];
+
+        return data[index];
     }
 }

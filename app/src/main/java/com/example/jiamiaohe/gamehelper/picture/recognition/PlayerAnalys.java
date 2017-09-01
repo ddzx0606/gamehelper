@@ -369,7 +369,11 @@ public class PlayerAnalys {
     }
 
     public Bitmap combineHorizontal() {
-        return  combineHorizontal(mNameBitmap, mRoleNameBitmap, mNumKillBitmap, mNumDeadBitmap, mNumHelpBitmap, mNumMoneyBitmap);
+        return  combineHorizontal(mNameBitmap, mRoleNameBitmap,
+                mNumKillBitmap,
+                mNumDeadBitmap,
+                mNumHelpBitmap,
+                mNumMoneyBitmap);
     }
     public static Bitmap combineHorizontal(Bitmap...bitmaps) {
         if (bitmaps.length <= 0) return null;
