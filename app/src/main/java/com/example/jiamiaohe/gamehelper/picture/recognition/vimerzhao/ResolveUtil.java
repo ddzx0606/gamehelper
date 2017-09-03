@@ -150,6 +150,7 @@ public class ResolveUtil {
     static {
         modifyTable.put("O", 0);
         modifyTable.put("o", 0);
+        modifyTable.put("C", 0);
         modifyTable.put("l", 1);
         modifyTable.put("L", 1);
     }
