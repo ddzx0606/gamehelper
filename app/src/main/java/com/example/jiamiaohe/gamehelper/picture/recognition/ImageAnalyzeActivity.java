@@ -12,13 +12,15 @@ import android.widget.LinearLayout;
 
 import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
 
+import org.opencv.android.OpenCVLoader;
+
 /**
  * Created by jiamiaohe on 2017/8/27.
  */
 
 public class ImageAnalyzeActivity extends Activity {
 
-    private final String TAG = "ImageAnalyzeActivity";
+    private static final String TAG = "ImageAnalyzeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class ImageAnalyzeActivity extends Activity {
 
         Log.i(TAG, "onCreate = "+path);
 
+        BitmapRecognizeUtils.getInstance();
+
         // 初始化
         ResolveUtil.getYoutuInstance();
         BattleSituation.getInstance().analys(BitmapFactory.decodeFile(path));
@@ -35,5 +39,13 @@ public class ImageAnalyzeActivity extends Activity {
 
 //        LinearLayout linearLayout = new LinearLayout(this);
 //        linearLayout.addView();
+    }
+
+    static {
+        if (!OpenCVLoader.initDebug()) {
+            Log.i(TAG, "opencv not load");
+        } else {
+            Log.i(TAG, "opencv load");
+        }
     }
 }

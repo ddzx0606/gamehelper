@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.media.Image;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -19,11 +20,14 @@ import com.youtu.Youtu;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by jiamiaohe on 2017/8/27.
@@ -42,6 +46,18 @@ public class PlayerAnalys {
     Bitmap mNumHelpBitmap = null;
     Bitmap mNumMoneyBitmap = null;
 
+    ArrayList<Bitmap> mProps = new ArrayList<Bitmap>();
+    TextView mPropsTextView = null;
+
+    public static  final int PROP_WIDTH = 64;
+    public static  final int PROP_HEIGHT = 64;
+    public static final Rect mPropsRect[] = {new Rect(261,55, 261+PROP_WIDTH, 55+PROP_HEIGHT),
+            new Rect(352,55, 352+PROP_WIDTH, 55+PROP_HEIGHT),
+            new Rect(441,55, 441+PROP_WIDTH, 55+PROP_HEIGHT),
+            new Rect(530,55, 530+PROP_WIDTH, 55+PROP_HEIGHT),
+            new Rect(620,55, 620+PROP_WIDTH, 55+PROP_HEIGHT),
+            new Rect(710,55, 710+PROP_WIDTH, 55+PROP_HEIGHT)};
+
     private static final int FRAGMENT_HEIGHT = 42;
     private static final Rect NAME_RECT = new Rect(270, 0, 490, FRAGMENT_HEIGHT);
     private static final Rect NAME_ROLE = new Rect(125, 0, 254, FRAGMENT_HEIGHT);
@@ -54,6 +70,9 @@ public class PlayerAnalys {
     private static final Rect NUM_MONEY = new Rect(747, 0, 850, FRAGMENT_HEIGHT);
 
     public void analys(@NotNull Bitmap bitmap, @NotNull Rect rect, @NotNull String index) {
+        //clear
+        mProps.clear();
+
         mPlayerBitmap = Bitmap.createBitmap(bitmap, rect.left, rect.top, rect.right-rect.left, rect.bottom-rect.top);
         mPlayerIndex = index;
 
@@ -63,6 +82,16 @@ public class PlayerAnalys {
         mNumDeadBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_DEAD.left, NUM_DEAD.top, NUM_DEAD.right-NUM_DEAD.left, NUM_DEAD.bottom-NUM_DEAD.top);
         mNumHelpBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_HELP.left, NUM_HELP.top, NUM_HELP.right-NUM_HELP.left, NUM_HELP.bottom-NUM_HELP.top);
         mNumMoneyBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_MONEY.left, NUM_MONEY.top, NUM_MONEY.right-NUM_MONEY.left, NUM_MONEY.bottom-NUM_MONEY.top);
+
+        Log.i(TAG, "mPlayerBitmap.width = "+mPlayerBitmap.getWidth()+", height = "+mPlayerBitmap.getHeight());
+//        int temp = 0;
+        for(Rect rect1 : mPropsRect) {
+            Log.i(TAG, "rect1.left = "+rect1.left+", rect.right = "+rect1.right+", rect1 = "+(rect1.bottom-rect1.top));;
+            mProps.add((Bitmap.createBitmap(mPlayerBitmap, rect1.left, rect1.top, rect1.right-rect1.left, rect1.bottom-rect1.top)));
+//            if (index.equals("友方五") || index.equals("敌方三")) {
+//                saveBitmap(mProps.get(temp++), System.currentTimeMillis()+""+ new Random().nextInt()+".jpg");
+//            }
+        }
     }
 
     TextView mNameText = null;
@@ -108,7 +137,7 @@ public class PlayerAnalys {
 
             LinearLayout textLinear = new LinearLayout(MyApplication.getContext());
             textLinear.setOrientation(LinearLayout.HORIZONTAL);
-            sub.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            textLinear.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             mNameText = new TextView(MyApplication.getContext());
             mNameText.setTextColor(Color.BLACK);
             mNameText.setPadding(0,0,2,0);
@@ -146,25 +175,24 @@ public class PlayerAnalys {
             mMoneyText.setText("money:");
             textLinear.addView(mMoneyText);
 
-//            if (mPlayerIndex.equals("友方一")) {
-//                Log.i(TAG, "友方一识别名字");
-//                Youtu faceYoutu = new Youtu("10096205", "AKIDXtzJOEaAG7jAMJaUiOtACzWqysXxn2h7", "KPFqFSQBftrY4MPCiyxf7JI174mEWfYH", Youtu.API_YOUTU_END_POINT, "");
-//                JSONObject respose = null;
-//                //respose= faceYoutu.FaceCompareUrl("http://open.youtu.qq.com/content/img/slide-1.jpg","http://open.youtu.qq.com/content/img/slide-1.jpg");
-//                try {
-//                    respose = faceYoutu.GeneralOcrWithBitmap(mNameBitmap);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                    Log.i(TAG, "Exception = "+e.toString());
-//                }
-//
-////                TextView textView = new TextView(MyApplication.getContext());
-////                textView.setText(respose.);
-//                //get respose
-//                //System.out.println(respose);
-//                Log.i(TAG, "respose = "+respose);
-//            }
+            LinearLayout propLinear = new LinearLayout(MyApplication.getContext());
+            propLinear.setOrientation(LinearLayout.HORIZONTAL);
+            propLinear.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
 
+            LinearLayout propTextLinear = new LinearLayout(MyApplication.getContext());
+            propTextLinear.setOrientation(LinearLayout.HORIZONTAL);
+            propTextLinear.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            for(Bitmap bitmap : mProps) {
+                Log.i(TAG , "add prop image view "+bitmap);
+                ImageView imageProp = new ImageView(MyApplication.getContext());
+                imageProp.setPadding(0,0,2,0);
+                imageProp.setImageBitmap(bitmap);
+                propLinear.addView(imageProp);
+            }
+
+            mPropsTextView = new TextView(MyApplication.getContext());
+            mPropsTextView.setText("装备");
+            propTextLinear.addView(mPropsTextView);
 
             //main
             LinearLayout main = new LinearLayout(MyApplication.getContext());
@@ -176,7 +204,34 @@ public class PlayerAnalys {
             imageView.setPadding(0,0,0,2);
             main.addView(imageView);
             main.addView(sub);
+            main.addView(propLinear);
             main.addView(textLinear);
+            main.addView(propTextLinear);
+
+//            if (mPlayerIndex.equals("友方二")) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        StringBuilder stringBuilder = new StringBuilder();
+                        for(int i = 0; i < mProps.size(); i++) {
+//                        for (Bitmap bitmap : mProps) {
+                            stringBuilder.append(BitmapRecognizeUtils.getInstance().getBitmapName(mProps.get(i), i+1));
+                            if (i < mProps.size()-1) {
+                                stringBuilder.append('-');
+                            }
+                        }
+
+                        final String text = stringBuilder.toString();
+
+                        mHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mPropsTextView.setText(text);
+                            }
+                        });
+                    }
+                }).start();
+//            }
 
             return main;
         } else {
@@ -185,6 +240,8 @@ public class PlayerAnalys {
 
             return textView;
         }
+
+
     }
 
     public Bitmap getPlayerBitmap() {
