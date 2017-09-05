@@ -209,6 +209,8 @@ public class PlayerAnalys {
             main.addView(propTextLinear);
 
 //            if (mPlayerIndex.equals("友方二")) {
+            // TODO:暂时注释
+            /*
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -231,6 +233,7 @@ public class PlayerAnalys {
                         });
                     }
                 }).start();
+                */
 //            }
 
             return main;

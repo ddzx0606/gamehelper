@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -66,6 +67,11 @@ public class BattleSituation {
     }
 
     public void analys(@NotNull Bitmap bitmap) {
+        // 检查Bitmap
+        bitmap = ResolveUtil.checkBitmap(bitmap);
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/newBitmap.jpeg");
+        ResolveUtil.writeBitmap(path, bitmap);
+
         Log.i(TAG, "start to anlys bitmap = "+bitmap);
 
         for (int i = 0; i < mPlayers.length; i++) {

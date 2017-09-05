@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
 import com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys;
@@ -294,7 +296,7 @@ public class ResolveUtil {
     }
 
 
-    private static void writeBitmap(String path, Bitmap bitmap) {
+    public static void writeBitmap(String path, Bitmap bitmap) {
         File file = new File(path);
         try {
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
@@ -338,6 +340,21 @@ public class ResolveUtil {
     public static String[] getItem(int index) {
 
         return data[index];
+    }
+    private final static int BITMAP_WIDTH = 1920;
+    private final static int BITMAP_HEIGHT = 1080;
+    public static Bitmap checkBitmap(Bitmap bitmap) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        if (width == BITMAP_WIDTH && height == BITMAP_HEIGHT) {
+            Toast.makeText(MyApplication.getContext(), "标准", Toast.LENGTH_SHORT).show();
+            return bitmap;
+        }
+        float scaleWidth = (float) BITMAP_WIDTH / width;
+        float scaleHeight = (float) BITMAP_HEIGHT / height;
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        return Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
     }
 
     private static class ReturnData implements Comparable<ReturnData> {
