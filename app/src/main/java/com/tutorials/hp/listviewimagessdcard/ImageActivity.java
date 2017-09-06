@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class ImageActivity extends AppCompatActivity {
 
+    ListView mLv = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,16 +26,22 @@ public class ImageActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final ListView lv= (ListView) findViewById(R.id.lv);
+        mLv= (ListView) findViewById(R.id.lv);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                lv.setAdapter(new CustomAdapter(ImageActivity.this,getData()));
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                lv.setAdapter(new CustomAdapter(ImageActivity.this,getData()));
+//
+//            }
+//        });
+    }
 
-            }
-        });
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mLv.setAdapter(new CustomAdapter(ImageActivity.this,getData()));
     }
 
     private ArrayList<Spacecraft> getData()

@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by jiamiaohe on 2017/9/3.
@@ -50,7 +51,7 @@ public class BitmapRecognizeUtils {
 
     private BitmapRecognizeUtils() {
         Bitmap bitmap;
-        for(int i = 1; i < 94; i++) {
+        for(int i = 1; i < 97; i++) {
             bitmap = BitmapFactory.decodeResource(MyApplication.getContext().getResources(), MyApplication.getContext().getResources().getIdentifier("b"+i, "drawable", MyApplication.getContext().getPackageName()));
             Log.i(TAG, "initBitmapList = bitmap = "+bitmap+", index = "+i);
             mList.add(scaleBitmap(bitmap));
@@ -158,12 +159,15 @@ public class BitmapRecognizeUtils {
         return getBitmapName(origin, 0);
     }
 
+    public static int i = 1;
     public String getBitmapName(Bitmap origin, int id) {
         Log.i(TAG, "start to compare");
 
         Bitmap bitmap = Bitmap.createBitmap(origin);
         bitmap = scaleBitmap(bitmap);
         bitmap = toRoundBitmap(bitmap);
+
+//        PlayerAnalys.saveBitmap(bitmap, "b"+ (i++)+".jpg");
 
         double maxSimilar = 0;
         int maxSimilarIndex = 0;
@@ -194,6 +198,10 @@ public class BitmapRecognizeUtils {
         }
         Log.i(TAG, "end to compare = "+mListName.get(maxSimilarIndex));
 
+        if (!"空".equals(mListName.get(maxSimilarIndex))) {
+            PlayerAnalys.saveBitmap(bitmap, "kong"+(i++)+".png");
+        }
+
         return mListName.get(maxSimilarIndex);
 
     }
@@ -202,8 +210,12 @@ public class BitmapRecognizeUtils {
 
         srcMat.convertTo(srcMat, CvType.CV_32F);
         desMat.convertTo(desMat, CvType.CV_32F);
-        double target = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_CORREL);
-        Log.i(TAG, "相似度 ：   ==" + target+", index = "+index);
+        double target = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_CORREL);   //相关性
+        double target_2 = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_CHISQR);  //卡方
+        double target_3 = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_INTERSECT);  //交集法
+        double target_4 = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_BHATTACHARYYA);  //常态分布比对的Bhattacharyya距离法
+
+        Log.i(TAG, "similar ： target  ==" + target+"，target_2 =  "+target_2+"， target_3 =  "+target_3+"， target_4 = "+target_4+", index = "+index);
         return target;
     }
 

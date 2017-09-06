@@ -87,7 +87,7 @@ public final class BlockCallHelper {
         @Override
         public void onCallStateChanged(int state, String incomingNumber) {
             Log.i("BlockCallHelper", "incomingNumber = "+incomingNumber+", state = "+state+", GameHelperService.isForground() = "+GameHelperService.isForground());
-            if (GameHelperService.isForground() && mTurnOn && state == TelephonyManager.CALL_STATE_RINGING) {
+            if (mTurnOn && state == TelephonyManager.CALL_STATE_RINGING) {
 
                 endCall();
                 Toast.makeText(MyApplication.getContext(), "拦截电话:"+incomingNumber, Toast.LENGTH_SHORT).show();

@@ -51,7 +51,7 @@ public class PlayerAnalys {
 
     public static  final int PROP_WIDTH = 64;
     public static  final int PROP_HEIGHT = 64;
-    public static final Rect mPropsRect[] = {new Rect(261,55, 261+PROP_WIDTH, 55+PROP_HEIGHT),
+    public static final Rect mPropsRect[] = {new Rect(262,55, 261+PROP_WIDTH, 55+PROP_HEIGHT),
             new Rect(352,55, 352+PROP_WIDTH, 55+PROP_HEIGHT),
             new Rect(441,55, 441+PROP_WIDTH, 55+PROP_HEIGHT),
             new Rect(530,55, 530+PROP_WIDTH, 55+PROP_HEIGHT),
@@ -209,8 +209,6 @@ public class PlayerAnalys {
             main.addView(propTextLinear);
 
 //            if (mPlayerIndex.equals("友方二")) {
-            // TODO:暂时注释
-            /*
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -222,9 +220,7 @@ public class PlayerAnalys {
                                 stringBuilder.append('-');
                             }
                         }
-
                         final String text = stringBuilder.toString();
-
                         mHandler.post(new Runnable() {
                             @Override
                             public void run() {
@@ -233,7 +229,6 @@ public class PlayerAnalys {
                         });
                     }
                 }).start();
-                */
 //            }
 
             return main;
@@ -243,8 +238,6 @@ public class PlayerAnalys {
 
             return textView;
         }
-
-
     }
 
     public Bitmap getPlayerBitmap() {

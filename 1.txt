@@ -1,0 +1,856 @@
+--------- beginning of crash
+--------- beginning of system
+--------- beginning of main
+09-05 15:04:42.779 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.3760715059521661，target_2 =  468800.5148133621， target_3 =  85594.0， target_4 = 0.29528150619830873, index = 47
+09-05 15:04:42.780 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.3961486989396356，target_2 =  748510.5906824047， target_3 =  83268.0， target_4 = 0.3169415271711385, index = 48
+09-05 15:04:42.780 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4701579439743826，target_2 =  436923.27068498253， target_3 =  89652.0， target_4 = 0.2552233556236504, index = 49
+09-05 15:04:42.780 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.29980895043280653，target_2 =  510455.3146259678， target_3 =  81716.0， target_4 = 0.31789077785595793, index = 50
+09-05 15:04:42.780 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5005673389492572，target_2 =  1004253.5557848731， target_3 =  93583.0， target_4 = 0.25082551882738957, index = 51
+09-05 15:04:42.781 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.43404355425989677，target_2 =  692200.2986802111， target_3 =  89627.0， target_4 = 0.27349572832450575, index = 52
+09-05 15:04:42.781 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4198003496236308，target_2 =  527379.0017745866， target_3 =  91205.0， target_4 = 0.2498143078872881, index = 53
+09-05 15:04:42.781 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.46561006570669305，target_2 =  444692.5683206256， target_3 =  89882.0， target_4 = 0.25708431645642865, index = 54
+09-05 15:04:42.781 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.3450487878906013，target_2 =  1055099.377948711， target_3 =  83237.0， target_4 = 0.3341236082663567, index = 55
+09-05 15:04:42.782 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.358243302787245，target_2 =  498675.7614370022， target_3 =  77266.0， target_4 = 0.36699693850746795, index = 56
+09-05 15:04:42.782 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.407381134399536，target_2 =  561084.251496865， target_3 =  87754.0， target_4 = 0.27605458071106675, index = 57
+09-05 15:04:42.782 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4787896355806646，target_2 =  735966.3549501591， target_3 =  94537.0， target_4 = 0.24923343392170813, index = 58
+09-05 15:04:42.782 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.32417654619238045，target_2 =  557988.4610886354， target_3 =  84432.0， target_4 = 0.3056974013907878, index = 59
+09-05 15:04:42.783 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.43702094853066437，target_2 =  649259.9597213553， target_3 =  92885.0， target_4 = 0.2503975483392277, index = 60
+09-05 15:04:42.783 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4857391772073925，target_2 =  434179.5171884564， target_3 =  93144.0， target_4 = 0.23078936263195116, index = 61
+09-05 15:04:42.783 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.365256933165999，target_2 =  754739.6064258952， target_3 =  89391.0， target_4 = 0.28732110897707214, index = 62
+09-05 15:04:42.783 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4548646666445467，target_2 =  678567.125350369， target_3 =  93707.0， target_4 = 0.24592263472877113, index = 63
+09-05 15:04:42.783 11552 11622 I BitmapRecognizeUtils: similar ： target  ==-0.8920496696827422，target_2 =  913210.2681545654， target_3 =  88949.0， target_4 = 0.5834650879458892, index = 64
+09-05 15:04:42.784 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4564051744589186，target_2 =  738098.5119739799， target_3 =  95252.0， target_4 = 0.247688888950625, index = 65
+09-05 15:04:42.784 11552 11622 I BitmapRecognizeUtils: similar ： target  ==-0.8608728248034528，target_2 =  1631073.3785593691， target_3 =  95120.0， target_4 = 0.507179948164645, index = 66
+09-05 15:04:42.784 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.6761940469041974，target_2 =  1236018.7287303119， target_3 =  98273.0， target_4 = 0.18963779283588914, index = 67
+09-05 15:04:42.785 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5126603479489197，target_2 =  541106.0551390721， target_3 =  94493.0， target_4 = 0.23438405697809842, index = 68
+09-05 15:04:42.785 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5490015014760496，target_2 =  134650.68686655085， target_3 =  83921.0， target_4 = 0.23467856372688242, index = 69
+09-05 15:04:42.785 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.39094421487804853，target_2 =  248166.83487918545， target_3 =  73947.0， target_4 = 0.33455008473659936, index = 70
+09-05 15:04:42.785 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5360615736448705，target_2 =  835547.4733923973， target_3 =  96499.0， target_4 = 0.22221216182814707, index = 71
+09-05 15:04:42.785 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.49513332870520343，target_2 =  430768.1714155646， target_3 =  88728.0， target_4 = 0.2584293435711412, index = 72
+09-05 15:04:42.786 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4506703124233015，target_2 =  508452.4186150529， target_3 =  86056.0， target_4 = 0.2874871559214536, index = 73
+09-05 15:04:42.786 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.4497990872831563，target_2 =  568946.852760891， target_3 =  89441.0， target_4 = 0.27388302735988623, index = 74
+09-05 15:04:42.786 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.446451749564014，target_2 =  547558.7377705461， target_3 =  85862.0， target_4 = 0.2825045255710741, index = 75
+09-05 15:04:42.786 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.37366228338584456，target_2 =  514092.8729850685， target_3 =  94583.0， target_4 = 0.2722210164941808, index = 76
+09-05 15:04:42.787 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.6429992145354143，target_2 =  700833.9065347186， target_3 =  96637.0， target_4 = 0.19792855699910936, index = 77
+09-05 15:04:42.787 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.6223670867944875，target_2 =  1111273.2550136247， target_3 =  96944.0， target_4 = 0.21048485580508397, index = 78
+09-05 15:04:42.787 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5878011354041789，target_2 =  533252.672547432， target_3 =  96208.0， target_4 = 0.2164818656879515, index = 79
+09-05 15:04:42.787 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.6638092610254469，target_2 =  1435688.779658964， target_3 =  98186.0， target_4 = 0.18541551277600193, index = 80
+09-05 15:04:42.788 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.6209998697813581，target_2 =  1141790.1788463227， target_3 =  97064.0， target_4 = 0.20988313712566928, index = 81
+09-05 15:04:42.788 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5730706807370031，target_2 =  511481.11915984383， target_3 =  96091.0， target_4 = 0.21950837935534562, index = 82
+09-05 15:04:42.788 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.6540026974196412，target_2 =  1278767.9796314065， target_3 =  98772.0， target_4 = 0.23778336757227794, index = 83
+09-05 15:04:42.788 11552 11622 I BitmapRecognizeUtils: similar ： target  ==-0.006003466929116043，target_2 =  498501.42424407834， target_3 =  72773.0， target_4 = 0.4440015119690477, index = 84
+09-05 15:04:42.789 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.23713717780446622，target_2 =  641269.6324358535， target_3 =  94724.0， target_4 = 0.32278069100325907, index = 85
+09-05 15:04:42.789 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.07328371587724385，target_2 =  708722.9656071863， target_3 =  88479.0， target_4 = 0.3869026005389368, index = 86
+09-05 15:04:42.789 11552 11622 I BitmapRecognizeUtils: similar ： target  ==-0.13953856153694266，target_2 =  588011.0265397679， target_3 =  80333.0， target_4 = 0.4335819910177108, index = 87
+09-05 15:04:42.789 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.2127880830196662，target_2 =  637299.4629930153， target_3 =  91360.0， target_4 = 0.3474749446343833, index = 88
+09-05 15:04:42.790 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.3522869796195608，target_2 =  1093027.946349462， target_3 =  97971.0， target_4 = 0.294566397193349, index = 89
+09-05 15:04:42.790 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.3842018163308071，target_2 =  728043.8004625594， target_3 =  82216.0， target_4 = 0.3293704467070344, index = 90
+09-05 15:04:42.790 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.5594575982795993，target_2 =  1225135.7322915432， target_3 =  98291.0， target_4 = 0.20948114827426548, index = 91
+09-05 15:04:42.790 11552 11622 I BitmapRecognizeUtils: similar ： target  ==0.37728578131538915，target_2 =  550904.0529110273， target_3 =  88273.0， target_4 = 0.2907966274466784, index = 92
+09-05 15:04:42.790 11552 11622 I BitmapRecognizeUtils: end to compare = 空
+09-05 15:09:01.550 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3376104871430449，target_2 =  443218.8529212846， target_3 =  100317.0， target_4 = 0.3457986137679159, index = 47
+09-05 15:09:01.551 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3761323980850147，target_2 =  716228.1609861803， target_3 =  111324.0， target_4 = 0.3440134786908827, index = 48
+09-05 15:09:01.551 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5819269165308601，target_2 =  352109.96037655696， target_3 =  121935.0， target_4 = 0.26835687587005225, index = 49
+09-05 15:09:01.551 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.6460242295126422，target_2 =  274494.280397394， target_3 =  123292.0， target_4 = 0.25102157336788256, index = 50
+09-05 15:09:01.551 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.26214996244067984，target_2 =  1484575.1788061296， target_3 =  116586.0， target_4 = 0.3611085456308795, index = 51
+09-05 15:09:01.552 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.28170925262993635，target_2 =  1000662.3213442647， target_3 =  106938.0， target_4 = 0.36933548897874874, index = 52
+09-05 15:09:01.552 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.45576405394279346，target_2 =  616201.7039471058， target_3 =  118618.0， target_4 = 0.30783785681167475, index = 53
+09-05 15:09:01.552 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35658182907211666，target_2 =  498104.8455724984， target_3 =  109080.0， target_4 = 0.32515885972868175, index = 54
+09-05 15:09:01.552 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5295537352550771，target_2 =  894775.112206472， target_3 =  124336.0， target_4 = 0.3151734688058778, index = 55
+09-05 15:09:01.553 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.47261577726457493，target_2 =  479832.7179911211， target_3 =  106370.0， target_4 = 0.36573215683438853, index = 56
+09-05 15:09:01.553 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35338574825965885，target_2 =  892833.064237287， target_3 =  112722.0， target_4 = 0.3456041446696807, index = 57
+09-05 15:09:01.553 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.45603031757799023，target_2 =  860578.4546165053， target_3 =  122024.0， target_4 = 0.31357647237417763, index = 58
+09-05 15:09:01.553 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.40681960628842384，target_2 =  504336.8675867408， target_3 =  107954.0， target_4 = 0.3321538475097743, index = 59
+09-05 15:09:01.554 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.586981897498667，target_2 =  498451.04912589665， target_3 =  127489.0， target_4 = 0.26577097926261956, index = 60
+09-05 15:09:01.554 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35670831769984，target_2 =  657242.8428536901， target_3 =  111638.0， target_4 = 0.335109612499857, index = 61
+09-05 15:09:01.554 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.48965871369691627，target_2 =  744716.6436224403， target_3 =  118094.0， target_4 = 0.3233588626025851, index = 62
+09-05 15:09:01.554 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.37886333415491397，target_2 =  982773.3577731854， target_3 =  115768.0， target_4 = 0.34082174939767523, index = 63
+09-05 15:09:01.555 12228 12648 I BitmapRecognizeUtils: similar ： target  ==-0.24961191045021244，target_2 =  943316.5315582048， target_3 =  112653.0， target_4 = 0.597494219688298, index = 64
+09-05 15:09:01.555 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4181022387668156，target_2 =  873859.1895140989， target_3 =  120248.0， target_4 = 0.3236725554487138, index = 65
+09-05 15:09:01.555 12228 12648 I BitmapRecognizeUtils: similar ： target  ==-0.14416957816373105，target_2 =  1906728.2709644197， target_3 =  133720.0， target_4 = 0.5369050226508105, index = 66
+09-05 15:09:01.555 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2774632896614606，target_2 =  1900937.7774729321， target_3 =  123669.0， target_4 = 0.3475424231691675, index = 67
+09-05 15:09:01.556 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35592422631351145，target_2 =  841825.7138236794， target_3 =  112374.0， target_4 = 0.3494282911980956, index = 68
+09-05 15:09:01.556 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3830551998410055，target_2 =  219939.3491369924， target_3 =  93138.0， target_4 = 0.32824739094049954, index = 69
+09-05 15:09:01.556 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3333274111798326，target_2 =  422956.3255580259， target_3 =  91276.0， target_4 = 0.38123539624164526, index = 70
+09-05 15:09:01.556 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.39986759793137533，target_2 =  1078139.2211935865， target_3 =  122372.0， target_4 = 0.31790464309200833, index = 71
+09-05 15:09:01.557 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2884815044611218，target_2 =  774645.4076535753， target_3 =  104065.0， target_4 = 0.36597327066016466, index = 72
+09-05 15:09:01.557 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2690518434990027，target_2 =  652475.1461722042， target_3 =  99057.0， target_4 = 0.3740567482934407, index = 73
+09-05 15:09:01.557 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3351636974680981，target_2 =  676439.8128280842， target_3 =  108228.0， target_4 = 0.34500198220006173, index = 74
+09-05 15:09:01.557 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3990080846565454，target_2 =  643179.1766845214， target_3 =  110976.0， target_4 = 0.3387355832973989, index = 75
+09-05 15:09:01.558 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.32041125865748993，target_2 =  519735.28744900395， target_3 =  105358.0， target_4 = 0.3385067054019646, index = 76
+09-05 15:09:01.558 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3731367957598728，target_2 =  1121710.7667207692， target_3 =  120146.0， target_4 = 0.3399465161921264, index = 77
+09-05 15:09:01.558 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3088077206611756，target_2 =  1996443.2408519608， target_3 =  124314.0， target_4 = 0.35650360521986524, index = 78
+09-05 15:09:01.559 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35037765755172834，target_2 =  857506.7221414393， target_3 =  113403.0， target_4 = 0.3393959873303175, index = 79
+09-05 15:09:01.559 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.34529744535710405，target_2 =  2164550.9872071138， target_3 =  129067.0， target_4 = 0.3321856468589499, index = 80
+09-05 15:09:01.559 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.31015017686868546，target_2 =  2037439.26877071， target_3 =  124884.0， target_4 = 0.3553973104009447, index = 81
+09-05 15:09:01.560 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3574571617241975，target_2 =  812897.9778428714， target_3 =  113473.0， target_4 = 0.33557661937253636, index = 82
+09-05 15:09:01.561 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.10139014577537074，target_2 =  3263452.239803903， target_3 =  122279.0， target_4 = 0.4141193119212309, index = 83
+09-05 15:09:01.561 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.44109755852877564，target_2 =  312994.1814626971， target_3 =  107787.0， target_4 = 0.40494020045943824, index = 84
+09-05 15:09:01.561 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.37675145556422046，target_2 =  743899.8763226779， target_3 =  120829.0， target_4 = 0.3869585050651145, index = 85
+09-05 15:09:01.562 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3006379952128088，target_2 =  664120.6861458361， target_3 =  115952.0， target_4 = 0.41527588363793255, index = 86
+09-05 15:09:01.562 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4610413479668789，target_2 =  402452.53497304494， target_3 =  118756.0， target_4 = 0.4092346294387928, index = 87
+09-05 15:09:01.562 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.18838182545211846，target_2 =  803540.2661005397， target_3 =  108468.0， target_4 = 0.4213404626606009, index = 88
+09-05 15:09:01.562 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3577928380439457，target_2 =  1325826.0665160257， target_3 =  127669.0， target_4 = 0.3746441073853319, index = 89
+09-05 15:09:01.563 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.47124494991857674，target_2 =  753728.9077063139， target_3 =  115112.0， target_4 = 0.33339355994809033, index = 90
+09-05 15:09:01.563 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.44284436056264964，target_2 =  1552235.327764964， target_3 =  130369.0， target_4 = 0.3081805715216506, index = 91
+09-05 15:09:01.563 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.37637144149113455，target_2 =  842284.9491604897， target_3 =  108042.0， target_4 = 0.35729525811632057, index = 92
+09-05 15:09:01.563 12228 12648 I BitmapRecognizeUtils: end to compare = 提神水晶
+09-05 15:09:01.563 12228 12648 I BitmapRecognizeUtils: start to compare
+09-05 15:09:01.564 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.8318799181087554，target_2 =  45969.74153199327， target_3 =  155190.0， target_4 = 0.15435287011302484, index = 0
+09-05 15:09:01.565 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.16012470794869518，target_2 =  313588.07639723376， target_3 =  78067.0， target_4 = 0.5170836834725927, index = 1
+09-05 15:09:01.565 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.42586281658933905，target_2 =  197592.01024623035， target_3 =  106483.0， target_4 = 0.327757320686093, index = 2
+09-05 15:09:01.565 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.06910513105687716，target_2 =  498998.138613632， target_3 =  83214.0， target_4 = 0.433774597555149, index = 3
+09-05 15:09:01.566 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3136154796122759，target_2 =  457778.36180375563， target_3 =  143187.0， target_4 = 0.30764789545039967, index = 4
+09-05 15:09:01.567 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5309910710772566，target_2 =  279764.1426352856， target_3 =  144635.0， target_4 = 0.27472530505874876, index = 5
+09-05 15:09:01.567 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.45485902639809606，target_2 =  397075.4850245076， target_3 =  140294.0， target_4 = 0.2885837063013286, index = 6
+09-05 15:09:01.567 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.22475444531584365，target_2 =  346110.12993293005， target_3 =  98389.0， target_4 = 0.38872055303916253, index = 7
+09-05 15:09:01.568 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2804448845046913，target_2 =  417120.5781833381， target_3 =  121889.0， target_4 = 0.36145700726283975, index = 8
+09-05 15:09:01.569 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4878756169213399，target_2 =  605928.0524615997， target_3 =  159858.0， target_4 = 0.27559949611300383, index = 9
+09-05 15:09:01.569 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4188756270087914，target_2 =  136861.31121748104， target_3 =  100688.0， target_4 = 0.31335210662593826, index = 10
+09-05 15:09:01.569 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.42832542378874106，target_2 =  615285.6253787667， target_3 =  135362.0， target_4 = 0.33435299403243224, index = 11
+09-05 15:09:01.570 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.32651068109368336，target_2 =  1283926.0504257998， target_3 =  165566.0， target_4 = 0.30532153377917215, index = 12
+09-05 15:09:01.570 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.39497149963946593，target_2 =  380989.6012107229， target_3 =  126900.0， target_4 = 0.32117281273142706, index = 13
+09-05 15:09:01.570 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.44807133090247936，target_2 =  448099.1510869889， target_3 =  160836.0， target_4 = 0.2642315730683287, index = 14
+09-05 15:09:01.571 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2902017881607548，target_2 =  286702.74663902336， target_3 =  96145.0， target_4 = 0.37053716208228155, index = 15
+09-05 15:09:01.571 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.400074036719104，target_2 =  332873.0894292531， target_3 =  136129.0， target_4 = 0.3004748870751346, index = 16
+09-05 15:09:01.571 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5596943854065253，target_2 =  253066.80353178916， target_3 =  156887.0， target_4 = 0.24200835411854626, index = 17
+09-05 15:09:01.571 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.47114417394008823，target_2 =  307806.3534077572， target_3 =  132682.0， target_4 = 0.30935002115541926, index = 18
+09-05 15:09:01.572 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.27634184407015283，target_2 =  220344.12487263206， target_3 =  88739.0， target_4 = 0.4159785406365702, index = 19
+09-05 15:09:01.572 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.24579981613947874，target_2 =  525418.8850210903， target_3 =  145429.0， target_4 = 0.31219963060788486, index = 20
+09-05 15:09:01.572 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35298330895991936，target_2 =  479527.71030003135， target_3 =  142120.0， target_4 = 0.311135415958116, index = 21
+09-05 15:09:01.572 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.33331065924125547，target_2 =  314974.5680308017， target_3 =  113481.0， target_4 = 0.4566495885388962, index = 22
+09-05 15:09:01.573 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.568553255547567，target_2 =  326696.4455047357， target_3 =  154347.0， target_4 = 0.26472402060024375, index = 23
+09-05 15:09:01.573 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3812744706079115，target_2 =  269619.19620181184， target_3 =  127024.0， target_4 = 0.3129293793501595, index = 24
+09-05 15:09:01.573 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.37072990870393685，target_2 =  293217.7860683528， target_3 =  122863.0， target_4 = 0.3238942610484405, index = 25
+09-05 15:09:01.573 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.43794937831329067，target_2 =  271244.85745416756， target_3 =  145197.0， target_4 = 0.27834823722053087, index = 26
+09-05 15:09:01.574 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5815234917571558，target_2 =  404585.21277577715， target_3 =  148623.0， target_4 = 0.2842265824736133, index = 27
+09-05 15:09:01.574 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.33207581161417377，target_2 =  281759.4300082769， target_3 =  132132.0， target_4 = 0.2953711330370405, index = 28
+09-05 15:09:01.574 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.36646272369881283，target_2 =  153060.25005929594， target_3 =  104970.0， target_4 = 0.36819499148406176, index = 29
+09-05 15:09:01.574 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4444884334907252，target_2 =  338992.123012579， target_3 =  143375.0， target_4 = 0.29490795134955233, index = 30
+09-05 15:09:01.575 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.38625612242545004，target_2 =  414324.1086517846， target_3 =  146094.0， target_4 = 0.3019407656763203, index = 31
+09-05 15:09:01.575 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.49179447845759416，target_2 =  165308.79106938856， target_3 =  143436.0， target_4 = 0.24674858339338065, index = 32
+09-05 15:09:01.575 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35020637153663176，target_2 =  259113.7965619465， target_3 =  107826.0， target_4 = 0.3544890675518073, index = 33
+09-05 15:09:01.575 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.340457429271271，target_2 =  685468.4980049559， target_3 =  154760.0， target_4 = 0.304418169936322, index = 34
+09-05 15:09:01.575 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5917537862529675，target_2 =  59073.4099163228， target_3 =  96207.0， target_4 = 0.19330926080170513, index = 35
+09-05 15:09:01.576 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.32777454577122633，target_2 =  601378.5962584475， target_3 =  150467.0， target_4 = 0.3063976302254224, index = 36
+09-05 15:09:01.576 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.34720684231372406，target_2 =  477468.31199101097， target_3 =  133806.0， target_4 = 0.32817997105084934, index = 37
+09-05 15:09:01.576 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4174206893788914，target_2 =  195671.29345562615， target_3 =  121020.0， target_4 = 0.3047337702558074, index = 38
+09-05 15:09:01.576 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4097322177258372，target_2 =  548504.6746453587， target_3 =  162119.0， target_4 = 0.2709029114981077, index = 39
+09-05 15:09:01.577 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5688234524880043，target_2 =  316499.0186884051， target_3 =  152559.0， target_4 = 0.2655577390067264, index = 40
+09-05 15:09:01.577 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4249927390672222，target_2 =  617907.778130648， target_3 =  156460.0， target_4 = 0.28962574818590386, index = 41
+09-05 15:09:01.577 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.32264689345094677，target_2 =  292750.7385409785， target_3 =  120207.0， target_4 = 0.33202815711541, index = 42
+09-05 15:09:01.577 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.38794296973175324，target_2 =  231695.6193997723， target_3 =  126421.0， target_4 = 0.3025798920510621, index = 43
+09-05 15:09:01.577 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3050164982037404，target_2 =  1012700.3841965683， target_3 =  157333.0， target_4 = 0.32177685414052665, index = 44
+09-05 15:09:01.578 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35431969110494643，target_2 =  543668.7064329865， target_3 =  154836.0， target_4 = 0.2901390156219635, index = 45
+09-05 15:09:01.578 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4357868100410842，target_2 =  773228.5598722441， target_3 =  160485.0， target_4 = 0.2904248316854411, index = 46
+09-05 15:09:01.578 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.5473023146796441，target_2 =  168150.11813910492， target_3 =  138901.0， target_4 = 0.2649402570651921, index = 47
+09-05 15:09:01.578 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3197132551135746，target_2 =  423436.308896766， target_3 =  131571.0， target_4 = 0.34290090819073227, index = 48
+09-05 15:09:01.579 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.433124929674813，target_2 =  233746.9880327789， target_3 =  140998.0， target_4 = 0.27778297922990647, index = 49
+09-05 15:09:01.579 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.42509132646052883，target_2 =  275810.04175810557， target_3 =  125649.0， target_4 = 0.31292372277470465, index = 50
+09-05 15:09:01.579 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.382789692254161，target_2 =  533696.4386972741， target_3 =  151601.0， target_4 = 0.29336657206509215, index = 51
+09-05 15:09:01.579 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2993352068178057，target_2 =  442207.52246225695， target_3 =  135779.0， target_4 = 0.32398687817725846, index = 52
+09-05 15:09:01.580 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3169971262672443，target_2 =  346076.8680427486， target_3 =  139616.0， target_4 = 0.29930136142585595, index = 53
+09-05 15:09:01.580 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35754658382650184，target_2 =  303405.5642640966， target_3 =  134772.0， target_4 = 0.2967689465166206, index = 54
+09-05 15:09:01.580 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.30034434568404583，target_2 =  674339.9645871671， target_3 =  137985.0， target_4 = 0.3621403336465781, index = 55
+09-05 15:09:01.580 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.38128264618350244，target_2 =  330536.18483772303， target_3 =  121135.0， target_4 = 0.36592673549512594, index = 56
+09-05 15:09:01.580 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.32395939647434685，target_2 =  336673.6915802， target_3 =  133997.0， target_4 = 0.3158333676948134, index = 57
+09-05 15:09:01.581 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35271346965283706，target_2 =  492620.21046970383， target_3 =  147137.0， target_4 = 0.30134186288086795, index = 58
+09-05 15:09:01.581 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3972099683506548，target_2 =  374581.8853422969， target_3 =  131276.0， target_4 = 0.3119281574745421, index = 59
+09-05 15:09:01.581 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4177425114721163，target_2 =  399632.9760671226， target_3 =  151164.0， target_4 = 0.2815840021331946, index = 60
+09-05 15:09:01.581 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4664709433943753，target_2 =  313367.7620548779， target_3 =  146416.0， target_4 = 0.2601805692359522, index = 61
+09-05 15:09:01.582 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.40262585705708426，target_2 =  438967.2398768453， target_3 =  144177.0， target_4 = 0.3090184868371204, index = 62
+09-05 15:09:01.582 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4000744224260604，target_2 =  419864.0287401185， target_3 =  148588.0， target_4 = 0.28665052612906755, index = 63
+09-05 15:09:01.582 12228 12648 I BitmapRecognizeUtils: similar ： target  ==-0.5192796677640612，target_2 =  622195.8009605446， target_3 =  128029.0， target_4 = 0.5985042755361349, index = 64
+09-05 15:09:01.582 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4322449958957609，target_2 =  434615.28130385047， target_3 =  154009.0， target_4 = 0.27925478320656105, index = 65
+09-05 15:09:01.582 12228 12648 I BitmapRecognizeUtils: similar ： target  ==-0.48483161971488825，target_2 =  1087333.510536756， target_3 =  160750.0， target_4 = 0.5282377163583182, index = 66
+09-05 15:09:01.583 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4886581472428593，target_2 =  671714.1580148749， target_3 =  172512.0， target_4 = 0.24351332156545122, index = 67
+09-05 15:09:01.583 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.4038525439666401，target_2 =  294142.12547429535， target_3 =  146150.0， target_4 = 0.2816575713189047, index = 68
+09-05 15:09:01.583 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3023597959614857，target_2 =  141199.30150512987， target_3 =  111373.0， target_4 = 0.31099772103130974, index = 69
+09-05 15:09:01.583 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.43769095222551124，target_2 =  179378.51805560564， target_3 =  111946.0， target_4 = 0.31879381217967556, index = 70
+09-05 15:09:01.584 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.35945392934656006，target_2 =  576183.0493783554， target_3 =  157570.0， target_4 = 0.28361495616999066, index = 71
+09-05 15:09:01.584 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.30226755810320727，target_2 =  271882.05859778833， target_3 =  130514.0， target_4 = 0.3151925799281213, index = 72
+09-05 15:09:01.584 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3820537724483814，target_2 =  250736.40813645307， target_3 =  130819.0， target_4 = 0.31066267089092264, index = 73
+09-05 15:09:01.584 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.347131623177362，target_2 =  360914.30980878224， target_3 =  140096.0， target_4 = 0.3056627401856151, index = 74
+09-05 15:09:01.585 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.47829440133217704，target_2 =  302227.6132581475， target_3 =  141487.0， target_4 = 0.28932628123525045, index = 75
+09-05 15:09:01.585 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.40691830734760925，target_2 =  326083.15789833607， target_3 =  138123.0， target_4 = 0.2792889047350411, index = 76
+09-05 15:09:01.585 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3375544496528455，target_2 =  449183.70806330757， target_3 =  153148.0， target_4 = 0.2867546176819781, index = 77
+09-05 15:09:01.585 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.42323531392766156，target_2 =  695926.5004409114， target_3 =  164316.0， target_4 = 0.2764726734588643, index = 78
+09-05 15:09:01.586 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2462961292828391，target_2 =  393093.6419414968， target_3 =  137866.0， target_4 = 0.3125004908610799, index = 79
+09-05 15:09:01.586 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.36312101470400665，target_2 =  929208.3104864699， target_3 =  169142.0， target_4 = 0.2718497053048615, index = 80
+09-05 15:09:01.586 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.43297101803771804，target_2 =  707065.6399919639， target_3 =  166167.0， target_4 = 0.2728534062072874, index = 81
+09-05 15:09:01.586 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2388650109288778，target_2 =  379457.1448605735， target_3 =  136108.0， target_4 = 0.3141275134254413, index = 82
+09-05 15:09:01.586 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.28239857602003443，target_2 =  824238.8547926245， target_3 =  162899.0， target_4 = 0.3222073132223739, index = 83
+09-05 15:09:01.587 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.06578870747059502，target_2 =  425209.49869022483， target_3 =  107399.0， target_4 = 0.46524982857934344, index = 84
+09-05 15:09:01.587 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3215115726412235，target_2 =  367484.72065453464， target_3 =  152878.0， target_4 = 0.35159018840714756, index = 85
+09-05 15:09:01.587 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.2949201615360746，target_2 =  378053.51564116107， target_3 =  145305.0， target_4 = 0.3907072408460984, index = 86
+09-05 15:09:01.587 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.018232301405152362，target_2 =  416729.7383663918， target_3 =  119245.0， target_4 = 0.4555032093153032, index = 87
+09-05 15:09:01.588 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.14932352000642202，target_2 =  446230.9871057683， target_3 =  138713.0， target_4 = 0.39151517927849455, index = 88
+09-05 15:09:01.588 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.24269692184446265，target_2 =  798572.1473830387， target_3 =  162906.0， target_4 = 0.34688172949174706, index = 89
+09-05 15:09:01.588 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3983002342837908，target_2 =  438368.94952884497， target_3 =  132299.0， target_4 = 0.3348973887738194, index = 90
+09-05 15:09:01.588 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3502370067631444，target_2 =  765559.3645357769， target_3 =  162377.0， target_4 = 0.281612148617153, index = 91
+09-05 15:09:01.588 12228 12648 I BitmapRecognizeUtils: similar ： target  ==0.3259775411126885，target_2 =  369214.3670248299， target_3 =  129405.0， target_4 = 0.327851328608243, index = 92
+09-05 15:09:01.588 12228 12648 I BitmapRecognizeUtils: end to compare = 铁剑
+09-05 15:12:21.876 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@2351f42, index = 1
+09-05 15:12:21.880 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@c379c90, index = 2
+09-05 15:12:21.883 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@df9ed8e, index = 3
+09-05 15:12:21.887 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@821f1bc, index = 4
+09-05 15:12:21.890 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@62b549a, index = 5
+09-05 15:12:21.893 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@9fa6da8, index = 6
+09-05 15:12:21.896 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@5da2066, index = 7
+09-05 15:12:21.899 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e5cbc54, index = 8
+09-05 15:12:21.903 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@657dcf2, index = 9
+09-05 15:12:21.907 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@df349c0, index = 10
+09-05 15:12:21.909 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@282d63e, index = 11
+09-05 15:12:21.913 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@fa341ec, index = 12
+09-05 15:12:21.916 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@2d2184a, index = 13
+09-05 15:12:21.918 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@17890d8, index = 14
+09-05 15:12:21.922 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e216f16, index = 15
+09-05 15:12:21.926 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@451e284, index = 16
+09-05 15:12:21.930 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@b3d66a2, index = 17
+09-05 15:12:21.934 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@64ca2f0, index = 18
+09-05 15:12:21.937 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@f2f4aee, index = 19
+09-05 15:12:21.941 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@7f0fe1c, index = 20
+09-05 15:12:21.945 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@44927fa, index = 21
+09-05 15:12:21.948 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@81de008, index = 22
+09-05 15:12:21.952 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@5f1c9c6, index = 23
+09-05 15:12:21.956 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@2b4f4b4, index = 24
+09-05 15:12:21.960 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@d30bc52, index = 25
+09-05 15:12:21.964 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e06a820, index = 26
+09-05 15:12:21.966 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@9fa4b9e, index = 27
+09-05 15:12:21.969 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@2fe264c, index = 28
+09-05 15:12:21.973 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@53b83aa, index = 29
+09-05 15:12:21.977 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@c0d5b38, index = 30
+09-05 15:12:21.981 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@7a63076, index = 31
+09-05 15:12:21.984 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@6d8f2e4, index = 32
+09-05 15:12:21.988 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@13cde02, index = 33
+09-05 15:12:21.994 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@4a45950, index = 34
+09-05 15:12:21.997 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@d9ed84e, index = 35
+09-05 15:12:21.999 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@57dba7c, index = 36
+09-05 15:12:22.001 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@1142b5a, index = 37
+09-05 15:12:22.005 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@a2a0268, index = 38
+09-05 15:12:22.009 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@a59a326, index = 39
+09-05 15:12:22.013 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@8d0dd14, index = 40
+09-05 15:12:22.017 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@52ccbb2, index = 41
+09-05 15:12:22.020 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@68b680, index = 42
+09-05 15:12:22.024 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@997f0fe, index = 43
+09-05 15:12:22.028 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@6e2baac, index = 44
+09-05 15:12:22.032 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@3fe1f0a, index = 45
+09-05 15:12:22.035 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e16d598, index = 46
+09-05 15:12:22.038 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@1e721d6, index = 47
+09-05 15:12:22.041 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@b6fb344, index = 48
+09-05 15:12:22.045 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@f8b8562, index = 49
+09-05 15:12:22.049 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e56bfb0, index = 50
+09-05 15:12:22.052 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@22095ae, index = 51
+09-05 15:12:22.055 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@16026dc, index = 52
+09-05 15:12:22.059 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@ae45eba, index = 53
+09-05 15:12:22.062 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@236d4c8, index = 54
+09-05 15:12:22.066 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@ee9ac86, index = 55
+09-05 15:12:22.069 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@c487574, index = 56
+09-05 15:12:22.073 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@fa40b12, index = 57
+09-05 15:12:22.075 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@23174e0, index = 58
+09-05 15:12:22.078 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@33c65e, index = 59
+09-05 15:12:22.080 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@1e8ff0c, index = 60
+09-05 15:12:22.083 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@371ea6a, index = 61
+09-05 15:12:22.087 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@facfff8, index = 62
+09-05 15:12:22.090 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@ebc4336, index = 63
+09-05 15:12:22.094 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@3ae23a4, index = 64
+09-05 15:12:22.096 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@d815cc2, index = 65
+09-05 15:12:22.099 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@67bd610, index = 66
+09-05 15:12:22.101 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@18c830e, index = 67
+09-05 15:12:22.105 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@830433c, index = 68
+09-05 15:12:22.109 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@c11c21a, index = 69
+09-05 15:12:22.116 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e5c5728, index = 70
+09-05 15:12:22.120 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@b79e5e6, index = 71
+09-05 15:12:22.124 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@4b3bdd4, index = 72
+09-05 15:12:22.128 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@9ee7a72, index = 73
+09-05 15:12:22.132 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@c78e340, index = 74
+09-05 15:12:22.136 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@8a5cbbe, index = 75
+09-05 15:12:22.139 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@6a8f36c, index = 76
+09-05 15:12:22.142 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@3eee5ca, index = 77
+09-05 15:12:22.145 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@4e7da58, index = 78
+09-05 15:12:22.148 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@bfd9496, index = 79
+09-05 15:12:22.151 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@d2c4404, index = 80
+09-05 15:12:22.164 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@e766422, index = 81
+09-05 15:12:22.167 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@c2b9c70, index = 82
+09-05 15:12:22.170 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@cbaa06e, index = 83
+09-05 15:12:22.173 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@2860f9c, index = 84
+09-05 15:12:22.175 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@af4557a, index = 85
+09-05 15:12:22.177 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@8b28988, index = 86
+09-05 15:12:22.180 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@3e24f46, index = 87
+09-05 15:12:22.182 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@5aab634, index = 88
+09-05 15:12:22.184 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@d6419d2, index = 89
+09-05 15:12:22.186 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@45701a0, index = 90
+09-05 15:12:22.189 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@9c6011e, index = 91
+09-05 15:12:22.191 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@3ba97cc, index = 92
+09-05 15:12:22.203 13373 13373 I BitmapRecognizeUtils: initBitmapList = bitmap = android.graphics.Bitmap@1cd112a, index = 93
+09-05 15:12:22.204 13373 13373 I BitmapRecognizeUtils: mListName size = 93
+09-05 15:12:22.382 13373 13945 I BitmapRecognizeUtils: start to compare
+09-05 15:12:22.387 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37497344631556434，target_2 =  150962.03842842113， target_3 =  137415.0， target_4 = 0.28545529572652334, index = 0
+09-05 15:12:22.389 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1687264288890417，target_2 =  284837.9260839342， target_3 =  85838.0， target_4 = 0.5156473580932301, index = 1
+09-05 15:12:22.390 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2971557744379013，target_2 =  229636.72375488936， target_3 =  111068.0， target_4 = 0.3685740747101665, index = 2
+09-05 15:12:22.392 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2966135691107106，target_2 =  389891.8287617942， target_3 =  102587.0， target_4 = 0.3978562601249636, index = 3
+09-05 15:12:22.393 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46894834013358383，target_2 =  310529.0947311361， target_3 =  177813.0， target_4 = 0.2803266202636923, index = 4
+09-05 15:12:22.393 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4526861461515635，target_2 =  304394.62145038287， target_3 =  161382.0， target_4 = 0.29450618490289965, index = 5
+09-05 15:12:22.394 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47598887023497943，target_2 =  265467.7568814936， target_3 =  157456.0， target_4 = 0.29363975478922455, index = 6
+09-05 15:12:22.395 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2335901655602228，target_2 =  312087.4251597896， target_3 =  110997.0， target_4 = 0.390770062732497, index = 7
+09-05 15:12:22.395 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47085205187530027，target_2 =  300421.5258681127， target_3 =  155884.0， target_4 = 0.3237681906242148, index = 8
+09-05 15:12:22.396 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4113811616488466，target_2 =  620322.3742580167， target_3 =  182399.0， target_4 = 0.3080063040226966, index = 9
+09-05 15:12:22.396 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3002882708869685，target_2 =  174865.57722375816， target_3 =  103831.0， target_4 = 0.34681040863477486, index = 10
+09-05 15:12:22.397 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4117777605546895，target_2 =  490809.4193856917， target_3 =  154994.0， target_4 = 0.3401070496924163, index = 11
+09-05 15:12:22.398 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36100534391903555，target_2 =  1084425.886336697， target_3 =  199366.0， target_4 = 0.32185363207627643, index = 12
+09-05 15:12:22.398 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3732186482151398，target_2 =  298608.7636244455， target_3 =  141068.0， target_4 = 0.33610789518716666, index = 13
+09-05 15:12:22.399 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41960833325667574，target_2 =  370545.21316615987， target_3 =  180223.0， target_4 = 0.2861715385163204, index = 14
+09-05 15:12:22.400 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2526104889703169，target_2 =  282962.8606588015， target_3 =  101677.0， target_4 = 0.38401043721539085, index = 15
+09-05 15:12:22.400 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43403691114285514，target_2 =  254196.9582611034， target_3 =  157589.0， target_4 = 0.2997812438642709, index = 16
+09-05 15:12:22.401 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39896583488648885，target_2 =  338050.3749137783， target_3 =  169499.0， target_4 = 0.2901386461013274, index = 17
+09-05 15:12:22.402 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41803250300116296，target_2 =  322237.73166570807， target_3 =  147750.0， target_4 = 0.32343535906860693, index = 18
+09-05 15:12:22.403 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1685988407337985，target_2 =  324584.3045533036， target_3 =  92287.0， target_4 = 0.4468146828558461, index = 19
+09-05 15:12:22.415 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26026856651081104，target_2 =  648893.930403832， target_3 =  171879.0， target_4 = 0.32564228896455927, index = 20
+09-05 15:12:22.415 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4196514980312588，target_2 =  398729.91740948614， target_3 =  168838.0， target_4 = 0.30213769725776246, index = 21
+09-05 15:12:22.415 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41628257796190543，target_2 =  323559.83381593175， target_3 =  137241.0， target_4 = 0.4350571170626438, index = 22
+09-05 15:12:22.416 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5404271831169952，target_2 =  287278.197585594， target_3 =  183242.0， target_4 = 0.26332497929108745, index = 23
+09-05 15:12:22.416 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4519729161431543，target_2 =  200170.8106201854， target_3 =  144577.0， target_4 = 0.30164161355611335, index = 24
+09-05 15:12:22.416 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41988694709057806，target_2 =  252362.17288667988， target_3 =  140780.0， target_4 = 0.3192065679168621, index = 25
+09-05 15:12:22.417 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3546515637572123，target_2 =  278828.13800265227， target_3 =  160337.0， target_4 = 0.3001068483475313, index = 26
+09-05 15:12:22.417 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42430506291110875，target_2 =  340327.68702690647， target_3 =  160901.0， target_4 = 0.32381727026444823, index = 27
+09-05 15:12:22.418 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42347512763408734，target_2 =  227004.76859338177， target_3 =  150154.0， target_4 = 0.28965361306539705, index = 28
+09-05 15:12:22.418 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39439437259743，target_2 =  175669.71396472343， target_3 =  118502.0， target_4 = 0.3637035998985939, index = 29
+09-05 15:12:22.418 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4286037841861901，target_2 =  301909.4227696788， target_3 =  164195.0， target_4 = 0.3061030643005373, index = 30
+09-05 15:12:22.419 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39168836948798447，target_2 =  445488.5583355908， target_3 =  169127.0， target_4 = 0.32082537725243826, index = 31
+09-05 15:12:22.419 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5332819892065734，target_2 =  145031.31940841675， target_3 =  160172.0， target_4 = 0.24204766980827003, index = 32
+09-05 15:12:22.420 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46264461983784216，target_2 =  194195.27625032808， target_3 =  127231.0， target_4 = 0.3176142999238821, index = 33
+09-05 15:12:22.420 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3121570950320152，target_2 =  830843.6783166641， target_3 =  179157.0， target_4 = 0.3264333893541084, index = 34
+09-05 15:12:22.420 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5183419365224574，target_2 =  114122.58544445183， target_3 =  92285.0， target_4 = 0.2372546269212719, index = 35
+09-05 15:12:22.421 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4671103098953742，target_2 =  469038.3844867289， target_3 =  190421.0， target_4 = 0.2843061358745212, index = 36
+09-05 15:12:22.421 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3525341614969119，target_2 =  382746.0085228303， target_3 =  151956.0， target_4 = 0.3298588267830761, index = 37
+09-05 15:12:22.422 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43448997961047015，target_2 =  198051.5025971438， target_3 =  136071.0， target_4 = 0.3134257541021319, index = 38
+09-05 15:12:22.423 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45961573819278806，target_2 =  529577.9028529007， target_3 =  193638.0， target_4 = 0.2741110630658402, index = 39
+09-05 15:12:22.423 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4001835995260423，target_2 =  353212.74133429007， target_3 =  161848.0， target_4 = 0.3117486034769512, index = 40
+09-05 15:12:22.426 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4542723153204114，target_2 =  488969.32263395237， target_3 =  184744.0， target_4 = 0.29713628677964316, index = 41
+09-05 15:12:22.427 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30164224833830217，target_2 =  316324.5436827607， target_3 =  132546.0， target_4 = 0.3483677815909368, index = 42
+09-05 15:12:22.427 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2981268999430772，target_2 =  342873.31473604083， target_3 =  134747.0， target_4 = 0.3390674112648214, index = 43
+09-05 15:12:22.427 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.261723812393732，target_2 =  1124507.654593097， target_3 =  179500.0， target_4 = 0.34874662794198136, index = 44
+09-05 15:12:22.429 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4486748146701924，target_2 =  533092.0861869323， target_3 =  189124.0， target_4 = 0.2864619341124242, index = 45
+09-05 15:12:22.431 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3358805596066985，target_2 =  590167.9668144078， target_3 =  177209.0， target_4 = 0.32413582188143103, index = 46
+09-05 15:12:22.431 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35717224495941335，target_2 =  238971.72487038438， target_3 =  142730.0， target_4 = 0.31582929852833463, index = 47
+09-05 15:12:22.431 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6017636276145262，target_2 =  215057.78234391683， target_3 =  175023.0， target_4 = 0.27989121849463083, index = 48
+09-05 15:12:22.432 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5162615075785634，target_2 =  155118.0621015758， target_3 =  167274.0， target_4 = 0.26040799293075884, index = 49
+09-05 15:12:22.432 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45044103591363166，target_2 =  235208.48056835725， target_3 =  143246.0， target_4 = 0.3127028521899021, index = 50
+09-05 15:12:22.432 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43291060886020893，target_2 =  529670.9646540505， target_3 =  183671.0， target_4 = 0.2999853707782151, index = 51
+09-05 15:12:22.433 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3886334852169269，target_2 =  413141.49122559174， target_3 =  164138.0， target_4 = 0.3133732585339023, index = 52
+09-05 15:12:22.433 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.505673300947727，target_2 =  302817.1464883234， target_3 =  173752.0， target_4 = 0.26841540668889563, index = 53
+09-05 15:12:22.433 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5277735045831529，target_2 =  191784.68143251003， target_3 =  163417.0， target_4 = 0.2650029128304989, index = 54
+09-05 15:12:22.434 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36684143328814595，target_2 =  557488.8825311994， target_3 =  166448.0， target_4 = 0.34913431295770037, index = 55
+09-05 15:12:22.434 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3020139116225519，target_2 =  324974.95052889123， target_3 =  134034.0， target_4 = 0.39428002453289795, index = 56
+09-05 15:12:22.434 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4212932645226036，target_2 =  317325.0451974297， target_3 =  162691.0， target_4 = 0.3066250795558825, index = 57
+09-05 15:12:22.435 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.430676412967105，target_2 =  389972.40201682743， target_3 =  175807.0， target_4 = 0.29264215135362615, index = 58
+09-05 15:12:22.437 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37234892876457065，target_2 =  275720.1279235609， target_3 =  144356.0， target_4 = 0.32494784626358747, index = 59
+09-05 15:12:22.438 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4467972639037584，target_2 =  369014.94902724354， target_3 =  175249.0， target_4 = 0.28225561083169454, index = 60
+09-05 15:12:22.439 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.484597956817705，target_2 =  194063.06583949656， target_3 =  167295.0， target_4 = 0.2665119178567678, index = 61
+09-05 15:12:22.439 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2898147168844768，target_2 =  440606.2570248131， target_3 =  156917.0， target_4 = 0.34425322102548495, index = 62
+09-05 15:12:22.440 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.40560845201489204，target_2 =  294781.87014136766， target_3 =  169165.0， target_4 = 0.2993084806104268, index = 63
+09-05 15:12:22.441 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.4956166722812887，target_2 =  753328.5409893007， target_3 =  143505.0， target_4 = 0.6036757696881407, index = 64
+09-05 15:12:22.441 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4441258948128421，target_2 =  316244.65079322376， target_3 =  176118.0， target_4 = 0.2837706401648735, index = 65
+09-05 15:12:22.441 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.44437613715501234，target_2 =  1138318.3160591251， target_3 =  189016.0， target_4 = 0.5332984775163249, index = 66
+09-05 15:12:22.442 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6451196446839556，target_2 =  376709.35011422954， target_3 =  223172.0， target_4 = 0.21773014909415458, index = 67
+09-05 15:12:22.442 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26107347406612214，target_2 =  386851.7757449147， target_3 =  154401.0， target_4 = 0.3338520422915568, index = 68
+09-05 15:12:22.442 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4930708725499069，target_2 =  135219.26811201152， target_3 =  125041.0， target_4 = 0.28507570683531014, index = 69
+09-05 15:12:22.445 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6070967134775281，target_2 =  109908.97188936087， target_3 =  134608.0， target_4 = 0.2657133402191685, index = 70
+09-05 15:12:22.445 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3572466173374302，target_2 =  556372.8831855169， target_3 =  183091.0， target_4 = 0.3026103318882316, index = 71
+09-05 15:12:22.445 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5400996020352329，target_2 =  170025.38868026703， target_3 =  164817.0， target_4 = 0.25732169925336257, index = 72
+09-05 15:12:22.446 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5730894101045525，target_2 =  161407.25241245984， target_3 =  167433.0， target_4 = 0.26564828467630125, index = 73
+09-05 15:12:22.446 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.8248425294158065，target_2 =  57832.53438285846， target_3 =  202365.0， target_4 = 0.16297935701037405, index = 74
+09-05 15:12:22.446 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5645921329038739，target_2 =  170718.23350039913， target_3 =  171993.0， target_4 = 0.25883227274102427, index = 75
+09-05 15:12:22.447 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.48671944608641393，target_2 =  162108.00036633434， target_3 =  154904.0， target_4 = 0.2730142459515558, index = 76
+09-05 15:12:22.447 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4337311397325755，target_2 =  519756.602457654， target_3 =  189659.0， target_4 = 0.2932748390009164, index = 77
+09-05 15:12:22.447 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3498848861466536，target_2 =  725538.5166747809， target_3 =  191450.0， target_4 = 0.3081071737838368, index = 78
+09-05 15:12:22.448 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37522822422169316，target_2 =  430720.1586118543， target_3 =  167581.0， target_4 = 0.3088203828559985, index = 79
+09-05 15:12:22.453 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4451472562893038，target_2 =  1077872.220995005， target_3 =  213707.0， target_4 = 0.28387796999422726, index = 80
+09-05 15:12:22.454 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3424468102057592，target_2 =  732199.0151769749， target_3 =  192067.0， target_4 = 0.30845495469912176, index = 81
+09-05 15:12:22.454 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37370051026130824，target_2 =  413014.7256940527， target_3 =  164775.0， target_4 = 0.3085433996350316, index = 82
+09-05 15:12:22.455 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.34767893508633696，target_2 =  721605.628785752， target_3 =  203504.0， target_4 = 0.325670153262908, index = 83
+09-05 15:12:22.455 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.10218365989405472，target_2 =  447267.0258886142， target_3 =  120055.0， target_4 = 0.463821200706468, index = 84
+09-05 15:12:22.455 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39501045433754545，target_2 =  352235.7398271065， target_3 =  181167.0， target_4 = 0.3482478001787403, index = 85
+09-05 15:12:22.456 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38120435122551566，target_2 =  294562.4585025597， target_3 =  175092.0， target_4 = 0.38134220695293225, index = 86
+09-05 15:12:22.456 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.23012315112028706，target_2 =  326313.1546242214， target_3 =  148748.0， target_4 = 0.4322912437313999, index = 87
+09-05 15:12:22.456 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.22710005221091112，target_2 =  491035.2500176656， target_3 =  161873.0， target_4 = 0.392047219669011, index = 88
+09-05 15:12:22.457 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35240165126461737，target_2 =  679356.9482150597， target_3 =  199110.0， target_4 = 0.3457998895821682, index = 89
+09-05 15:12:22.457 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3243810161993588，target_2 =  443555.35449672537， target_3 =  147835.0， target_4 = 0.35920280189854364, index = 90
+09-05 15:12:22.458 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47926297503549725，target_2 =  669966.0175091564， target_3 =  206675.0， target_4 = 0.274861591247298, index = 91
+09-05 15:12:22.458 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30948642533583015，target_2 =  372931.2313286269， target_3 =  141895.0， target_4 = 0.34651083221472606, index = 92
+09-05 15:12:22.458 13373 13945 I BitmapRecognizeUtils: end to compare = 极速战靴
+09-05 15:12:22.458 13373 13945 I BitmapRecognizeUtils: start to compare
+09-05 15:12:22.459 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43888042359165935，target_2 =  172707.51669455497， target_3 =  130023.0， target_4 = 0.2888653158164301, index = 0
+09-05 15:12:22.460 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2923942140427618，target_2 =  268962.9202350824， target_3 =  87128.0， target_4 = 0.4834688823231173, index = 1
+09-05 15:12:22.460 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4935834775898393，target_2 =  174108.01957436607， target_3 =  120791.0， target_4 = 0.3100653478976667, index = 2
+09-05 15:12:22.461 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.29055833533819947，target_2 =  255648.80196125383， target_3 =  100454.0， target_4 = 0.37838537764369934, index = 3
+09-05 15:12:22.461 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.40542082218395553，target_2 =  399447.5980332889， target_3 =  161261.0， target_4 = 0.30225483960887434, index = 4
+09-05 15:12:22.461 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5239059640527408，target_2 =  280673.9622942458， target_3 =  163778.0， target_4 = 0.26666778886250503, index = 5
+09-05 15:12:22.462 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6294979382721546，target_2 =  238587.02679643928， target_3 =  167638.0， target_4 = 0.23697329686536522, index = 6
+09-05 15:12:22.462 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33145418999503146，target_2 =  318444.5855982034， target_3 =  113391.0， target_4 = 0.36809140600941254, index = 7
+09-05 15:12:22.462 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5174852574953945，target_2 =  367181.00355674984， target_3 =  153829.0， target_4 = 0.3036443182674515, index = 8
+09-05 15:12:22.463 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5393992855385463，target_2 =  469822.97767944884， target_3 =  180725.0， target_4 = 0.27189249679704813, index = 9
+09-05 15:12:22.463 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4900305083900773，target_2 =  165666.14916707625， target_3 =  106505.0， target_4 = 0.3075339000065307, index = 10
+09-05 15:12:22.464 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6121835815797536，target_2 =  355291.24853479356， target_3 =  170813.0， target_4 = 0.2717834064528708, index = 11
+09-05 15:12:22.464 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43964368991265046，target_2 =  1048356.4871336123， target_3 =  188922.0， target_4 = 0.30494745062529877, index = 12
+09-05 15:12:22.464 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.503770157584531，target_2 =  305088.1370954307， target_3 =  146734.0， target_4 = 0.2976493269869225, index = 13
+09-05 15:12:22.465 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33942024737414633，target_2 =  479111.1975462531， target_3 =  159973.0， target_4 = 0.31316252634817277, index = 14
+09-05 15:12:22.465 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5370669846991658，target_2 =  131387.0700212657， target_3 =  116888.0， target_4 = 0.2998693087460074, index = 15
+09-05 15:12:22.466 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.879513708337485，target_2 =  43624.14546248734， target_3 =  195408.0， target_4 = 0.1416243999916893, index = 16
+09-05 15:12:22.466 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49090604514813296，target_2 =  302614.05048917985， target_3 =  168002.0， target_4 = 0.2708479912893216, index = 17
+09-05 15:12:22.466 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5108304129562659，target_2 =  298661.82289696886， target_3 =  148780.0， target_4 = 0.3026536110849384, index = 18
+09-05 15:12:22.467 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3764351263068668，target_2 =  221470.6800996225， target_3 =  101966.0， target_4 = 0.38753319546358733, index = 19
+09-05 15:12:22.467 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.29449083399338105，target_2 =  558413.2709268985， target_3 =  159685.0， target_4 = 0.32684635393070394, index = 20
+09-05 15:12:22.467 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49288314141959905，target_2 =  320883.7997181472， target_3 =  167096.0， target_4 = 0.28377729525509326, index = 21
+09-05 15:12:22.468 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5746011613846955，target_2 =  190598.9344260202， target_3 =  145847.0， target_4 = 0.3730355941520465, index = 22
+09-05 15:12:22.468 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5418494679777967，target_2 =  288492.87016051775， target_3 =  169051.0， target_4 = 0.2662428492115146, index = 23
+09-05 15:12:22.468 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49594005831146293，target_2 =  201778.44545044177， target_3 =  139064.0， target_4 = 0.30181519806586526, index = 24
+09-05 15:12:22.469 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6436398346221883，target_2 =  118051.54065711061， target_3 =  154312.0， target_4 = 0.2432077748791276, index = 25
+09-05 15:12:22.469 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46812096841369166，target_2 =  278543.6751413475， target_3 =  154891.0， target_4 = 0.29343012313940664, index = 26
+09-05 15:12:22.469 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6477517874781871，target_2 =  258369.95461933973， target_3 =  176370.0， target_4 = 0.2485208936124937, index = 27
+09-05 15:12:22.469 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5149936078115718，target_2 =  169717.09395428124， target_3 =  150660.0， target_4 = 0.26608148871441145, index = 28
+09-05 15:12:22.470 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49879441966625393，target_2 =  139742.41846700528， target_3 =  118465.0， target_4 = 0.3338689422826762, index = 29
+09-05 15:12:22.470 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.534388134675759，target_2 =  279988.6129601831， target_3 =  165320.0， target_4 = 0.28165465509149296, index = 30
+09-05 15:12:22.470 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5992580898931816，target_2 =  265630.45532249147， target_3 =  176136.0， target_4 = 0.2611538744724115, index = 31
+09-05 15:12:22.471 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5835398431585472，target_2 =  137842.81788028785， target_3 =  154652.0， target_4 = 0.24120767402926532, index = 32
+09-05 15:12:22.471 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5386553250215889，target_2 =  175652.48835990555， target_3 =  129661.0， target_4 = 0.29207935547614705, index = 33
+09-05 15:12:22.471 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4048806487049637，target_2 =  546126.1796381301， target_3 =  169351.0， target_4 = 0.31002398349373506, index = 34
+09-05 15:12:22.471 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4304445196749186，target_2 =  107448.16184268612， target_3 =  88043.0， target_4 = 0.26692977826198944, index = 35
+09-05 15:12:22.472 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5079919964347487，target_2 =  412835.7759731646， target_3 =  179800.0， target_4 = 0.27619372656128405, index = 36
+09-05 15:12:22.472 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5388881965392137，target_2 =  235624.82938904516， target_3 =  162063.0， target_4 = 0.2742488699788239, index = 37
+09-05 15:12:22.472 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5252874752637395，target_2 =  152080.33903947863， target_3 =  135753.0， target_4 = 0.28697730203495275, index = 38
+09-05 15:12:22.473 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5059673899793341，target_2 =  385563.4492334932， target_3 =  181497.0， target_4 = 0.26519917694447426, index = 39
+09-05 15:12:22.473 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.538744649532501，target_2 =  304451.2827131375， target_3 =  164681.0， target_4 = 0.276768987295733, index = 40
+09-05 15:12:22.474 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49409125105839063，target_2 =  464686.4923818243， target_3 =  175987.0， target_4 = 0.2886037714107641, index = 41
+09-05 15:12:22.474 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4733141558228857，target_2 =  207616.2368565617， target_3 =  140390.0， target_4 = 0.30353107068952817, index = 42
+09-05 15:12:22.475 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5297827844475793，target_2 =  179420.95836694658， target_3 =  144921.0， target_4 = 0.28139050118553227, index = 43
+09-05 15:12:22.477 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44498152961085957，target_2 =  755113.088397814， target_3 =  182943.0， target_4 = 0.30250026696129406, index = 44
+09-05 15:12:22.477 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44892496805015764，target_2 =  466246.86318534915， target_3 =  177028.0， target_4 = 0.2870987283896065, index = 45
+09-05 15:12:22.478 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4660283361955693，target_2 =  597349.0242136706， target_3 =  178675.0， target_4 = 0.2977366282264729, index = 46
+09-05 15:12:22.478 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.446602763456019，target_2 =  202372.83381332722， target_3 =  136930.0， target_4 = 0.30415571233226835, index = 47
+09-05 15:12:22.479 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.48501843720099136，target_2 =  347582.77451906586， target_3 =  154972.0， target_4 = 0.31634234611540785, index = 48
+09-05 15:12:22.479 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5724190364168539，target_2 =  160625.2202717786， target_3 =  158656.0， target_4 = 0.256231437297793, index = 49
+09-05 15:12:22.480 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5895087441326269，target_2 =  157198.54867047566， target_3 =  150582.0， target_4 = 0.2601542729058255, index = 50
+09-05 15:12:22.480 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4734489534591788，target_2 =  565920.3868249839， target_3 =  179635.0， target_4 = 0.28042132190142904, index = 51
+09-05 15:12:22.481 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4268082953725446，target_2 =  372150.0259067868， target_3 =  157159.0， target_4 = 0.3095228886924558, index = 52
+09-05 15:12:22.481 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45787571967089435，target_2 =  238854.2057691903， target_3 =  158951.0， target_4 = 0.2789162840175397, index = 53
+09-05 15:12:22.482 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.392535435995259，target_2 =  281924.12876376783， target_3 =  145661.0， target_4 = 0.2981878146403832, index = 54
+09-05 15:12:22.482 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44189562324243215，target_2 =  469918.57038595685， target_3 =  164893.0， target_4 = 0.3249097427284571, index = 55
+09-05 15:12:22.483 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39913055740769443，target_2 =  245645.3170292695， target_3 =  131579.0， target_4 = 0.36731755691807627, index = 56
+09-05 15:12:22.483 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43887806681386127，target_2 =  311730.27226994553， target_3 =  154700.0， target_4 = 0.2997576892977707, index = 57
+09-05 15:12:22.484 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.499775692398376，target_2 =  347420.32180356147， target_3 =  169358.0， target_4 = 0.28478114512318875, index = 58
+09-05 15:12:22.484 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.485239411311998，target_2 =  184690.77337406838， target_3 =  146070.0， target_4 = 0.2895077730900155, index = 59
+09-05 15:12:22.485 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5795507339446029，target_2 =  246287.1555333321， target_3 =  173053.0， target_4 = 0.2553082269393769, index = 60
+09-05 15:12:22.485 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4421596401313148，target_2 =  246194.17493621155， target_3 =  153667.0， target_4 = 0.28387817969280693, index = 61
+09-05 15:12:22.486 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45321614813569416，target_2 =  342953.75574458594， target_3 =  159962.0， target_4 = 0.30702606428530094, index = 62
+09-05 15:12:22.486 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38445306635646576，target_2 =  391444.1931959536， target_3 =  156511.0， target_4 = 0.3114513082052889, index = 63
+09-05 15:12:22.487 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.3828341377696808，target_2 =  838328.3813201044， target_3 =  148361.0， target_4 = 0.5920713955306606, index = 64
+09-05 15:12:22.487 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5018328474852044，target_2 =  313010.6081826988， target_3 =  170795.0， target_4 = 0.27660390711379884, index = 65
+09-05 15:12:22.488 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.3144020543989889，target_2 =  1251921.4218169444， target_3 =  183355.0， target_4 = 0.525494138893855, index = 66
+09-05 15:12:22.488 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45879469037630255，target_2 =  784769.5211496773， target_3 =  191086.0， target_4 = 0.2787346619404059, index = 67
+09-05 15:12:22.489 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3644814354244911，target_2 =  388094.35293673835， target_3 =  152098.0， target_4 = 0.31903041595181214, index = 68
+09-05 15:12:22.489 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4440678499832237，target_2 =  129286.43389029837， target_3 =  120347.0， target_4 = 0.2933674972095143, index = 69
+09-05 15:12:22.489 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41421669909729714，target_2 =  173646.54507929663， target_3 =  117188.0， target_4 = 0.34217405782664156, index = 70
+09-05 15:12:22.490 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3617452783782825，target_2 =  569361.774559401， target_3 =  169178.0， target_4 = 0.30730019969594996, index = 71
+09-05 15:12:22.490 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41302983988715053，target_2 =  290458.0411208151， target_3 =  145558.0， target_4 = 0.30977140484471244, index = 72
+09-05 15:12:22.490 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3934020488579577，target_2 =  295246.6792485226， target_3 =  140819.0， target_4 = 0.3295117808245282, index = 73
+09-05 15:12:22.491 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43049638635437193，target_2 =  314388.87337575457， target_3 =  153559.0， target_4 = 0.3010963423246744, index = 74
+09-05 15:12:22.491 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5161752605895676，target_2 =  269758.0627392528， target_3 =  158347.0， target_4 = 0.2843525616389359, index = 75
+09-05 15:12:22.492 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45038857335665483，target_2 =  275993.1998191324， target_3 =  145735.0， target_4 = 0.28749615560858344, index = 76
+09-05 15:12:22.492 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4204764706337894，target_2 =  458461.1620486379， target_3 =  175508.0， target_4 = 0.2994615823964087, index = 77
+09-05 15:12:22.492 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37736406117421295，target_2 =  783756.8581999467， target_3 =  178033.0， target_4 = 0.3103736164523493, index = 78
+09-05 15:12:22.493 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35834869239247646，target_2 =  391933.5207702862， target_3 =  158204.0， target_4 = 0.312553933045241, index = 79
+09-05 15:12:22.493 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4195561955816651，target_2 =  955463.6929225347， target_3 =  193246.0， target_4 = 0.2902305306269712, index = 80
+09-05 15:12:22.494 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38644019045155165，target_2 =  792334.5760501074， target_3 =  180079.0， target_4 = 0.3071140426195323, index = 81
+09-05 15:12:22.494 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36359130679661333，target_2 =  371861.11256626627， target_3 =  156481.0， target_4 = 0.3097118215794194, index = 82
+09-05 15:12:22.495 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.25373916371993727，target_2 =  1116759.2481102808， target_3 =  184887.0， target_4 = 0.35264197625243393, index = 83
+09-05 15:12:22.495 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31916838897302197，target_2 =  282817.43083362567， target_3 =  130466.0， target_4 = 0.4187028955127054, index = 84
+09-05 15:12:22.496 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4252120810062705，target_2 =  342547.801491824， target_3 =  169232.0， target_4 = 0.3512454137557957, index = 85
+09-05 15:12:22.496 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38840936596543985，target_2 =  270132.3714841154， target_3 =  166216.0， target_4 = 0.3802431599531865, index = 86
+09-05 15:12:22.497 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33296415767134935，target_2 =  286329.47635685373， target_3 =  149763.0， target_4 = 0.4155124792640591, index = 87
+09-05 15:12:22.497 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2923465239103327，target_2 =  419359.523824639， target_3 =  156612.0， target_4 = 0.3833473471955101, index = 88
+09-05 15:12:22.498 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30927714982150856，target_2 =  648018.9916873665， target_3 =  178138.0， target_4 = 0.3558296988119878, index = 89
+09-05 15:12:22.498 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5659222745339519，target_2 =  276376.648450096， target_3 =  160024.0， target_4 = 0.2838957509564287, index = 90
+09-05 15:12:22.498 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.498806154742157，target_2 =  631364.564491328， target_3 =  192125.0， target_4 = 0.27118150228092897, index = 91
+09-05 15:12:22.499 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.287794621275006，target_2 =  351780.9350497476， target_3 =  131670.0， target_4 = 0.35308970105243187, index = 92
+09-05 15:12:22.499 13373 13945 I BitmapRecognizeUtils: end to compare = 无尽战刃
+09-05 15:12:22.499 13373 13945 I BitmapRecognizeUtils: start to compare
+09-05 15:12:22.500 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30308078131302535，target_2 =  255587.2981809494， target_3 =  105373.0， target_4 = 0.33226480029968736, index = 0
+09-05 15:12:22.500 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3046752153406279，target_2 =  383407.2159174289， target_3 =  72743.0， target_4 = 0.4872853115855297, index = 1
+09-05 15:12:22.501 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5164986598851693，target_2 =  227164.1150013953， target_3 =  104942.0， target_4 = 0.320588478216342, index = 2
+09-05 15:12:22.502 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1273118291977235，target_2 =  614345.5091602099， target_3 =  75462.0， target_4 = 0.45089054482487273, index = 3
+09-05 15:12:22.503 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32658474869335924，target_2 =  642410.659025958， target_3 =  122668.0， target_4 = 0.3403868508142712, index = 4
+09-05 15:12:22.503 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5595287183041093，target_2 =  424485.0260715244， target_3 =  134394.0， target_4 = 0.27828121935176836, index = 5
+09-05 15:12:22.504 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.533094407564148，target_2 =  378761.8160501018， target_3 =  130905.0， target_4 = 0.2858403378984535, index = 6
+09-05 15:12:22.504 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2695614239992477，target_2 =  529131.1219553954， target_3 =  90832.0， target_4 = 0.39852539056630265, index = 7
+09-05 15:12:22.504 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4397062505050408，target_2 =  501936.4142516749， target_3 =  118462.0， target_4 = 0.335759587503854, index = 8
+09-05 15:12:22.505 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.418885433272321，target_2 =  771804.511479136， target_3 =  133157.0， target_4 = 0.3097623377414366, index = 9
+09-05 15:12:22.505 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44097214946166957，target_2 =  154082.2914883146， target_3 =  91846.0， target_4 = 0.3252557397214845, index = 10
+09-05 15:12:22.505 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5740470673061425，target_2 =  546978.7762454342， target_3 =  133348.0， target_4 = 0.29655624423145566, index = 11
+09-05 15:12:22.506 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2817529449966545，target_2 =  1919238.8423968365， target_3 =  135484.0， target_4 = 0.3589854655884036, index = 12
+09-05 15:12:22.506 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5294619716458526，target_2 =  329643.5296823333， target_3 =  127453.0， target_4 = 0.29066508237532246, index = 13
+09-05 15:12:22.507 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.170035734902266，target_2 =  871872.1353535218， target_3 =  118336.0， target_4 = 0.36499827384109734, index = 14
+09-05 15:12:22.508 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.9068956880016618，target_2 =  35067.13572234874， target_3 =  132145.0， target_4 = 0.1575578428037769, index = 15
+09-05 15:12:22.508 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4727631856047831，target_2 =  353840.611949126， target_3 =  123186.0， target_4 = 0.3049929961814264, index = 16
+09-05 15:12:22.508 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4132911670856332，target_2 =  480966.4095863167， target_3 =  125769.0， target_4 = 0.3105580144220156, index = 17
+09-05 15:12:22.509 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4477519014415738，target_2 =  438393.6060667485， target_3 =  121155.0， target_4 = 0.3222183614197404, index = 18
+09-05 15:12:22.509 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4863840723167624，target_2 =  262796.8406837466， target_3 =  92389.0， target_4 = 0.36221611272256093, index = 19
+09-05 15:12:22.509 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.17579072836514079，target_2 =  990108.1124470311， target_3 =  117453.0， target_4 = 0.3765493965796807, index = 20
+09-05 15:12:22.510 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5055127185589847，target_2 =  633676.3904820811， target_3 =  135965.0， target_4 = 0.29956730897363637, index = 21
+09-05 15:12:22.510 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49187782272521074，target_2 =  419615.0502646738， target_3 =  109410.0， target_4 = 0.4057966271240357, index = 22
+09-05 15:12:22.510 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43888243225021056，target_2 =  643948.9814441447， target_3 =  128773.0， target_4 = 0.3161819545289086, index = 23
+09-05 15:12:22.511 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6039294604039253，target_2 =  234987.5087991705， target_3 =  124084.0， target_4 = 0.27505961991145644, index = 24
+09-05 15:12:22.511 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5222869600231919，target_2 =  300030.8663088732， target_3 =  118855.0， target_4 = 0.2995818397787239, index = 25
+09-05 15:12:22.511 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2373370083143419，target_2 =  555042.2221548577， target_3 =  114147.0， target_4 = 0.3576950914737293, index = 26
+09-05 15:12:22.512 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4679125864642078，target_2 =  586420.7234082698， target_3 =  131108.0， target_4 = 0.31082691722122646, index = 27
+09-05 15:12:22.512 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44244850168845007，target_2 =  368291.8471500051， target_3 =  119290.0， target_4 = 0.3084042196399673, index = 28
+09-05 15:12:22.512 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38238788458680795，target_2 =  218762.18047912957， target_3 =  92937.0， target_4 = 0.3872375189006289, index = 29
+09-05 15:12:22.513 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46480345300906095，target_2 =  551696.0805852468， target_3 =  128975.0， target_4 = 0.314158169202779, index = 30
+09-05 15:12:22.513 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43212588756089854，target_2 =  598563.4327352686， target_3 =  127530.0， target_4 = 0.3247124486136905, index = 31
+09-05 15:12:22.513 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43824324046271135，target_2 =  270034.18669407495， target_3 =  118371.0， target_4 = 0.2950745108256854, index = 32
+09-05 15:12:22.513 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.48666704356348134，target_2 =  295497.2218722832， target_3 =  105165.0， target_4 = 0.32851939424802334, index = 33
+09-05 15:12:22.514 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2504236458646935，target_2 =  1065000.1586359912， target_3 =  125476.0， target_4 = 0.359983987124721, index = 34
+09-05 15:12:22.514 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3117262525362103，target_2 =  74629.06400942906， target_3 =  80495.0， target_4 = 0.3082565368247228, index = 35
+09-05 15:12:22.514 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2731555106396632，target_2 =  1104566.5286223462， target_3 =  127875.0， target_4 = 0.3574302433689898, index = 36
+09-05 15:12:22.515 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3903636705899328，target_2 =  669008.6445325308， target_3 =  123161.0， target_4 = 0.33783783309412946, index = 37
+09-05 15:12:22.515 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43425951468633545，target_2 =  281648.35414847155， target_3 =  107716.0， target_4 = 0.32769412776286705, index = 38
+09-05 15:12:22.515 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4197955031527647，target_2 =  833944.3954799148， target_3 =  139180.0， target_4 = 0.30853595634968106, index = 39
+09-05 15:12:22.516 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3699090787176141，target_2 =  512634.4225763174， target_3 =  121226.0， target_4 = 0.33263540148731824, index = 40
+09-05 15:12:22.516 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4522990644651159，target_2 =  820106.1471709119， target_3 =  134948.0， target_4 = 0.3194406454150372, index = 41
+09-05 15:12:22.516 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41059066431468755，target_2 =  406351.2666770103， target_3 =  111834.0， target_4 = 0.33744391458120543, index = 42
+09-05 15:12:22.516 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.416453241852643，target_2 =  355655.41248656774， target_3 =  113679.0， target_4 = 0.32615443997073773, index = 43
+09-05 15:12:22.517 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.34232386459736946，target_2 =  1447690.2471617633， target_3 =  135497.0， target_4 = 0.343622817396212, index = 44
+09-05 15:12:22.517 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3650422773805576，target_2 =  969060.014980182， target_3 =  134286.0， target_4 = 0.3329456969603963, index = 45
+09-05 15:12:22.517 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33099632915966065，target_2 =  1121808.664447664， target_3 =  130756.0， target_4 = 0.3460655777884637, index = 46
+09-05 15:12:22.517 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3381112538634841，target_2 =  386518.13048322935， target_3 =  108403.0， target_4 = 0.34847212423428314, index = 47
+09-05 15:12:22.518 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4456900643526546，target_2 =  553861.1820168333， target_3 =  120058.0， target_4 = 0.34208255900857687, index = 48
+09-05 15:12:22.518 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4122657920321154，target_2 =  397660.7288807269， target_3 =  116646.0， target_4 = 0.32790582767445003, index = 49
+09-05 15:12:22.518 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.587631421524941，target_2 =  318719.3672669745， target_3 =  124082.0， target_4 = 0.2898597118499436, index = 50
+09-05 15:12:22.519 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42946363920772307，target_2 =  827927.9158495497， target_3 =  136843.0， target_4 = 0.30851039087666304, index = 51
+09-05 15:12:22.519 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39293333958198073，target_2 =  573436.4241454124， target_3 =  120898.0， target_4 = 0.33729117009355936, index = 52
+09-05 15:12:22.519 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4102698589302335，target_2 =  458735.36947951565， target_3 =  124623.0， target_4 = 0.3146139769426661, index = 53
+09-05 15:12:22.520 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.20151453321740462，target_2 =  548563.4566336109， target_3 =  104395.0， target_4 = 0.37188887631309986, index = 54
+09-05 15:12:22.520 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.29865142419244645，target_2 =  1096316.8574205327， target_3 =  119050.0， target_4 = 0.38609559730104337, index = 55
+09-05 15:12:22.520 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46536814976410185，target_2 =  425240.5788680116， target_3 =  108733.0， target_4 = 0.36813597259832687, index = 56
+09-05 15:12:22.520 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3158538057335765，target_2 =  560538.334653414， target_3 =  114693.0， target_4 = 0.3532262447894777, index = 57
+09-05 15:12:22.521 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2497984165017808，target_2 =  810856.0392303185， target_3 =  119630.0， target_4 = 0.3622191424601248, index = 58
+09-05 15:12:22.521 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4826586585376181，target_2 =  362043.70191562606， target_3 =  120103.0， target_4 = 0.31147803068992497, index = 59
+09-05 15:12:22.521 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46840078354056114，target_2 =  552582.494474021， target_3 =  133343.0， target_4 = 0.30338603306736794, index = 60
+09-05 15:12:22.521 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3653080656456553，target_2 =  403474.3026257343， target_3 =  118592.0， target_4 = 0.32240367924067903, index = 61
+09-05 15:12:22.522 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3130922359690244，target_2 =  746623.7343067103， target_3 =  120493.0， target_4 = 0.35630439990345814, index = 62
+09-05 15:12:22.522 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.19712366584940502，target_2 =  753339.0191049859， target_3 =  114517.0， target_4 = 0.3677087979264601, index = 63
+09-05 15:12:22.522 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.28485220213083157，target_2 =  924786.8003985746， target_3 =  114761.0， target_4 = 0.6080358906599547, index = 64
+09-05 15:12:22.523 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26100055005992584，target_2 =  762247.8146441373， target_3 =  120714.0， target_4 = 0.3565671735161361, index = 65
+09-05 15:12:22.523 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.15316093603386222，target_2 =  1526529.1584516184， target_3 =  143007.0， target_4 = 0.5320943065463337, index = 66
+09-05 15:12:22.523 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30593113753571394，target_2 =  1418208.1844151702， target_3 =  138964.0， target_4 = 0.3314223464921749, index = 67
+09-05 15:12:22.523 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3947654287434567，target_2 =  583247.0581436487， target_3 =  124575.0， target_4 = 0.32823595028497937, index = 68
+09-05 15:12:22.524 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2222614608444642，target_2 =  228957.37647475858， target_3 =  88834.0， target_4 = 0.3706178318560033, index = 69
+09-05 15:12:22.524 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.21308538802655236，target_2 =  287327.0479803781， target_3 =  89390.0， target_4 = 0.4086761558756153, index = 70
+09-05 15:12:22.524 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.18870194283632638，target_2 =  1035841.2890746285， target_3 =  121349.0， target_4 = 0.36868864727896966, index = 71
+09-05 15:12:22.524 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30383319207579335，target_2 =  471539.1039522212， target_3 =  111081.0， target_4 = 0.3511220199273471, index = 72
+09-05 15:12:22.525 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3010153729856043，target_2 =  482334.7263005879， target_3 =  108487.0， target_4 = 0.35746199035381976, index = 73
+09-05 15:12:22.525 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3290408819784346，target_2 =  538665.7982492028， target_3 =  116255.0， target_4 = 0.34730238048764095, index = 74
+09-05 15:12:22.525 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3329811303426422，target_2 =  524529.0959360176， target_3 =  113647.0， target_4 = 0.35034810599638316, index = 75
+09-05 15:12:22.526 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.48122422433713485，target_2 =  286598.10048620455， target_3 =  123485.0， target_4 = 0.2897498150473435, index = 76
+09-05 15:12:22.526 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2901372791399351，target_2 =  829862.6958340035， target_3 =  127161.0， target_4 = 0.3472011089860594, index = 77
+09-05 15:12:22.526 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33155165917817203，target_2 =  1208613.1082986265， target_3 =  134734.0， target_4 = 0.3385402271930343, index = 78
+09-05 15:12:22.527 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2571655896022892，target_2 =  715454.6997269776， target_3 =  117962.0， target_4 = 0.3590413031535274, index = 79
+09-05 15:12:22.527 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2629312542397423，target_2 =  1622048.683978446， target_3 =  135521.0， target_4 = 0.3420766051382111, index = 80
+09-05 15:12:22.527 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33109424616860594，target_2 =  1232828.8534382433， target_3 =  135226.0， target_4 = 0.3376342180506101, index = 81
+09-05 15:12:22.528 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2595377947654543，target_2 =  688659.9105764381， target_3 =  117060.0， target_4 = 0.3588912314189189, index = 82
+09-05 15:12:22.528 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.12953200996433548，target_2 =  1592989.840046051， target_3 =  130760.0， target_4 = 0.3902991199673698, index = 83
+09-05 15:12:22.528 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.21450864219915936，target_2 =  520743.6909529363， target_3 =  99277.0， target_4 = 0.46062994891850095, index = 84
+09-05 15:12:22.529 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.24427294016379344，target_2 =  663848.9572726126， target_3 =  123586.0， target_4 = 0.3989395774457287, index = 85
+09-05 15:12:22.529 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1999187538523586，target_2 =  672324.1025769486， target_3 =  119705.0， target_4 = 0.431810912235271, index = 86
+09-05 15:12:22.529 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2812771757260799，target_2 =  514958.72998340166， target_3 =  114573.0， target_4 = 0.44519026866996614, index = 87
+09-05 15:12:22.530 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.16146844448024494，target_2 =  764138.2558581801， target_3 =  116378.0， target_4 = 0.4250942139615605, index = 88
+09-05 15:12:22.530 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.15613013273228463，target_2 =  1301432.9257347754， target_3 =  130158.0， target_4 = 0.4037394554662698, index = 89
+09-05 15:12:22.530 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49251026272537896，target_2 =  560938.9055951891， target_3 =  126282.0， target_4 = 0.326797437294704, index = 90
+09-05 15:12:22.531 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41650385507483917，target_2 =  1194614.598504004， target_3 =  143933.0， target_4 = 0.31410822372886466, index = 91
+09-05 15:12:22.531 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.17519506245304153，target_2 =  641969.6241762992， target_3 =  100930.0， target_4 = 0.4012643907193852, index = 92
+09-05 15:12:22.531 13373 13945 I BitmapRecognizeUtils: end to compare = 泣血之刃
+09-05 15:12:22.531 13373 13945 I BitmapRecognizeUtils: start to compare
+09-05 15:12:22.534 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26482776003383485，target_2 =  571854.4254179344， target_3 =  104101.0， target_4 = 0.3567662779624381, index = 0
+09-05 15:12:22.534 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31362220041703204，target_2 =  422489.0641886717， target_3 =  77237.0， target_4 = 0.48878613404068394, index = 1
+09-05 15:12:22.535 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33194539960729547，target_2 =  497900.88065584266， target_3 =  93454.0， target_4 = 0.3913684934455309, index = 2
+09-05 15:12:22.535 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.06848141594900765，target_2 =  1357704.488925517， target_3 =  73731.0， target_4 = 0.48778070301392573, index = 3
+09-05 15:12:22.535 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3481021676058472，target_2 =  1203467.124988427， target_3 =  128283.0， target_4 = 0.35566343332735545, index = 4
+09-05 15:12:22.536 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31709810741482986，target_2 =  1062946.1045570455， target_3 =  121527.0， target_4 = 0.3608995988673786, index = 5
+09-05 15:12:22.536 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.29861849593257667，target_2 =  1039385.1489685858， target_3 =  117112.0， target_4 = 0.37010206070550095, index = 6
+09-05 15:12:22.536 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.20079593583612834，target_2 =  878969.4475807808， target_3 =  88469.0， target_4 = 0.4282814064805879, index = 7
+09-05 15:12:22.537 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3556000165749466，target_2 =  769505.1597211345， target_3 =  114286.0， target_4 = 0.3729616165898301, index = 8
+09-05 15:12:22.537 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42108746957869564，target_2 =  1346997.1349068207， target_3 =  136392.0， target_4 = 0.34107347960066975, index = 9
+09-05 15:12:22.538 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26784177311883794，target_2 =  309684.3530128507， target_3 =  83172.0， target_4 = 0.38889653192512674, index = 10
+09-05 15:12:22.538 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3503538998088827，target_2 =  1289926.0009938425， target_3 =  117213.0， target_4 = 0.38518155301802787, index = 11
+09-05 15:12:22.538 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2376349956615656，target_2 =  3120297.42717804， target_3 =  139637.0， target_4 = 0.3807661834666172, index = 12
+09-05 15:12:22.539 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4397568256812875，target_2 =  688525.5247348524， target_3 =  115537.0， target_4 = 0.3531041764123688, index = 13
+09-05 15:12:22.539 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.21929266617778034，target_2 =  1864403.1070119685， target_3 =  127146.0， target_4 = 0.3794444766261791, index = 14
+09-05 15:12:22.540 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.48752760389205024，target_2 =  238330.81216629394， target_3 =  96663.0， target_4 = 0.34334974763192877, index = 15
+09-05 15:12:22.540 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.367666663027161，target_2 =  818812.9890665712， target_3 =  119962.0， target_4 = 0.35476683471118264, index = 16
+09-05 15:12:22.540 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3479987520326287，target_2 =  876717.5665086425， target_3 =  126481.0， target_4 = 0.34465073626092746, index = 17
+09-05 15:12:22.540 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3906438524675582，target_2 =  861688.9378506343， target_3 =  114753.0， target_4 = 0.3678584157155919, index = 18
+09-05 15:12:22.541 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.8221408402997953，target_2 =  59658.954648422754， target_3 =  118708.0， target_4 = 0.24361628912236605, index = 19
+09-05 15:12:22.541 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1966790451598789，target_2 =  1336952.0441104325， target_3 =  123806.0， target_4 = 0.38173993589869, index = 20
+09-05 15:12:22.542 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4295559740753966，target_2 =  1011869.0132999488， target_3 =  131281.0， target_4 = 0.340979239970015, index = 21
+09-05 15:12:22.545 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4213632973231818，target_2 =  634206.7540241663， target_3 =  104013.0， target_4 = 0.45959415212731486, index = 22
+09-05 15:12:22.546 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3209379014352787，target_2 =  1571940.890816134， target_3 =  127727.0， target_4 = 0.37411708155419104, index = 23
+09-05 15:12:22.546 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.454373933824639，target_2 =  402946.82961009355， target_3 =  114016.0， target_4 = 0.3348476204925525, index = 24
+09-05 15:12:22.547 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3696855449758421，target_2 =  631378.3841139385， target_3 =  111350.0， target_4 = 0.3619125886075496, index = 25
+09-05 15:12:22.548 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2535669856898242，target_2 =  1042444.8661005464， target_3 =  116384.0， target_4 = 0.37625336349086047, index = 26
+09-05 15:12:22.548 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30988148429186285，target_2 =  1634970.6891417494， target_3 =  123436.0， target_4 = 0.38404115643828923, index = 27
+09-05 15:12:22.549 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33250521631283103，target_2 =  829515.0787095827， target_3 =  115882.0， target_4 = 0.350891734964058, index = 28
+09-05 15:12:22.549 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38179584996340804，target_2 =  337382.90994217945， target_3 =  92107.0， target_4 = 0.4036183736566168, index = 29
+09-05 15:12:22.549 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32758263801563414，target_2 =  1016539.5844716242， target_3 =  124345.0， target_4 = 0.3592997198248551, index = 30
+09-05 15:12:22.550 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37010500456381834，target_2 =  837010.7272447777， target_3 =  128550.0， target_4 = 0.3465665996336739, index = 31
+09-05 15:12:22.550 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3075894220246231，target_2 =  588177.5199561042， target_3 =  115230.0， target_4 = 0.3432320713393521, index = 32
+09-05 15:12:22.553 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3332525537067206，target_2 =  713986.4207905156， target_3 =  94613.0， target_4 = 0.39822423492301173, index = 33
+09-05 15:12:22.553 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2710842515665768，target_2 =  1733332.3584002634， target_3 =  128943.0， target_4 = 0.37712128010858104, index = 34
+09-05 15:12:22.553 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.41075538133083583，target_2 =  91339.98221609984， target_3 =  79094.0， target_4 = 0.3007366075102003, index = 35
+09-05 15:12:22.554 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.29867682277570795，target_2 =  1533311.2889403193， target_3 =  133451.0， target_4 = 0.36646810307321526, index = 36
+09-05 15:12:22.554 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2842266999296254，target_2 =  1551759.7321323415， target_3 =  117598.0， target_4 = 0.386264876617379, index = 37
+09-05 15:12:22.554 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.274969662532653，target_2 =  543941.6746948877， target_3 =  100642.0， target_4 = 0.3848207844729158, index = 38
+09-05 15:12:22.555 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32783886200990947，target_2 =  1654457.8157544911， target_3 =  139300.0， target_4 = 0.34806702269216316, index = 39
+09-05 15:12:22.555 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36774616351427764，target_2 =  1124160.7487584508， target_3 =  122423.0， target_4 = 0.3659870760925829, index = 40
+09-05 15:12:22.555 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30498260519313297，target_2 =  1670058.822003671， target_3 =  129423.0， target_4 = 0.3736607116749303, index = 41
+09-05 15:12:22.555 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3483890628343046，target_2 =  613705.7700127859， target_3 =  108991.0， target_4 = 0.36694616754887355, index = 42
+09-05 15:12:22.556 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3484680358479395，target_2 =  669904.9755278456， target_3 =  111338.0， target_4 = 0.3568964448849322, index = 43
+09-05 15:12:22.556 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4090313953590992，target_2 =  2089354.993195294， target_3 =  142078.0， target_4 = 0.34647543985714135, index = 44
+09-05 15:12:22.556 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3169843015054712，target_2 =  1451691.397319128， target_3 =  133545.0， target_4 = 0.35392845844306775, index = 45
+09-05 15:12:22.557 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2652488603487612，target_2 =  2117629.6913581192， target_3 =  131898.0， target_4 = 0.37952490407227846, index = 46
+09-05 15:12:22.557 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39183854719176536，target_2 =  819917.535686047， target_3 =  114009.0， target_4 = 0.357934433987879, index = 47
+09-05 15:12:22.557 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36197590637868293，target_2 =  793050.0355612212， target_3 =  115679.0， target_4 = 0.38077969649045995, index = 48
+09-05 15:12:22.558 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2726260542388998，target_2 =  718816.5225245142， target_3 =  113234.0， target_4 = 0.36819028774853285, index = 49
+09-05 15:12:22.558 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.34550666016843884，target_2 =  726184.9296479842， target_3 =  109728.0， target_4 = 0.36836577752311916, index = 50
+09-05 15:12:22.558 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42873367260269163，target_2 =  1194334.8357441772， target_3 =  137911.0， target_4 = 0.33213776254598865, index = 51
+09-05 15:12:22.559 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3490121693149328，target_2 =  894304.6190027754， target_3 =  119850.0， target_4 = 0.3648474791660169, index = 52
+09-05 15:12:22.559 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36430020836962046，target_2 =  904669.4265731605， target_3 =  124083.0， target_4 = 0.3470317622033871, index = 53
+09-05 15:12:22.560 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2148404912039745，target_2 =  1121595.9026938844， target_3 =  109150.0， target_4 = 0.3848306160400726, index = 54
+09-05 15:12:22.561 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2729899051524176，target_2 =  1808861.2712909991， target_3 =  122018.0， target_4 = 0.4109182721199478, index = 55
+09-05 15:12:22.561 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3423685107331668，target_2 =  715279.9558252746， target_3 =  107410.0， target_4 = 0.39342231450277737, index = 56
+09-05 15:12:22.561 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2906306154521431，target_2 =  973718.0821344496， target_3 =  117613.0， target_4 = 0.3740837850058879, index = 57
+09-05 15:12:22.562 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.24895199936426884，target_2 =  1209046.6456357972， target_3 =  121863.0， target_4 = 0.3788020238108964, index = 58
+09-05 15:12:22.562 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3851995645501943，target_2 =  911205.4732958213， target_3 =  116375.0， target_4 = 0.36216715110214676, index = 59
+09-05 15:12:22.562 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3716766542775631，target_2 =  1014329.7253428902， target_3 =  130569.0， target_4 = 0.34097181014876976, index = 60
+09-05 15:12:22.563 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.28973120607774683，target_2 =  925169.2605740678， target_3 =  118230.0， target_4 = 0.36143759190738795, index = 61
+09-05 15:12:22.563 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.29681978075455495，target_2 =  1414547.5007929592， target_3 =  123639.0， target_4 = 0.3775992217603812, index = 62
+09-05 15:12:22.564 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.13463544502171973，target_2 =  1773705.5606167794， target_3 =  115897.0， target_4 = 0.4027765292093705, index = 63
+09-05 15:12:22.565 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.37018130114037634，target_2 =  1090058.1054612887， target_3 =  110359.0， target_4 = 0.6198938287260733, index = 64
+09-05 15:12:22.565 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2590213510392538，target_2 =  1564734.2705529835， target_3 =  125950.0， target_4 = 0.37603841638443225, index = 65
+09-05 15:12:22.565 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.3055953577302574，target_2 =  2104133.09737718， target_3 =  140915.0， target_4 = 0.5526295342015536, index = 66
+09-05 15:12:22.566 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2809912400549773，target_2 =  2033346.1199313763， target_3 =  140519.0， target_4 = 0.34926766657529623, index = 67
+09-05 15:12:22.566 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3325987994679205，target_2 =  850975.2744016236， target_3 =  122037.0， target_4 = 0.35742424568995024, index = 68
+09-05 15:12:22.566 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.23144751557677554，target_2 =  311585.4014870969， target_3 =  92993.0， target_4 = 0.3767352183732135, index = 69
+09-05 15:12:22.567 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.17107521821126576，target_2 =  627314.1931216982， target_3 =  84538.0， target_4 = 0.4410825334759561, index = 70
+09-05 15:12:22.567 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31442641635480034，target_2 =  1353665.2567287008， target_3 =  131634.0， target_4 = 0.3495141879824772, index = 71
+09-05 15:12:22.567 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26541507206901194，target_2 =  879659.6507326353， target_3 =  112644.0， target_4 = 0.3756821620354752, index = 72
+09-05 15:12:22.567 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35718717506981607，target_2 =  582664.6557061402， target_3 =  114444.0， target_4 = 0.35215455787187, index = 73
+09-05 15:12:22.568 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2438482261090566，target_2 =  1194920.7343502997， target_3 =  115062.0， target_4 = 0.38652590497629385, index = 74
+09-05 15:12:22.568 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2547706363178151，target_2 =  1071501.078607944， target_3 =  112761.0， target_4 = 0.3897276104633474, index = 75
+09-05 15:12:22.568 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35286874690497555，target_2 =  670977.1357284836， target_3 =  117060.0， target_4 = 0.34556521827402126, index = 76
+09-05 15:12:22.568 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2784058568012433，target_2 =  1136222.4012502572， target_3 =  128736.0， target_4 = 0.35670696297915816, index = 77
+09-05 15:12:22.569 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30901990627405657，target_2 =  1757433.216756022， target_3 =  136865.0， target_4 = 0.35865395519249016, index = 78
+09-05 15:12:22.569 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.23278038584254337，target_2 =  937416.6437532391， target_3 =  118490.0， target_4 = 0.3706176187627582, index = 79
+09-05 15:12:22.569 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2562903939086061，target_2 =  2265280.5853807796， target_3 =  138603.0， target_4 = 0.360545226256784, index = 80
+09-05 15:12:22.570 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3208438566197199，target_2 =  1801059.2410281105， target_3 =  138261.0， target_4 = 0.35527881044704535, index = 81
+09-05 15:12:22.570 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.22855415918728006，target_2 =  902420.9358797431， target_3 =  117080.0， target_4 = 0.3719708804054671, index = 82
+09-05 15:12:22.570 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.16631108627769348，target_2 =  1944386.4622624738， target_3 =  138007.0， target_4 = 0.39211462370644357, index = 83
+09-05 15:12:22.570 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.06261322785686439，target_2 =  916863.0250644136， target_3 =  91962.0， target_4 = 0.4995104095070424, index = 84
+09-05 15:12:22.571 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.10593450008294147，target_2 =  1308329.7646230464， target_3 =  122726.0， target_4 = 0.43431320730253015, index = 85
+09-05 15:12:22.571 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1379265039821624，target_2 =  1490218.7634729904， target_3 =  121884.0， target_4 = 0.4586392519383477, index = 86
+09-05 15:12:22.571 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.04362291702726093，target_2 =  1130860.2216695258， target_3 =  106253.0， target_4 = 0.49298550002538666, index = 87
+09-05 15:12:22.571 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.1018406782785878，target_2 =  1378013.2371523546， target_3 =  119364.0， target_4 = 0.44667004807929617, index = 88
+09-05 15:12:22.572 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.09168860765105584，target_2 =  2265554.7381087504， target_3 =  134111.0， target_4 = 0.42498734486406514, index = 89
+09-05 15:12:22.572 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2659607610516798，target_2 =  1103658.4160900111， target_3 =  111920.0， target_4 = 0.39944178183179024, index = 90
+09-05 15:12:22.572 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3229528429983174，target_2 =  1821030.9119434117， target_3 =  140677.0， target_4 = 0.3439457853683252, index = 91
+09-05 15:12:22.572 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.09170530086308036，target_2 =  1335387.16039949， target_3 =  97567.0， target_4 = 0.43557179656171624, index = 92
+09-05 15:12:22.572 13373 13945 I BitmapRecognizeUtils: end to compare = 影刃
+09-05 15:12:22.573 13373 13945 I BitmapRecognizeUtils: start to compare
+09-05 15:12:22.574 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36474357174142613，target_2 =  344018.9482440214， target_3 =  100973.0， target_4 = 0.3311265319649898, index = 0
+09-05 15:12:22.574 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37906647544305444，target_2 =  402374.47351484565， target_3 =  75113.0， target_4 = 0.46186222901534857, index = 1
+09-05 15:12:22.574 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31377222618845196，target_2 =  550963.2839235923， target_3 =  90677.0， target_4 = 0.3843540235081136, index = 2
+09-05 15:12:22.574 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43661081794758066，target_2 =  300635.8746130798， target_3 =  87218.0， target_4 = 0.36259745847758884, index = 3
+09-05 15:12:22.575 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2792323791104102，target_2 =  1029618.7990581815， target_3 =  112939.0， target_4 = 0.35812463524279364, index = 4
+09-05 15:12:22.575 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49800926912109567，target_2 =  617702.4428757972， target_3 =  120445.0， target_4 = 0.3017132251624814, index = 5
+09-05 15:12:22.575 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5209914245588917，target_2 =  500298.9727774483， target_3 =  119286.0， target_4 = 0.29749420544732846, index = 6
+09-05 15:12:22.575 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47826386495565565，target_2 =  536105.7386157544， target_3 =  100200.0， target_4 = 0.3382741141445817, index = 7
+09-05 15:12:22.576 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.331957064422188，target_2 =  783478.2663735036， target_3 =  105966.0， target_4 = 0.3617286904095297, index = 8
+09-05 15:12:22.576 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39310347301683674，target_2 =  1249975.117464924， target_3 =  122974.0， target_4 = 0.3327446272243868, index = 9
+09-05 15:12:22.576 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43207820728144913，target_2 =  194289.4100025496， target_3 =  84104.0， target_4 = 0.34140253871912934, index = 10
+09-05 15:12:22.576 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5146497152185027，target_2 =  879198.3264048047， target_3 =  121630.0， target_4 = 0.3196010338006362, index = 11
+09-05 15:12:22.577 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35909645902737625，target_2 =  2743423.4555047904， target_3 =  127660.0， target_4 = 0.3554507905548265, index = 12
+09-05 15:12:22.577 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31137893742321837，target_2 =  756184.4153873208， target_3 =  100338.0， target_4 = 0.3723870388479047, index = 13
+09-05 15:12:22.577 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.278955514155919，target_2 =  1307923.3069083046， target_3 =  116047.0， target_4 = 0.35714010682452557, index = 14
+09-05 15:12:22.577 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.428175333365302，target_2 =  279215.8519158059， target_3 =  86506.0， target_4 = 0.3590621849787777, index = 15
+09-05 15:12:22.578 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49987145060327454，target_2 =  437448.9488312144， target_3 =  115030.0， target_4 = 0.3042295923761501, index = 16
+09-05 15:12:22.578 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3716331816311251，target_2 =  741150.2334253294， target_3 =  116058.0， target_4 = 0.3254210617427996, index = 17
+09-05 15:12:22.578 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31643770244686187，target_2 =  925560.1225471976， target_3 =  104349.0， target_4 = 0.36761381558008344, index = 18
+09-05 15:12:22.578 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.25332057045832707，target_2 =  433646.6308266899， target_3 =  75108.0， target_4 = 0.423111755162131, index = 19
+09-05 15:12:22.579 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2528391026138464，target_2 =  1373578.3814314196， target_3 =  113936.0， target_4 = 0.35744008787711423, index = 20
+09-05 15:12:22.579 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5405167998942346，target_2 =  757903.3846401202， target_3 =  125984.0， target_4 = 0.29082733795069415, index = 21
+09-05 15:12:22.579 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4520933163380201，target_2 =  462620.1380711876， target_3 =  102020.0， target_4 = 0.39455291568722795, index = 22
+09-05 15:12:22.579 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5421569720941204，target_2 =  572302.2973547901， target_3 =  124571.0， target_4 = 0.27945138552752535, index = 23
+09-05 15:12:22.579 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4110454288290257，target_2 =  443498.3259497965， target_3 =  106249.0， target_4 = 0.3358099877247079, index = 24
+09-05 15:12:22.580 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5509019664408521，target_2 =  294439.5338929868， target_3 =  114743.0， target_4 = 0.27985711219665815, index = 25
+09-05 15:12:22.580 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38264024219500237，target_2 =  685053.1378516807， target_3 =  110348.0， target_4 = 0.34119764951003106, index = 26
+09-05 15:12:22.580 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5370624026412737，target_2 =  665407.2090557115， target_3 =  120516.0， target_4 = 0.3075160538982747, index = 27
+09-05 15:12:22.581 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4590346208610593，target_2 =  403165.9383842085， target_3 =  113525.0， target_4 = 0.2989147171139498, index = 28
+09-05 15:12:22.581 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4449676202060396，target_2 =  247313.15677135566， target_3 =  93768.0， target_4 = 0.3377952291751817, index = 29
+09-05 15:12:22.581 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4839857236856119，target_2 =  760464.723099591， target_3 =  118597.0， target_4 = 0.32444576624184024, index = 30
+09-05 15:12:22.581 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45907244414134535，target_2 =  685179.4542297241， target_3 =  121823.0， target_4 = 0.3015898732541, index = 31
+09-05 15:12:22.582 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5021338245042842，target_2 =  280506.2308490569， target_3 =  114141.0， target_4 = 0.27955905625215416, index = 32
+09-05 15:12:22.582 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5200740586774525，target_2 =  275373.92316361406， target_3 =  101938.0， target_4 = 0.3117326004397771, index = 33
+09-05 15:12:22.582 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4109126415833478，target_2 =  1337310.7711894147， target_3 =  125215.0， target_4 = 0.3308715669101696, index = 34
+09-05 15:12:22.582 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2637442120796166，target_2 =  110226.3457294595， target_3 =  72861.0， target_4 = 0.3321362886144962, index = 35
+09-05 15:12:22.582 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49635452088958915，target_2 =  1092640.320361164， target_3 =  129345.0， target_4 = 0.2957415805307743, index = 36
+09-05 15:12:22.583 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.46818859324058293，target_2 =  651239.88886574， target_3 =  118249.0， target_4 = 0.3113113155116841, index = 37
+09-05 15:12:22.583 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49515002116957274，target_2 =  269580.7508219803， target_3 =  105485.0， target_4 = 0.30768347638650184, index = 38
+09-05 15:12:22.583 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5063708727721754，target_2 =  960851.4437589659， target_3 =  130651.0， target_4 = 0.28966497919818707, index = 39
+09-05 15:12:22.584 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.40372107939520396，target_2 =  817512.6946404187， target_3 =  113817.0， target_4 = 0.34427863888977694, index = 40
+09-05 15:12:22.584 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3844184551772025，target_2 =  1391856.6062066045， target_3 =  120711.0， target_4 = 0.351806116148498, index = 41
+09-05 15:12:22.584 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42546996034857043，target_2 =  461964.3339649004， target_3 =  106261.0， target_4 = 0.32984329046522026, index = 42
+09-05 15:12:22.584 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38981169967444074，target_2 =  379831.39180434245， target_3 =  106594.0， target_4 = 0.3224995432363814, index = 43
+09-05 15:12:22.585 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44894294191742506，target_2 =  1705553.7318888837， target_3 =  131324.0， target_4 = 0.316717125648233, index = 44
+09-05 15:12:22.585 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4683272302570735，target_2 =  996818.9083163358， target_3 =  128741.0， target_4 = 0.29727961890352933, index = 45
+09-05 15:12:22.585 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5949075917536343，target_2 =  968509.9839643693， target_3 =  133013.0， target_4 = 0.2795680162541858, index = 46
+09-05 15:12:22.585 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3376104871430449，target_2 =  443218.8529212846， target_3 =  100317.0， target_4 = 0.3457986137679159, index = 47
+09-05 15:12:22.586 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3761323980850147，target_2 =  716228.1609861803， target_3 =  111324.0， target_4 = 0.3440134786908827, index = 48
+09-05 15:12:22.586 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5819269165308601，target_2 =  352109.96037655696， target_3 =  121935.0， target_4 = 0.26835687587005225, index = 49
+09-05 15:12:22.586 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.6460242295126422，target_2 =  274494.280397394， target_3 =  123292.0， target_4 = 0.25102157336788256, index = 50
+09-05 15:12:22.586 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.26214996244067984，target_2 =  1484575.1788061296， target_3 =  116586.0， target_4 = 0.3611085456308795, index = 51
+09-05 15:12:22.587 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.28170925262993635，target_2 =  1000662.3213442647， target_3 =  106938.0， target_4 = 0.36933548897874874, index = 52
+09-05 15:12:22.587 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45576405394279346，target_2 =  616201.7039471058， target_3 =  118618.0， target_4 = 0.30783785681167475, index = 53
+09-05 15:12:22.587 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35658182907211666，target_2 =  498104.8455724984， target_3 =  109080.0， target_4 = 0.32515885972868175, index = 54
+09-05 15:12:22.587 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5295537352550771，target_2 =  894775.112206472， target_3 =  124336.0， target_4 = 0.3151734688058778, index = 55
+09-05 15:12:22.587 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47261577726457493，target_2 =  479832.7179911211， target_3 =  106370.0， target_4 = 0.36573215683438853, index = 56
+09-05 15:12:22.588 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35338574825965885，target_2 =  892833.064237287， target_3 =  112722.0， target_4 = 0.3456041446696807, index = 57
+09-05 15:12:22.588 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45603031757799023，target_2 =  860578.4546165053， target_3 =  122024.0， target_4 = 0.31357647237417763, index = 58
+09-05 15:12:22.588 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.40681960628842384，target_2 =  504336.8675867408， target_3 =  107954.0， target_4 = 0.3321538475097743, index = 59
+09-05 15:12:22.588 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.586981897498667，target_2 =  498451.04912589665， target_3 =  127489.0， target_4 = 0.26577097926261956, index = 60
+09-05 15:12:22.589 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35670831769984，target_2 =  657242.8428536901， target_3 =  111638.0， target_4 = 0.335109612499857, index = 61
+09-05 15:12:22.589 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.48965871369691627，target_2 =  744716.6436224403， target_3 =  118094.0， target_4 = 0.3233588626025851, index = 62
+09-05 15:12:22.589 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37886333415491397，target_2 =  982773.3577731854， target_3 =  115768.0， target_4 = 0.34082174939767523, index = 63
+09-05 15:12:22.589 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.24961191045021244，target_2 =  943316.5315582048， target_3 =  112653.0， target_4 = 0.597494219688298, index = 64
+09-05 15:12:22.590 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4181022387668156，target_2 =  873859.1895140989， target_3 =  120248.0， target_4 = 0.3236725554487138, index = 65
+09-05 15:12:22.590 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.14416957816373105，target_2 =  1906728.2709644197， target_3 =  133720.0， target_4 = 0.5369050226508105, index = 66
+09-05 15:12:22.590 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2774632896614606，target_2 =  1900937.7774729321， target_3 =  123669.0， target_4 = 0.3475424231691675, index = 67
+09-05 15:12:22.590 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35592422631351145，target_2 =  841825.7138236794， target_3 =  112374.0， target_4 = 0.3494282911980956, index = 68
+09-05 15:12:22.591 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3830551998410055，target_2 =  219939.3491369924， target_3 =  93138.0， target_4 = 0.32824739094049954, index = 69
+09-05 15:12:22.591 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3333274111798326，target_2 =  422956.3255580259， target_3 =  91276.0， target_4 = 0.38123539624164526, index = 70
+09-05 15:12:22.591 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39986759793137533，target_2 =  1078139.2211935865， target_3 =  122372.0， target_4 = 0.31790464309200833, index = 71
+09-05 15:12:22.591 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2884815044611218，target_2 =  774645.4076535753， target_3 =  104065.0， target_4 = 0.36597327066016466, index = 72
+09-05 15:12:22.592 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2690518434990027，target_2 =  652475.1461722042， target_3 =  99057.0， target_4 = 0.3740567482934407, index = 73
+09-05 15:12:22.592 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3351636974680981，target_2 =  676439.8128280842， target_3 =  108228.0， target_4 = 0.34500198220006173, index = 74
+09-05 15:12:22.592 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3990080846565454，target_2 =  643179.1766845214， target_3 =  110976.0， target_4 = 0.3387355832973989, index = 75
+09-05 15:12:22.592 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32041125865748993，target_2 =  519735.28744900395， target_3 =  105358.0， target_4 = 0.3385067054019646, index = 76
+09-05 15:12:22.593 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3731367957598728，target_2 =  1121710.7667207692， target_3 =  120146.0， target_4 = 0.3399465161921264, index = 77
+09-05 15:12:22.593 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3088077206611756，target_2 =  1996443.2408519608， target_3 =  124314.0， target_4 = 0.35650360521986524, index = 78
+09-05 15:12:22.593 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35037765755172834，target_2 =  857506.7221414393， target_3 =  113403.0， target_4 = 0.3393959873303175, index = 79
+09-05 15:12:22.593 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.34529744535710405，target_2 =  2164550.9872071138， target_3 =  129067.0， target_4 = 0.3321856468589499, index = 80
+09-05 15:12:22.593 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.31015017686868546，target_2 =  2037439.26877071， target_3 =  124884.0， target_4 = 0.3553973104009447, index = 81
+09-05 15:12:22.594 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3574571617241975，target_2 =  812897.9778428714， target_3 =  113473.0， target_4 = 0.33557661937253636, index = 82
+09-05 15:12:22.594 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.10139014577537074，target_2 =  3263452.239803903， target_3 =  122279.0， target_4 = 0.4141193119212309, index = 83
+09-05 15:12:22.594 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44109755852877564，target_2 =  312994.1814626971， target_3 =  107787.0， target_4 = 0.40494020045943824, index = 84
+09-05 15:12:22.595 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37675145556422046，target_2 =  743899.8763226779， target_3 =  120829.0， target_4 = 0.3869585050651145, index = 85
+09-05 15:12:22.595 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3006379952128088，target_2 =  664120.6861458361， target_3 =  115952.0， target_4 = 0.41527588363793255, index = 86
+09-05 15:12:22.595 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4610413479668789，target_2 =  402452.53497304494， target_3 =  118756.0， target_4 = 0.4092346294387928, index = 87
+09-05 15:12:22.595 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.18838182545211846，target_2 =  803540.2661005397， target_3 =  108468.0， target_4 = 0.4213404626606009, index = 88
+09-05 15:12:22.596 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3577928380439457，target_2 =  1325826.0665160257， target_3 =  127669.0， target_4 = 0.3746441073853319, index = 89
+09-05 15:12:22.596 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47124494991857674，target_2 =  753728.9077063139， target_3 =  115112.0， target_4 = 0.33339355994809033, index = 90
+09-05 15:12:22.596 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44284436056264964，target_2 =  1552235.327764964， target_3 =  130369.0， target_4 = 0.3081805715216506, index = 91
+09-05 15:12:22.596 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37637144149113455，target_2 =  842284.9491604897， target_3 =  108042.0， target_4 = 0.35729525811632057, index = 92
+09-05 15:12:22.596 13373 13945 I BitmapRecognizeUtils: end to compare = 提神水晶
+09-05 15:12:22.599 13373 13945 I BitmapRecognizeUtils: start to compare
+09-05 15:12:22.600 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.8318799181087554，target_2 =  45969.74153199327， target_3 =  155190.0， target_4 = 0.15435287011302484, index = 0
+09-05 15:12:22.601 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.16012470794869518，target_2 =  313588.07639723376， target_3 =  78067.0， target_4 = 0.5170836834725927, index = 1
+09-05 15:12:22.601 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42586281658933905，target_2 =  197592.01024623035， target_3 =  106483.0， target_4 = 0.327757320686093, index = 2
+09-05 15:12:22.601 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.06910513105687716，target_2 =  498998.138613632， target_3 =  83214.0， target_4 = 0.433774597555149, index = 3
+09-05 15:12:22.601 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3136154796122759，target_2 =  457778.36180375563， target_3 =  143187.0， target_4 = 0.30764789545039967, index = 4
+09-05 15:12:22.601 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5309910710772566，target_2 =  279764.1426352856， target_3 =  144635.0， target_4 = 0.27472530505874876, index = 5
+09-05 15:12:22.602 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.45485902639809606，target_2 =  397075.4850245076， target_3 =  140294.0， target_4 = 0.2885837063013286, index = 6
+09-05 15:12:22.602 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.22475444531584365，target_2 =  346110.12993293005， target_3 =  98389.0， target_4 = 0.38872055303916253, index = 7
+09-05 15:12:22.602 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2804448845046913，target_2 =  417120.5781833381， target_3 =  121889.0， target_4 = 0.36145700726283975, index = 8
+09-05 15:12:22.602 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4878756169213399，target_2 =  605928.0524615997， target_3 =  159858.0， target_4 = 0.27559949611300383, index = 9
+09-05 15:12:22.603 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4188756270087914，target_2 =  136861.31121748104， target_3 =  100688.0， target_4 = 0.31335210662593826, index = 10
+09-05 15:12:22.603 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42832542378874106，target_2 =  615285.6253787667， target_3 =  135362.0， target_4 = 0.33435299403243224, index = 11
+09-05 15:12:22.603 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32651068109368336，target_2 =  1283926.0504257998， target_3 =  165566.0， target_4 = 0.30532153377917215, index = 12
+09-05 15:12:22.603 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.39497149963946593，target_2 =  380989.6012107229， target_3 =  126900.0， target_4 = 0.32117281273142706, index = 13
+09-05 15:12:22.603 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.44807133090247936，target_2 =  448099.1510869889， target_3 =  160836.0， target_4 = 0.2642315730683287, index = 14
+09-05 15:12:22.604 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2902017881607548，target_2 =  286702.74663902336， target_3 =  96145.0， target_4 = 0.37053716208228155, index = 15
+09-05 15:12:22.604 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.400074036719104，target_2 =  332873.0894292531， target_3 =  136129.0， target_4 = 0.3004748870751346, index = 16
+09-05 15:12:22.604 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5596943854065253，target_2 =  253066.80353178916， target_3 =  156887.0， target_4 = 0.24200835411854626, index = 17
+09-05 15:12:22.604 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47114417394008823，target_2 =  307806.3534077572， target_3 =  132682.0， target_4 = 0.30935002115541926, index = 18
+09-05 15:12:22.605 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.27634184407015283，target_2 =  220344.12487263206， target_3 =  88739.0， target_4 = 0.4159785406365702, index = 19
+09-05 15:12:22.605 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.24579981613947874，target_2 =  525418.8850210903， target_3 =  145429.0， target_4 = 0.31219963060788486, index = 20
+09-05 15:12:22.605 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35298330895991936，target_2 =  479527.71030003135， target_3 =  142120.0， target_4 = 0.311135415958116, index = 21
+09-05 15:12:22.605 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33331065924125547，target_2 =  314974.5680308017， target_3 =  113481.0， target_4 = 0.4566495885388962, index = 22
+09-05 15:12:22.606 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.568553255547567，target_2 =  326696.4455047357， target_3 =  154347.0， target_4 = 0.26472402060024375, index = 23
+09-05 15:12:22.606 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3812744706079115，target_2 =  269619.19620181184， target_3 =  127024.0， target_4 = 0.3129293793501595, index = 24
+09-05 15:12:22.606 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.37072990870393685，target_2 =  293217.7860683528， target_3 =  122863.0， target_4 = 0.3238942610484405, index = 25
+09-05 15:12:22.606 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43794937831329067，target_2 =  271244.85745416756， target_3 =  145197.0， target_4 = 0.27834823722053087, index = 26
+09-05 15:12:22.607 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5815234917571558，target_2 =  404585.21277577715， target_3 =  148623.0， target_4 = 0.2842265824736133, index = 27
+09-05 15:12:22.607 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.33207581161417377，target_2 =  281759.4300082769， target_3 =  132132.0， target_4 = 0.2953711330370405, index = 28
+09-05 15:12:22.607 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36646272369881283，target_2 =  153060.25005929594， target_3 =  104970.0， target_4 = 0.36819499148406176, index = 29
+09-05 15:12:22.607 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4444884334907252，target_2 =  338992.123012579， target_3 =  143375.0， target_4 = 0.29490795134955233, index = 30
+09-05 15:12:22.607 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38625612242545004，target_2 =  414324.1086517846， target_3 =  146094.0， target_4 = 0.3019407656763203, index = 31
+09-05 15:12:22.608 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.49179447845759416，target_2 =  165308.79106938856， target_3 =  143436.0， target_4 = 0.24674858339338065, index = 32
+09-05 15:12:22.608 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35020637153663176，target_2 =  259113.7965619465， target_3 =  107826.0， target_4 = 0.3544890675518073, index = 33
+09-05 15:12:22.608 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.340457429271271，target_2 =  685468.4980049559， target_3 =  154760.0， target_4 = 0.304418169936322, index = 34
+09-05 15:12:22.608 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5917537862529675，target_2 =  59073.4099163228， target_3 =  96207.0， target_4 = 0.19330926080170513, index = 35
+09-05 15:12:22.609 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32777454577122633，target_2 =  601378.5962584475， target_3 =  150467.0， target_4 = 0.3063976302254224, index = 36
+09-05 15:12:22.609 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.34720684231372406，target_2 =  477468.31199101097， target_3 =  133806.0， target_4 = 0.32817997105084934, index = 37
+09-05 15:12:22.609 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4174206893788914，target_2 =  195671.29345562615， target_3 =  121020.0， target_4 = 0.3047337702558074, index = 38
+09-05 15:12:22.609 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4097322177258372，target_2 =  548504.6746453587， target_3 =  162119.0， target_4 = 0.2709029114981077, index = 39
+09-05 15:12:22.610 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5688234524880043，target_2 =  316499.0186884051， target_3 =  152559.0， target_4 = 0.2655577390067264, index = 40
+09-05 15:12:22.610 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4249927390672222，target_2 =  617907.778130648， target_3 =  156460.0， target_4 = 0.28962574818590386, index = 41
+09-05 15:12:22.610 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32264689345094677，target_2 =  292750.7385409785， target_3 =  120207.0， target_4 = 0.33202815711541, index = 42
+09-05 15:12:22.610 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38794296973175324，target_2 =  231695.6193997723， target_3 =  126421.0， target_4 = 0.3025798920510621, index = 43
+09-05 15:12:22.610 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3050164982037404，target_2 =  1012700.3841965683， target_3 =  157333.0， target_4 = 0.32177685414052665, index = 44
+09-05 15:12:22.611 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35431969110494643，target_2 =  543668.7064329865， target_3 =  154836.0， target_4 = 0.2901390156219635, index = 45
+09-05 15:12:22.611 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4357868100410842，target_2 =  773228.5598722441， target_3 =  160485.0， target_4 = 0.2904248316854411, index = 46
+09-05 15:12:22.611 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.5473023146796441，target_2 =  168150.11813910492， target_3 =  138901.0， target_4 = 0.2649402570651921, index = 47
+09-05 15:12:22.611 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3197132551135746，target_2 =  423436.308896766， target_3 =  131571.0， target_4 = 0.34290090819073227, index = 48
+09-05 15:12:22.612 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.433124929674813，target_2 =  233746.9880327789， target_3 =  140998.0， target_4 = 0.27778297922990647, index = 49
+09-05 15:12:22.612 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42509132646052883，target_2 =  275810.04175810557， target_3 =  125649.0， target_4 = 0.31292372277470465, index = 50
+09-05 15:12:22.612 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.382789692254161，target_2 =  533696.4386972741， target_3 =  151601.0， target_4 = 0.29336657206509215, index = 51
+09-05 15:12:22.612 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2993352068178057，target_2 =  442207.52246225695， target_3 =  135779.0， target_4 = 0.32398687817725846, index = 52
+09-05 15:12:22.612 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3169971262672443，target_2 =  346076.8680427486， target_3 =  139616.0， target_4 = 0.29930136142585595, index = 53
+09-05 15:12:22.613 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35754658382650184，target_2 =  303405.5642640966， target_3 =  134772.0， target_4 = 0.2967689465166206, index = 54
+09-05 15:12:22.613 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30034434568404583，target_2 =  674339.9645871671， target_3 =  137985.0， target_4 = 0.3621403336465781, index = 55
+09-05 15:12:22.613 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.38128264618350244，target_2 =  330536.18483772303， target_3 =  121135.0， target_4 = 0.36592673549512594, index = 56
+09-05 15:12:22.613 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.32395939647434685，target_2 =  336673.6915802， target_3 =  133997.0， target_4 = 0.3158333676948134, index = 57
+09-05 15:12:22.614 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35271346965283706，target_2 =  492620.21046970383， target_3 =  147137.0， target_4 = 0.30134186288086795, index = 58
+09-05 15:12:22.614 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3972099683506548，target_2 =  374581.8853422969， target_3 =  131276.0， target_4 = 0.3119281574745421, index = 59
+09-05 15:12:22.614 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4177425114721163，target_2 =  399632.9760671226， target_3 =  151164.0， target_4 = 0.2815840021331946, index = 60
+09-05 15:12:22.614 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4664709433943753，target_2 =  313367.7620548779， target_3 =  146416.0， target_4 = 0.2601805692359522, index = 61
+09-05 15:12:22.614 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.40262585705708426，target_2 =  438967.2398768453， target_3 =  144177.0， target_4 = 0.3090184868371204, index = 62
+09-05 15:12:22.615 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4000744224260604，target_2 =  419864.0287401185， target_3 =  148588.0， target_4 = 0.28665052612906755, index = 63
+09-05 15:12:22.615 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.5192796677640612，target_2 =  622195.8009605446， target_3 =  128029.0， target_4 = 0.5985042755361349, index = 64
+09-05 15:12:22.615 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4322449958957609，target_2 =  434615.28130385047， target_3 =  154009.0， target_4 = 0.27925478320656105, index = 65
+09-05 15:12:22.615 13373 13945 I BitmapRecognizeUtils: similar ： target  ==-0.48483161971488825，target_2 =  1087333.510536756， target_3 =  160750.0， target_4 = 0.5282377163583182, index = 66
+09-05 15:12:22.616 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4886581472428593，target_2 =  671714.1580148749， target_3 =  172512.0， target_4 = 0.24351332156545122, index = 67
+09-05 15:12:22.616 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.4038525439666401，target_2 =  294142.12547429535， target_3 =  146150.0， target_4 = 0.2816575713189047, index = 68
+09-05 15:12:22.617 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3023597959614857，target_2 =  141199.30150512987， target_3 =  111373.0， target_4 = 0.31099772103130974, index = 69
+09-05 15:12:22.617 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43769095222551124，target_2 =  179378.51805560564， target_3 =  111946.0， target_4 = 0.31879381217967556, index = 70
+09-05 15:12:22.618 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.35945392934656006，target_2 =  576183.0493783554， target_3 =  157570.0， target_4 = 0.28361495616999066, index = 71
+09-05 15:12:22.618 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.30226755810320727，target_2 =  271882.05859778833， target_3 =  130514.0， target_4 = 0.3151925799281213, index = 72
+09-05 15:12:22.618 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3820537724483814，target_2 =  250736.40813645307， target_3 =  130819.0， target_4 = 0.31066267089092264, index = 73
+09-05 15:12:22.619 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.347131623177362，target_2 =  360914.30980878224， target_3 =  140096.0， target_4 = 0.3056627401856151, index = 74
+09-05 15:12:22.619 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.47829440133217704，target_2 =  302227.6132581475， target_3 =  141487.0， target_4 = 0.28932628123525045, index = 75
+09-05 15:12:22.619 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.40691830734760925，target_2 =  326083.15789833607， target_3 =  138123.0， target_4 = 0.2792889047350411, index = 76
+09-05 15:12:22.619 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3375544496528455，target_2 =  449183.70806330757， target_3 =  153148.0， target_4 = 0.2867546176819781, index = 77
+09-05 15:12:22.620 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.42323531392766156，target_2 =  695926.5004409114， target_3 =  164316.0， target_4 = 0.2764726734588643, index = 78
+09-05 15:12:22.620 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2462961292828391，target_2 =  393093.6419414968， target_3 =  137866.0， target_4 = 0.3125004908610799, index = 79
+09-05 15:12:22.620 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.36312101470400665，target_2 =  929208.3104864699， target_3 =  169142.0， target_4 = 0.2718497053048615, index = 80
+09-05 15:12:22.620 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.43297101803771804，target_2 =  707065.6399919639， target_3 =  166167.0， target_4 = 0.2728534062072874, index = 81
+09-05 15:12:22.621 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2388650109288778，target_2 =  379457.1448605735， target_3 =  136108.0， target_4 = 0.3141275134254413, index = 82
+09-05 15:12:22.621 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.28239857602003443，target_2 =  824238.8547926245， target_3 =  162899.0， target_4 = 0.3222073132223739, index = 83
+09-05 15:12:22.621 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.06578870747059502，target_2 =  425209.49869022483， target_3 =  107399.0， target_4 = 0.46524982857934344, index = 84
+09-05 15:12:22.621 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3215115726412235，target_2 =  367484.72065453464， target_3 =  152878.0， target_4 = 0.35159018840714756, index = 85
+09-05 15:12:22.622 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.2949201615360746，target_2 =  378053.51564116107， target_3 =  145305.0， target_4 = 0.3907072408460984, index = 86
+09-05 15:12:22.622 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.018232301405152362，target_2 =  416729.7383663918， target_3 =  119245.0， target_4 = 0.4555032093153032, index = 87
+09-05 15:12:22.622 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.14932352000642202，target_2 =  446230.9871057683， target_3 =  138713.0， target_4 = 0.39151517927849455, index = 88
+09-05 15:12:22.622 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.24269692184446265，target_2 =  798572.1473830387， target_3 =  162906.0， target_4 = 0.34688172949174706, index = 89
+09-05 15:12:22.623 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3983002342837908，target_2 =  438368.94952884497， target_3 =  132299.0， target_4 = 0.3348973887738194, index = 90
+09-05 15:12:22.623 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3502370067631444，target_2 =  765559.3645357769， target_3 =  162377.0， target_4 = 0.281612148617153, index = 91
+09-05 15:12:22.623 13373 13945 I BitmapRecognizeUtils: similar ： target  ==0.3259775411126885，target_2 =  369214.3670248299， target_3 =  129405.0， target_4 = 0.327851328608243, index = 92
+09-05 15:12:22.623 13373 13945 I BitmapRecognizeUtils: end to compare = 铁剑

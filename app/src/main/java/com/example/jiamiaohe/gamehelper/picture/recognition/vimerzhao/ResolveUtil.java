@@ -160,53 +160,58 @@ public class ResolveUtil {
     private static void correctDataByRepeat() {
         Arrays.sort(sTempData);
 
-        for (int i = 0; i < sReturnData.length; i++) {
-            for (int j = 0; j < sReturnData[0].length; j++) {
-                if (sReturnData[i][j] == null) {
+        try {
 
-                    sReturnData[i][j] = new ReturnData();
+            for (int i = 0; i < sReturnData.length; i++) {
+                for (int j = 0; j < sReturnData[0].length; j++) {
+                    if (sReturnData[i][j] == null) {
+
+                        sReturnData[i][j] = new ReturnData();
+                    }
                 }
             }
-        }
-        int iCount = 0;
-        // 默认文字能识别出来
-        for (int i = 0; i < sTempData.length; ) {
-            if (iCount >= 10) break;
+            int iCount = 0;
+            // 默认文字能识别出来
+            for (int i = 0; i < sTempData.length; ) {
+                if (iCount >= 10) break;
 
-            int jCount = 0;
-            sReturnData[iCount][jCount].data = sTempData[i].data;
-            sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-            sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
-
-            sReturnData[iCount][jCount].data = sTempData[i].data;
-            sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-            sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
-
-            for (int k = 0; k < 3; k++) {
-                System.out.println(iCount+"=="+jCount);
-                // TODO: 其实需要处理的就是 中间3个较小的数字
+                int jCount = 0;
+                sReturnData[iCount][jCount].data = sTempData[i].data;
                 sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-                sReturnData[iCount][jCount].yLoc = sTempData[i].yLoc;
-                sReturnData[iCount][jCount].data = sTempData[i].data.trim().substring(sTempData[i].data.length() / 2);
+                sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
 
-                if (!TextUtils.isDigitsOnly(sReturnData[iCount][jCount].data)) {
-                    sReturnData[iCount][jCount].data = String.valueOf(modifyTable.get(sReturnData[iCount][jCount].data));
+                sReturnData[iCount][jCount].data = sTempData[i].data;
+                sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
+
+                for (int k = 0; k < 3; k++) {
+                    System.out.println(iCount + "==" + jCount);
+                    // TODO: 其实需要处理的就是 中间3个较小的数字
+                    sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                    sReturnData[iCount][jCount].yLoc = sTempData[i].yLoc;
+                    sReturnData[iCount][jCount].data = sTempData[i].data.trim().substring(sTempData[i].data.length() / 2);
+
+                    if (!TextUtils.isDigitsOnly(sReturnData[iCount][jCount].data)) {
+                        sReturnData[iCount][jCount].data = String.valueOf(modifyTable.get(sReturnData[iCount][jCount].data));
+                    }
+
+                    jCount++;
+                    i++;
                 }
 
-                jCount++;
-                i++;
+                sReturnData[iCount][jCount].data = sTempData[i].data;
+                sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                sReturnData[iCount][jCount].yLoc = sTempData[i++].yLoc;
+                iCount++;
             }
-
-            sReturnData[iCount][jCount].data = sTempData[i].data;
-            sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-            sReturnData[iCount][jCount].yLoc = sTempData[i++].yLoc;
-            iCount++;
-        }
-        // sync
-        for (int i = 0; i < sReturnData.length; i++) {
-            for (int j = 0; j < sReturnData[i].length; j++) {
-                data[i][j] = sReturnData[i][j].data;
+            // sync
+            for (int i = 0; i < sReturnData.length; i++) {
+                for (int j = 0; j < sReturnData[i].length; j++) {
+                    data[i][j] = sReturnData[i][j].data;
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

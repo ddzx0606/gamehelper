@@ -51,7 +51,7 @@ public class GameHelperService extends Service{
         mGameHelperService = this;
 
         getNotification();
-        startForeground(1, mNoti);
+        //startForeground(1, mNoti);
 
         Log.i("hm", "GameHelperService onCreate");
         init();
@@ -144,16 +144,17 @@ public class GameHelperService extends Service{
 
     int mImageIndex = 0;
     int mImageArray[] = {R.drawable.battle_skill, R.drawable.detail_1, R.drawable.detail_2, R.drawable.detail_3, R.drawable.detail_4};
+//    Thread myThread = null;
     public void addView() {
         if (mTextView == null) {
             mTextView = new TextView(MyApplication.getContext());
             mTextView.setText("王者处于后台");
-            mTextView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ScreenShotterUtils.getInstance().startScreenShot(null);
-                }
-            });
+//            mTextView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    ScreenShotterUtils.getInstance().startScreenShot(null);
+//                }
+//            });
         }
 
         if (mSmallIcon == null) {
@@ -174,6 +175,22 @@ public class GameHelperService extends Service{
                 @Override
                 public boolean onLongClick(View view) {
                     ScreenShotterUtils.getInstance().startScreenShot(null);
+//                    if (myThread == null) {
+//                        myThread = new Thread(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                while(true) {
+//                                    ScreenShotterUtils.getInstance().startScreenShot(null);
+//                                    try {
+//                                        Thread.sleep(1000);
+//                                    } catch (InterruptedException e) {
+//                                        e.printStackTrace();
+//                                    }
+//                                }
+//                            }
+//                        });
+//                        myThread.start();
+//                    }
                     return true;
                 }
             });
