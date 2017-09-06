@@ -79,7 +79,7 @@ public class BattleSituation {
             mPlayers[i].analys(bitmap, mPlayesRect[i], mPlayersIndex[i]);
         }
         // 解析
-        Toast.makeText(MyApplication.getContext(), "识别中...", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MyApplication.getContext(), "识别中...", Toast.LENGTH_SHORT).show();
         ResolveUtil.resolve(mPlayers);
 
     }

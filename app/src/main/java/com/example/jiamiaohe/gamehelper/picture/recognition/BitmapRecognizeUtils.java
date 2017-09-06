@@ -51,7 +51,7 @@ public class BitmapRecognizeUtils {
 
     private BitmapRecognizeUtils() {
         Bitmap bitmap;
-        for(int i = 1; i < 97; i++) {
+        for(int i = 1; i < 100; i++) {
             bitmap = BitmapFactory.decodeResource(MyApplication.getContext().getResources(), MyApplication.getContext().getResources().getIdentifier("b"+i, "drawable", MyApplication.getContext().getPackageName()));
             Log.i(TAG, "initBitmapList = bitmap = "+bitmap+", index = "+i);
             mList.add(scaleBitmap(bitmap));
@@ -83,6 +83,10 @@ public class BitmapRecognizeUtils {
     private Bitmap scaleBitmap(Bitmap bitmap) {
         int with = bitmap.getWidth();
         int height = bitmap.getHeight();
+
+        if (with == 64 && height == 64) {
+            return bitmap;
+        }
 
         Matrix matrix = new Matrix();
         matrix.postScale(64.00f/with, 64.0f/height);
@@ -160,7 +164,7 @@ public class BitmapRecognizeUtils {
     }
 
     public static int i = 1;
-    public String getBitmapName(Bitmap origin, int id) {
+    public synchronized String getBitmapName(Bitmap origin, int id) {
         Log.i(TAG, "start to compare");
 
         Bitmap bitmap = Bitmap.createBitmap(origin);
