@@ -207,7 +207,8 @@ public class PlayerAnalys {
             main.addView(propLinear);
             main.addView(textLinear);
             main.addView(propTextLinear);
-
+            return main;
+/*
 //            if (mPlayerIndex.equals("友方二")) {
                 new Thread(new Runnable() {
                     @Override
@@ -230,8 +231,8 @@ public class PlayerAnalys {
                     }
                 }).start();
 //            }
+*/
 
-            return main;
         } else {
             TextView textView = new TextView(MyApplication.getContext());
             textView.setText(mPlayerIndex+"为空");

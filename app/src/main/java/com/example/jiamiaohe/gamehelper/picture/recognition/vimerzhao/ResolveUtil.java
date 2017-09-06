@@ -352,7 +352,8 @@ public class ResolveUtil {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
         if (width == BITMAP_WIDTH && height == BITMAP_HEIGHT) {
-            Toast.makeText(MyApplication.getContext(), "标准", Toast.LENGTH_SHORT).show();
+            //TODO: 这一句需要注释掉，在部分机型可能报错!!
+            // Toast.makeText(MyApplication.getContext(), "标准", Toast.LENGTH_SHORT).show();
             return bitmap;
         }
         float scaleWidth = (float) BITMAP_WIDTH / width;
