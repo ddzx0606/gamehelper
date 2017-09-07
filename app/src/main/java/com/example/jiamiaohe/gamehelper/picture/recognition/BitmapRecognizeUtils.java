@@ -164,6 +164,10 @@ public class BitmapRecognizeUtils {
     }
 
     public static int i = 1;
+    Mat mat1 = new Mat();
+    Mat mat2 = new Mat();
+    Mat mat11 = new Mat();
+    Mat mat22 = new Mat();
     public synchronized String getBitmapName(Bitmap origin, int id) {
         Log.i(TAG, "start to compare");
 
@@ -184,13 +188,9 @@ public class BitmapRecognizeUtils {
 
         double similar = 0;
         for(Bitmap bitDest : mList) {
-            Mat mat1 = new Mat();
-            Mat mat2 = new Mat();
-            Mat mat11 = new Mat();
-            Mat mat22 = new Mat();
             Utils.bitmapToMat(bitmap, mat1);
             Utils.bitmapToMat(bitDest, mat2);
-            Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);
+            Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);  //COLOR_RGB2HSV  COLOR_BGR2GRAY
             Imgproc.cvtColor(mat2, mat22, Imgproc.COLOR_BGR2GRAY);
             similar = comPareHist(mat11, mat22, index);
             if (similar > maxSimilar) {
