@@ -26,6 +26,9 @@ import android.widget.ToggleButton;
 
 import com.example.administrator.endcall.BlockCallHelper;
 import com.example.administrator.endcall.NotificationUtils;
+import com.example.jiamiaohe.gamehelper.bluetooth.Constants;
+import com.example.jiamiaohe.gamehelper.bluetooth.DeviceListActivity;
+import com.example.jiamiaohe.gamehelper.bluetooth.IconProxy;
 import com.tutorials.hp.listviewimagessdcard.ImageActivity;
 
 import java.util.ArrayList;
@@ -275,6 +278,10 @@ public class MainActivity extends AppCompatActivity {
                 ScreenShotterUtils.getInstance().init(MyApplication.getContext(), data);
             }
         }
+        // 建立连接，让IconProxy操作，减少耦合
+        if (iconProxy != null) {
+            iconProxy.onProxyActivityResult(MainActivity.this, requestCode, resultCode, data);
+        }
     }
 
     @Override
@@ -289,6 +296,13 @@ public class MainActivity extends AppCompatActivity {
         menu.add(Menu.NONE, Menu.FIRST+7, 1+7, "更改默认短信");
         menu.add(Menu.NONE, Menu.FIRST+8, 1+8, "截图");
         menu.add(Menu.NONE, Menu.FIRST+9, 1+9, "查看截图");
+
+        /*
+         * 新增两个入口
+         * vimerzhao
+         */
+        menu.add(Menu.NONE, Menu.FIRST+10, 1+10, "建立蓝牙连接");
+        menu.add(Menu.NONE, Menu.FIRST+11, 1+11, "开启设备可见性");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -330,12 +344,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             }
+            // 添加入口
+            case Menu.FIRST+10: {
+                Intent serverIntent = new Intent(this, DeviceListActivity.class);
+                startActivityForResult(serverIntent, Constants.REQUEST_CONNECT_DEVICE_SECURE);
+                return true;
+            }
+            case Menu.FIRST+11: {
+                iconProxy = IconProxy.getInstance();
+                iconProxy.ensureDiscoverable(this);
+            }
             default:
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
-
+    private IconProxy iconProxy;
     public void requestScreenShot() {
         if (Build.VERSION.SDK_INT >= 21) {
             startActivityForResult(

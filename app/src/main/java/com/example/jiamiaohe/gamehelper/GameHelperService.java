@@ -282,4 +282,9 @@ public class GameHelperService extends Service{
 
         return mNoti;
     }
+    //添加一个方法作为代理的入口
+    public void setImageResource(int index) {
+        if (index >= mImageArray.length) return;
+        mSmallIcon.setImageResource(mImageArray[index]);
+    }
 }

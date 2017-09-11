@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jiamiaohe.gamehelper">
-
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
@@ -58,6 +59,7 @@
 
         <activity android:name="com.tutorials.hp.listviewimagessdcard.ImageActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".bluetooth.DeviceListActivity"/>
 
         <!-- 注册广播 监听拨出电话 -->
         <receiver android:name="com.example.administrator.endcall.PhoneStateReceiver">
