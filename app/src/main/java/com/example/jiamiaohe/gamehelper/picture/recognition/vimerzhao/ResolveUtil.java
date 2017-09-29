@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -37,7 +38,7 @@ public class ResolveUtil {
     private static final String SECRET_KEY = "FUbaNF0ayAAzUpxgmifXD3kHfsz3LYaV";
     private static final String USER_ID = "1769898935";
     private final static int NUMBER = 10;
-    private final static int ITEM_COUNT = 6;
+    private final static int ITEM_COUNT = 7;
     static String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/tmp.png");
     private static Bitmap[] mPerPlayer = new Bitmap[NUMBER];
     private static Bitmap mTotalPlayer;
@@ -120,7 +121,7 @@ public class ResolveUtil {
         int count = 0;
 
         for (int i = 0; i < array.length(); i++) {
-            if (i < 60) {
+            if (i < NUMBER * ITEM_COUNT) {
 
                 //每行个，识别顺序可能变化，所以需要根据x大小排序，y轴顺序较为稳定，所以暂时不做排序
                 if (i != 0 && i % ITEM_COUNT == 0) {
@@ -154,6 +155,7 @@ public class ResolveUtil {
         modifyTable.put("C", 0);
         modifyTable.put("l", 1);
         modifyTable.put("L", 1);
+        modifyTable.put("g", 9);
     }
 
     private static void correctDataByRepeat() {
@@ -182,7 +184,7 @@ public class ResolveUtil {
             int dealt = 0;
             // 默认文字能识别出来
             for (int i = 0; i < sTempData.length; ) {
-                if (iCount >= 10) break;
+                if (iCount >= NUMBER) break;
 
                 int jCount = 0;
                 if (sTempData[dealt].data != null && Math.abs(sTempData[i].yLoc - sReturnData[iCount][jCount].yLoc) < RANGE) {
@@ -200,16 +202,13 @@ public class ResolveUtil {
                 }
                 jCount++;
 
-                for (int k = 0; k < 3; k++) {
+                for (int k = 0; k < 4; k++) {
                     System.out.println(iCount + "==" + jCount);
                     // TODO: 其实需要处理的就是 中间3个较小的数字
                     if (sTempData[dealt].data != null && Math.abs(sTempData[i].yLoc - sReturnData[iCount][jCount].yLoc) < RANGE) {
                         sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
                         sReturnData[iCount][jCount].yLoc = sTempData[i].yLoc;
-                        sReturnData[iCount][jCount].data = sTempData[i].data.trim().substring(sTempData[i].data.length() / 2);
-                        if (!TextUtils.isDigitsOnly(sReturnData[iCount][jCount].data)) {
-                            sReturnData[iCount][jCount].data = String.valueOf(modifyTable.get(sReturnData[iCount][jCount].data));
-                        }
+                        sReturnData[iCount][jCount].data = sTempData[i].data;
                         i++;
                     }
 
@@ -225,6 +224,7 @@ public class ResolveUtil {
                 iCount++;
             }
             // sync
+            modifyData(sReturnData);
             for (int i = 0; i < sReturnData.length; i++) {
                 for (int j = 0; j < sReturnData[i].length; j++) {
                     data[i][j] = sReturnData[i][j].data;
@@ -233,6 +233,71 @@ public class ResolveUtil {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+    }
+    //定位一行数据中没识别出来的
+    public static void modifyData(ReturnData[][] returnData) {
+        ReturnData[][] origin = new ReturnData[NUMBER][ITEM_COUNT];
+        for (int i = 0; i < returnData.length; i++) {
+            for (int j = 0; j < returnData[i].length; j++) {
+                origin[i][j] = new ReturnData();
+                origin[i][j].data = returnData[i][j].data;
+                origin[i][j].xLoc= returnData[i][j].xLoc;
+                returnData[i][j].data = "空";
+
+            }
+        }
+        int range = 30;
+        int[] locArr = new int[ITEM_COUNT];
+        ArrayList<Integer> originWidth = PlayerAnalysRatio.set.get(RatioData.wText);
+        ArrayList<Integer> textWidth = new ArrayList<>();
+        for (int i = 0; i < originWidth.size(); i++) {
+            textWidth.add(i, originWidth.get(i));
+        }
+        int tmp = textWidth.get(2);
+        textWidth.remove(2);
+        textWidth.add(2, 2*tmp);
+
+        tmp = textWidth.get(3);
+        textWidth.remove(3);
+        textWidth.add(3, 2*tmp);
+
+        tmp = textWidth.get(4);
+        textWidth.remove(4);
+        textWidth.add(4, 2*tmp);
+
+        textWidth.add(5, 2*  PlayerAnalysRatio.set.get(RatioData.levelTag).get(7));
+
+        for (int i = 1; i < textWidth.size(); i++){
+            locArr[i] = locArr[i-1] + textWidth.get(i-1) + PlayerAnalysRatio.getBreakWidth();
+        }
+        tmp = locArr[ITEM_COUNT-1];
+        locArr[ITEM_COUNT-1] = locArr[ITEM_COUNT-2];
+        locArr[ITEM_COUNT-2] = tmp;
+
+        for (int i = 0; i < origin.length; i++) {
+            for (int j = 0; j < origin[i].length; j++) {
+                for (int k =  0; k < locArr.length; k++) {
+                    if (Math.abs(locArr[j] - origin[i][k].xLoc) < range) {
+                        sReturnData[i][j].data = origin[i][k].data;
+                        sReturnData[i][j].xLoc = origin[i][k].xLoc;
+                        break;
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < NUMBER; i++) {
+            for (int j = 2; j < 5; j++) {
+                sReturnData[i][j].data = sReturnData[i][j].data.trim().substring(0, (sReturnData[i][j].data.length()+1) / 2);
+                if (!TextUtils.isDigitsOnly(sReturnData[i][j].data)) {
+                    if (modifyTable.get(sReturnData[i][j].data) != null) {
+                        sReturnData[i][j].data = String.valueOf(modifyTable.get(sReturnData[i][j].data));
+                    } else {
+                        sReturnData[i][j].data = "空";
+                    }
+                }
+            }
         }
 
     }

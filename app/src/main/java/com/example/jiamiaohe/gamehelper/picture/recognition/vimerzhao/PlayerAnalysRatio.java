@@ -46,6 +46,7 @@ public class PlayerAnalysRatio {
     Bitmap mNumMoneyBitmap = null;
 
     Bitmap mSkillBitmap = null;
+    Bitmap mLevelBitmap = null;
 
     ArrayList<Bitmap> mProps = new ArrayList<Bitmap>();
     TextView mPropsTextView = null;
@@ -55,6 +56,7 @@ public class PlayerAnalysRatio {
     TextView mDeadText = null;
     TextView mHelpText = null;
     TextView mMoneyText = null;
+    TextView mLevelText = null;
     Handler mHandler = new Handler();
 
     private static Rect BREAK = new Rect(0, 0, 120, 42);
@@ -176,12 +178,15 @@ public class PlayerAnalysRatio {
         Integer xImg2 = set.get(RatioData.OTHERS).get(1);
         Integer imgSize = set.get(RatioData.OTHERS).get(2);
         Integer textH = set.get(RatioData.OTHERS).get(3);
+        ArrayList<Integer> levelData = set.get(RatioData.levelTag);
 
         //skill
         ArrayList<Integer> xSkill = set.get(RatioData.xSkill);
         ArrayList<Integer> ySkill = set.get(RatioData.ySkill);
         int size = set.get(RatioData.sizeSkill).get(0);
 
+        mLevelBitmap = Bitmap.createBitmap(bitmap, levelData.get(0) + j * (levelData.get(1) - levelData.get(0)),
+                levelData.get(i+2), levelData.get(7), levelData.get(8));
         mNameBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(0) + j * (xText2 - xTextArr.get(0)),
                 yTextArr.get(i), wTextArr.get(0), textH);
         mRoleNameBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(1) + j * (xText2 - xTextArr.get(0)),
@@ -239,6 +244,10 @@ public class PlayerAnalysRatio {
             money.setPadding(0, 0, 2, 0);
             sub.addView(money);
 
+            ImageView level= new ImageView(MyApplication.getContext());
+            level.setImageBitmap(mLevelBitmap);
+            level.setPadding(0, 0, 2, 0);
+            sub.addView(level);
             LinearLayout textLinear = new LinearLayout(MyApplication.getContext());
             textLinear.setOrientation(LinearLayout.HORIZONTAL);
             textLinear.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -272,12 +281,21 @@ public class PlayerAnalysRatio {
             mHelpText.setTextSize(10);
             mHelpText.setText("help:");
             textLinear.addView(mHelpText);
+
+            mLevelText = new TextView(MyApplication.getContext());
+            mLevelText.setTextColor(Color.BLACK);
+            mLevelText.setPadding(0, 0, 2, 0);
+            mLevelText.setTextSize(10);
+            mLevelText.setText("level:");
+            textLinear.addView(mLevelText);
+
             mMoneyText = new TextView(MyApplication.getContext());
             mMoneyText.setTextColor(Color.BLACK);
             mMoneyText.setPadding(0, 0, 2, 0);
             mMoneyText.setTextSize(10);
             mMoneyText.setText("money:");
             textLinear.addView(mMoneyText);
+
 
             LinearLayout propLinear = new LinearLayout(MyApplication.getContext());
             propLinear.setOrientation(LinearLayout.HORIZONTAL);
@@ -397,7 +415,8 @@ public class PlayerAnalysRatio {
         final String killNum = res[2];
         final String deadNum = res[3];
         final String helpNum = res[4];
-        final String moneyNum = res[5];
+        final String level = res[5];
+        final String moneyNum = res[6];
         mHandler.post(new Runnable() {
             @Override
             public void run() {
@@ -407,6 +426,7 @@ public class PlayerAnalysRatio {
                 mDeadText.setText("--" + deadNum);
                 mHelpText.setText("--" + helpNum);
                 mMoneyText.setText("--" + moneyNum);
+                mLevelText.setText("--" + level);
             }
         });
 
@@ -494,21 +514,25 @@ public class PlayerAnalysRatio {
     public Bitmap combineHorizontal() {
         // TODO:根据使用的优化方法设置
         boolean useRepeat = true;
-        Bitmap newNumDeadBitmap, newNumKillBitmap, newNumHelpBitmap;
+        Bitmap newNumDeadBitmap, newNumKillBitmap, newNumHelpBitmap, newLevelBitmap;
         if (useRepeat) {
 
             newNumDeadBitmap = horizondDouble(mNumDeadBitmap);
             newNumKillBitmap = horizondDouble(mNumKillBitmap);
             newNumHelpBitmap = horizondDouble(mNumHelpBitmap);
+            newLevelBitmap = horizondDouble(mLevelBitmap);
+
         } else {
             newNumDeadBitmap = mNumDeadBitmap;
             newNumKillBitmap = mNumKillBitmap;
             newNumHelpBitmap = mNumHelpBitmap;
+            newLevelBitmap = mLevelBitmap;
         }
         return combineHorizontal(mNameBitmap, mRoleNameBitmap,
                 newNumKillBitmap,
                 newNumDeadBitmap,
                 newNumHelpBitmap,
+                newLevelBitmap,
                 mNumMoneyBitmap);
     }
 
@@ -524,5 +548,9 @@ public class PlayerAnalysRatio {
     }
     public static int getBreakHeight() {
         return  BREAK.bottom - BREAK.top;
+    }
+
+    public static int getBreakWidth() {
+        return BREAK.right - BREAK.left;
     }
 }
