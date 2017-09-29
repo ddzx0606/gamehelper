@@ -170,43 +170,65 @@ public class ResolveUtil {
                 }
             }
             int iCount = 0;
+            // 初始化
+            for (int i = 0; i < NUMBER; i++) {
+                for (int j = 0; j < ITEM_COUNT; j++) {
+                    sReturnData[i][j].data = "空";
+                    sReturnData[i][j].xLoc = 0;
+                    sReturnData[i][j].yLoc = i*2*PlayerAnalysRatio.getBreakHeight();
+                }
+            }
+            final int RANGE = 20;
+            int dealt = 0;
             // 默认文字能识别出来
             for (int i = 0; i < sTempData.length; ) {
                 if (iCount >= 10) break;
 
                 int jCount = 0;
-                sReturnData[iCount][jCount].data = sTempData[i].data;
-                sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-                sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
+                if (sTempData[dealt].data != null && Math.abs(sTempData[i].yLoc - sReturnData[iCount][jCount].yLoc) < RANGE) {
+                    dealt++;
+                    sReturnData[iCount][jCount].data = sTempData[i].data;
+                    sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                    sReturnData[iCount][jCount].yLoc = sTempData[i++].yLoc;
+                }
+                jCount++;
 
-                sReturnData[iCount][jCount].data = sTempData[i].data;
-                sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-                sReturnData[iCount][jCount++].yLoc = sTempData[i++].yLoc;
+                if (sTempData[dealt].data != null && Math.abs(sTempData[i].yLoc - sReturnData[iCount][jCount].yLoc) < RANGE) {
+                    sReturnData[iCount][jCount].data = sTempData[i].data;
+                    sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                    sReturnData[iCount][jCount].yLoc = sTempData[i++].yLoc;
+                }
+                jCount++;
 
                 for (int k = 0; k < 3; k++) {
                     System.out.println(iCount + "==" + jCount);
                     // TODO: 其实需要处理的就是 中间3个较小的数字
-                    sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-                    sReturnData[iCount][jCount].yLoc = sTempData[i].yLoc;
-                    sReturnData[iCount][jCount].data = sTempData[i].data.trim().substring(sTempData[i].data.length() / 2);
-
-                    if (!TextUtils.isDigitsOnly(sReturnData[iCount][jCount].data)) {
-                        sReturnData[iCount][jCount].data = String.valueOf(modifyTable.get(sReturnData[iCount][jCount].data));
+                    if (sTempData[dealt].data != null && Math.abs(sTempData[i].yLoc - sReturnData[iCount][jCount].yLoc) < RANGE) {
+                        sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                        sReturnData[iCount][jCount].yLoc = sTempData[i].yLoc;
+                        sReturnData[iCount][jCount].data = sTempData[i].data.trim().substring(sTempData[i].data.length() / 2);
+                        if (!TextUtils.isDigitsOnly(sReturnData[iCount][jCount].data)) {
+                            sReturnData[iCount][jCount].data = String.valueOf(modifyTable.get(sReturnData[iCount][jCount].data));
+                        }
+                        i++;
                     }
 
                     jCount++;
-                    i++;
                 }
 
-                sReturnData[iCount][jCount].data = sTempData[i].data;
-                sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
-                sReturnData[iCount][jCount].yLoc = sTempData[i++].yLoc;
+                if (sTempData[dealt].data != null && Math.abs(sTempData[i].yLoc - sReturnData[iCount][jCount].yLoc) < RANGE) {
+                    sReturnData[iCount][jCount].data = sTempData[i].data;
+                    sReturnData[iCount][jCount].xLoc = sTempData[i].xLoc;
+                    sReturnData[iCount][jCount].yLoc = sTempData[i++].yLoc;
+                }
+
                 iCount++;
             }
             // sync
             for (int i = 0; i < sReturnData.length; i++) {
                 for (int j = 0; j < sReturnData[i].length; j++) {
                     data[i][j] = sReturnData[i][j].data;
+                    System.out.printf(data[i][j]);
                 }
             }
         } catch (Exception e) {
