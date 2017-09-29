@@ -11,6 +11,9 @@ public class RatioData {
     static final String xImg= "x of Image";
     static final String yImg= "y of Image";
     static final String OTHERS= "xText2, xImg2, ImgSize, TextHeight";
+    static final String xSkill= "x of skill image";
+    static final String ySkill= "y of skill image";
+    static final String sizeSkill = "width of skill, height of skill";
 
     static ArrayList<Integer> dataArr;
     // 按照以下格式添加数据
@@ -118,6 +121,32 @@ public class RatioData {
         dataArr.add(2, 64);
         dataArr.add(3, 34);
         set1920_1080.put(OTHERS, dataArr);
+
+        //技能x坐标
+        dataArr = new ArrayList<>();
+        dataArr.add(0, 140);
+        dataArr.add(1, 1087);
+        set1920_1080.put(xSkill, dataArr);
+
+        dataArr = new ArrayList<>();
+        dataArr.add(0, 140);
+        dataArr.add(1, 1087);
+        set1920_1080.put(xSkill, dataArr);
+
+        dataArr = new ArrayList<>();
+        dataArr.add(0, 351);
+        dataArr.add(1, 482);
+        dataArr.add(1, 614);
+        dataArr.add(1, 745);
+        dataArr.add(1, 877);
+        set1920_1080.put(ySkill, dataArr);
+
+        dataArr = new ArrayList<>();
+        dataArr.add(0, 58);  //width or height
+        set1920_1080.put(sizeSkill, dataArr);
+
+        //等级
+
     }
 }
 

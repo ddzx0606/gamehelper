@@ -42,6 +42,9 @@ public class BitmapRecognizeUtils {
     ArrayList<Bitmap> mList = new ArrayList<Bitmap>();
     ArrayList<String> mListName = new ArrayList<String>();
 
+    ArrayList<Bitmap> mSkillList = new ArrayList<Bitmap>();
+    ArrayList<String> mSkillNameList = new ArrayList<String>();
+
     public static BitmapRecognizeUtils getInstance() {
         if (mBitmapRecognizeUtils == null) {
             mBitmapRecognizeUtils = new BitmapRecognizeUtils();
@@ -54,10 +57,16 @@ public class BitmapRecognizeUtils {
         Bitmap bitmap;
         for(int i = 1; i < 100; i++) {
             bitmap = BitmapFactory.decodeResource(MyApplication.getContext().getResources(), MyApplication.getContext().getResources().getIdentifier("b"+i, "drawable", MyApplication.getContext().getPackageName()));
-            Log.i(TAG, "initBitmapList = bitmap = "+bitmap+", index = "+i);
-            mList.add(scaleBitmap(bitmap));
-
+            mList.add(scaleBitmap(bitmap, 64, 64));
         }
+        Log.i(TAG, "initBitmapList size = " +mList.size());
+
+        //for skill
+        for(int i = 1; i < 22; i++) {
+            bitmap = BitmapFactory.decodeResource(MyApplication.getContext().getResources(), MyApplication.getContext().getResources().getIdentifier("s"+i, "drawable", MyApplication.getContext().getPackageName()));
+            mSkillList.add(toRoundBitmap(scaleBitmap(bitmap, 58, 58)));
+        }
+        Log.i(TAG, "mSkillList size = " +mSkillList.size());
 
         AssetManager assetManager = MyApplication.getContext().getAssets();
         try {
@@ -76,22 +85,40 @@ public class BitmapRecognizeUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         Log.i(TAG, "mListName size = "+mListName.size());
+
+        try {
+            InputStream inputStream = assetManager.open("skill.txt");
+            InputStreamReader dataInput = new InputStreamReader(inputStream);
+            BufferedReader breader = new BufferedReader(dataInput);
+
+            String strLine = null;
+            while((strLine =  breader.readLine()) != null) {
+                mSkillNameList.add(strLine);
+            }
+
+            inputStream.close();
+            dataInput.close();
+            breader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Log.i(TAG, "skill list name size = "+mSkillNameList.size());
+
     }
 
-    private Bitmap scaleBitmap(Bitmap bitmap) {
+    private Bitmap scaleBitmap(Bitmap bitmap, float tWidh, float tHeight) {
         int with = bitmap.getWidth();
         int height = bitmap.getHeight();
 
-        if (with == 64 && height == 64) {
+        if (with == tWidh && height == tHeight) {
             return bitmap;
         }
 
         Matrix matrix = new Matrix();
-        matrix.postScale(64.00f/with, 64.0f/height);
+        matrix.postScale(tWidh/with, tHeight/height);
 
-        Bitmap result =  Bitmap.createBitmap(bitmap, 0,0,with, height, matrix, true);
+        Bitmap result =  Bitmap.createBitmap(bitmap, 0, 0, with, height, matrix, true);
 
         bitmap.recycle();
 
@@ -99,9 +126,9 @@ public class BitmapRecognizeUtils {
     }
 
     public void saveRoundBitmap(Bitmap bitmap) {
-        Bitmap round = toRoundBitmap(bitmap);
-
-        PlayerAnalysRatio.saveBitmap(round, "null_bitmap");
+//        Bitmap round = toRoundBitmap(bitmap);
+//
+//        PlayerAnalysRatio.saveBitmap(bitmap, "null_bitmap");
     }
 
     public Bitmap toRoundBitmap(Bitmap bitmap) {
@@ -169,10 +196,10 @@ public class BitmapRecognizeUtils {
     Mat mat11 = new Mat();
     Mat mat22 = new Mat();
     public synchronized String getBitmapName(Bitmap origin, int id) {
-        Log.i(TAG, "start to compare");
+        //Log.i(TAG, "start to compare");
 
         Bitmap bitmap = Bitmap.createBitmap(origin);
-        bitmap = scaleBitmap(bitmap);
+        bitmap = scaleBitmap(bitmap, 64, 64);
         bitmap = toRoundBitmap(bitmap);
 
 
@@ -194,14 +221,51 @@ public class BitmapRecognizeUtils {
 
             index++;
         }
-        Log.i(TAG, "end to compare = "+mListName.get(maxSimilarIndex));
+        //Log.i(TAG, "end to compare = "+mListName.get(maxSimilarIndex));
 
-        if (!"空".equals(mListName.get(maxSimilarIndex))) {
-            PlayerAnalysRatio.saveBitmap(bitmap, "kong"+(i++)+".png");
-        }
+//        if (!"空".equals(mListName.get(maxSimilarIndex))) {
+//            PlayerAnalysRatio.saveBitmap(bitmap, "kong"+(i++)+".png");
+//        }
 
         return mListName.get(maxSimilarIndex);
 
+    }
+
+    public synchronized String getSkillName(Bitmap origin) {
+        Bitmap bitmap = Bitmap.createBitmap(origin);
+        bitmap = scaleBitmap(bitmap, 58, 58);
+        bitmap = toRoundBitmap(bitmap);
+
+
+        double maxSimilar = 0;
+        int maxSimilarIndex = 0;
+        int index = 0;
+
+        double similar = 0;
+        for(Bitmap bitDest : mSkillList) {
+            Utils.bitmapToMat(bitmap, mat1);
+            Utils.bitmapToMat(bitDest, mat2);
+            Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);  //COLOR_RGB2HSV  COLOR_BGR2GRAY
+            Imgproc.cvtColor(mat2, mat22, Imgproc.COLOR_BGR2GRAY);
+            similar = comPareHist(mat11, mat22, index);
+            Log.i(TAG, "getSkillName index = "+index+", similar = "+similar);
+            if (similar > maxSimilar) {
+                maxSimilar = similar;
+                maxSimilarIndex = index;
+            }
+
+            PlayerAnalysRatio.saveBitmap(bitDest, "dest"+index+".png");
+
+            index++;
+        }
+        PlayerAnalysRatio.saveBitmap(bitmap, "origin.png");
+        Log.i(TAG, "end to compare = "+mSkillNameList.get(maxSimilarIndex));
+
+//        if (!"空".equals(mListName.get(maxSimilarIndex))) {
+//            PlayerAnalysRatio.saveBitmap(bitmap, "kong"+(i++)+".png");
+//        }
+
+        return mSkillNameList.get(maxSimilarIndex);
     }
 
     private double comPareHist(Mat srcMat,Mat desMat, int index){
@@ -213,7 +277,7 @@ public class BitmapRecognizeUtils {
         double target_3 = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_INTERSECT);  //交集法
         double target_4 = Imgproc.compareHist(srcMat, desMat, Imgproc.CV_COMP_BHATTACHARYYA);  //常态分布比对的Bhattacharyya距离法
 
-        Log.i(TAG, "similar ： target  ==" + target+"，target_2 =  "+target_2+"， target_3 =  "+target_3+"， target_4 = "+target_4+", index = "+index);
+        //Log.i(TAG, "similar ： target  ==" + target+"，target_2 =  "+target_2+"， target_3 =  "+target_3+"， target_4 = "+target_4+", index = "+index);
         return target;
     }
 
