@@ -172,7 +172,6 @@ public class Youtu {
 			throws IOException {
 		InputStream in = MyApplication.getContext().getResources().openRawResource(id);
 		byte data[] = input2byte(in); // 创建合适文件大小的数组
-		Log.i("PlayerAnalys", "GetBase64FromResourceId  data size = "+data.length);
 		in.read(data); // 读取文件中的内容到b[]数组
 		in.close();
 		base64.append(Base64Util.encode(data));
@@ -182,7 +181,6 @@ public class Youtu {
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 		byte[] byteArray = stream.toByteArray();
-		Log.i("PlayerAnalys", "GetBase64FromBitmap size = "+byteArray.length);
 		base64.append(Base64Util.encode(byteArray));
 	}
 

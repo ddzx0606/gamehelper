@@ -12,7 +12,6 @@ import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
-import com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys;
 import com.youtu.Youtu;
 
 import org.json.JSONArray;
@@ -29,7 +28,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.HashMap;
 
-import static com.example.jiamiaohe.gamehelper.picture.recognition.PlayerAnalys.HEIGHT_DELTA;
+import static com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.PlayerAnalysRatio.HEIGHT_DELTA;
 
 public class ResolveUtil {
 
@@ -62,13 +61,14 @@ public class ResolveUtil {
         return faceYoutu;
     }
 
-    public static void resolve(PlayerAnalys[] players) {
+
+    public static void resolve(PlayerAnalysRatio[] players) {
         Bitmap source = getBitmapFromAsset(MyApplication.getContext(), "break.png");
         for (int i = 0; i < players.length; i++) {
             players[i].setBreak(source);
             mPerPlayer[i] = players[i].combineHorizontal();
         }
-        mTotalPlayer = PlayerAnalys.combineVertical(mPerPlayer);
+        mTotalPlayer = PlayerAnalysRatio.combineVertical(mPerPlayer);
 
         // 这个破方法越用效果越差
         // mTotalPlayer = sharpBitmap(mTotalPlayer);
@@ -77,7 +77,6 @@ public class ResolveUtil {
         writeBitmap(path, mTotalPlayer);
 
     }
-
     private static Bitmap getBitmapFromAsset(Context context, String filePath) {
         AssetManager assetManager = context.getAssets();
 
@@ -343,7 +342,6 @@ public class ResolveUtil {
     }
 
     public static String[] getItem(int index) {
-
         return data[index];
     }
     private final static int BITMAP_WIDTH = 1920;

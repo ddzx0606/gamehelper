@@ -1,4 +1,5 @@
-package com.example.jiamiaohe.gamehelper.picture.recognition;
+package com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao;
+
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -6,37 +7,32 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.media.Image;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.os.Handler;
+
 import com.example.jiamiaohe.gamehelper.MyApplication;
-import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
+import com.example.jiamiaohe.gamehelper.picture.recognition.BattleSituation;
+import com.example.jiamiaohe.gamehelper.picture.recognition.BitmapRecognizeUtils;
 import com.youtu.Youtu;
 
-import org.jetbrains.annotations.NotNull;
+
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.HashMap;
 
-/**
- * Created by jiamiaohe on 2017/8/27.
- */
+public class PlayerAnalysRatio {
+    static final String TAG = PlayerAnalysRatio.class.getSimpleName();
 
-public class PlayerAnalys {
-    private static final  String TAG = "PlayerAnalys";
-
-    Bitmap mPlayerBitmap = null;
     String mPlayerIndex = null;
 
     Bitmap mNameBitmap = null;
@@ -49,45 +45,65 @@ public class PlayerAnalys {
     ArrayList<Bitmap> mProps = new ArrayList<Bitmap>();
     TextView mPropsTextView = null;
 
-    public static  final int PROP_WIDTH = 64;
-    public static  final int PROP_HEIGHT = 64;
-    public static final Rect mPropsRect[] = {new Rect(262,55, 261+PROP_WIDTH, 55+PROP_HEIGHT),
-            new Rect(352,55, 352+PROP_WIDTH, 55+PROP_HEIGHT),
-            new Rect(441,55, 441+PROP_WIDTH, 55+PROP_HEIGHT),
-            new Rect(530,55, 530+PROP_WIDTH, 55+PROP_HEIGHT),
-            new Rect(620,55, 620+PROP_WIDTH, 55+PROP_HEIGHT),
-            new Rect(710,55, 710+PROP_WIDTH, 55+PROP_HEIGHT)};
+    public static HashMap<String, ArrayList<Integer> > set;
+    public static Bitmap initData(Bitmap bitmap) {
 
-    private static final int FRAGMENT_HEIGHT = 42;
-    private static final Rect NAME_RECT = new Rect(270, 0, 490, FRAGMENT_HEIGHT);
-    private static final Rect NAME_ROLE = new Rect(125, 0, 254, FRAGMENT_HEIGHT);
-    //private static final Rect NUM_KILL = new Rect(514, 0, 569, FRAGMENT_HEIGHT);   //width = 55
-    //private static final Rect NUM_DEAD = new Rect(592, 0, 650, FRAGMENT_HEIGHT);   //width = 52
-    //private static final Rect NUM_HELP = new Rect(673, 0, 733, FRAGMENT_HEIGHT);   //width = 60
-    private static final Rect NUM_KILL = new Rect(523, 0, 556, FRAGMENT_HEIGHT);   //width = 55
-    private static final Rect NUM_DEAD = new Rect(605, 0, 637, FRAGMENT_HEIGHT);   //width = 52
-    private static final Rect NUM_HELP = new Rect(690, 0, 723, FRAGMENT_HEIGHT);   //width = 60
-    private static final Rect NUM_MONEY = new Rect(747, 0, 850, FRAGMENT_HEIGHT);
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        if (width == 1280 && height == 768) {
+            set = RatioData.set1280_768;
+        } else if (width * 9 == height *16) {//16:9 比例
+            bitmap = scaleBitmap(bitmap, 1920, 1080);
+            set = RatioData.set1920_1080;
+        }
+        // 添加其他分辨率
+        return bitmap;
+    }
 
-    public void analys(@NotNull Bitmap bitmap, @NotNull Rect rect, @NotNull String index) {
-        //clear
+    public static Bitmap scaleBitmap(Bitmap bitmap, int bitmapWidth, int bitmapHeight) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        if (width == bitmapWidth && height == bitmapHeight) {
+            //TODO: 这一句需要注释掉，在部分机型可能报错!!
+            // Toast.makeText(MyApplication.getContext(), "标准", Toast.LENGTH_SHORT).show();
+            return bitmap;
+        }
+        float scaleWidth = (float) bitmapWidth / width;
+        float scaleHeight = (float) bitmapHeight / height;
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        return Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
+    }
+    public void analys(Bitmap bitmap, int i, int j) {
+        ArrayList<Integer> xTextArr = set.get(RatioData.xText);
+        ArrayList<Integer> yTextArr = set.get(RatioData.yText);
+        ArrayList<Integer> wTextArr = set.get(RatioData.wText);
+        ArrayList<Integer> xImgArr = set.get(RatioData.xImg);
+        ArrayList<Integer> yImgArr = set.get(RatioData.yImg);
+        Integer xText2 = set.get(RatioData.OTHERS).get(0);
+        Integer xImg2= set.get(RatioData.OTHERS).get(1);
+        Integer imgSize = set.get(RatioData.OTHERS).get(2);
+        Integer textH = set.get(RatioData.OTHERS).get(3);
+
+
+        mNameBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(0)+j*(xText2-xTextArr.get(0)),
+                yTextArr.get(i), wTextArr.get(0), textH);
+        mRoleNameBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(1)+(xText2-xTextArr.get(0)),
+                yTextArr.get(i), wTextArr.get(1), textH);
+        mNumKillBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(2)+j*(xText2-xTextArr.get(0)),
+                yTextArr.get(i), wTextArr.get(2), textH);
+        mNumDeadBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(3)+j*(xText2-xTextArr.get(0)),
+                yTextArr.get(i), wTextArr.get(3), textH);
+        mNumHelpBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(4)+j*(xText2-xTextArr.get(0)),
+                yTextArr.get(i), wTextArr.get(4), textH);
+        mNumMoneyBitmap = Bitmap.createBitmap(bitmap, xTextArr.get(5)+j*(xText2-xTextArr.get(0)),
+                yTextArr.get(i), wTextArr.get(5), textH);
+
+
         mProps.clear();
-
-        mPlayerBitmap = Bitmap.createBitmap(bitmap, rect.left, rect.top, rect.right-rect.left, rect.bottom-rect.top);
-        mPlayerIndex = index;
-
-        mNameBitmap = Bitmap.createBitmap(mPlayerBitmap, NAME_RECT.left, NAME_RECT.top, NAME_RECT.right-NAME_RECT.left, NAME_RECT.bottom-NAME_RECT.top);
-        mRoleNameBitmap = Bitmap.createBitmap(mPlayerBitmap, NAME_ROLE.left, NAME_ROLE.top, NAME_ROLE.right-NAME_ROLE.left, NAME_ROLE.bottom-NAME_ROLE.top);
-        mNumKillBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_KILL.left, NUM_KILL.top, NUM_KILL.right-NUM_KILL.left, NUM_KILL.bottom-NUM_KILL.top);
-        mNumDeadBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_DEAD.left, NUM_DEAD.top, NUM_DEAD.right-NUM_DEAD.left, NUM_DEAD.bottom-NUM_DEAD.top);
-        mNumHelpBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_HELP.left, NUM_HELP.top, NUM_HELP.right-NUM_HELP.left, NUM_HELP.bottom-NUM_HELP.top);
-        mNumMoneyBitmap = Bitmap.createBitmap(mPlayerBitmap, NUM_MONEY.left, NUM_MONEY.top, NUM_MONEY.right-NUM_MONEY.left, NUM_MONEY.bottom-NUM_MONEY.top);
-
-        Log.i(TAG, "mPlayerBitmap.width = "+mPlayerBitmap.getWidth()+", height = "+mPlayerBitmap.getHeight());
-//        int temp = 0;
-        for(Rect rect1 : mPropsRect) {
-            Log.i(TAG, "rect1.left = "+rect1.left+", rect.right = "+rect1.right+", rect1 = "+(rect1.bottom-rect1.top));;
-            mProps.add((Bitmap.createBitmap(mPlayerBitmap, rect1.left, rect1.top, rect1.right-rect1.left, rect1.bottom-rect1.top)));
+        for(int k = 0; k < 6; k++) {
+            mProps.add(Bitmap.createBitmap(bitmap,
+                    xImgArr.get(k) + j*(xImg2 - xImgArr.get(0)), yImgArr.get(i), imgSize, imgSize));
 //            if (index.equals("友方五") || index.equals("敌方三")) {
 //                saveBitmap(mProps.get(temp++), System.currentTimeMillis()+""+ new Random().nextInt()+".jpg");
 //            }
@@ -104,7 +120,7 @@ public class PlayerAnalys {
     Handler mHandler = new Handler();
 
     public View getView() {
-        if (mPlayerBitmap != null) {
+        if (mNameBitmap != null) {
 
             //sub
             LinearLayout sub = new LinearLayout(MyApplication.getContext());
@@ -183,7 +199,6 @@ public class PlayerAnalys {
             propTextLinear.setOrientation(LinearLayout.HORIZONTAL);
             propTextLinear.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             for(Bitmap bitmap : mProps) {
-                Log.i(TAG , "add prop image view "+bitmap);
                 ImageView imageProp = new ImageView(MyApplication.getContext());
                 imageProp.setPadding(0,0,2,0);
                 imageProp.setImageBitmap(bitmap);
@@ -192,6 +207,7 @@ public class PlayerAnalys {
 
             mPropsTextView = new TextView(MyApplication.getContext());
             mPropsTextView.setText("装备");
+            mPropsTextView.setBackgroundColor(Color.BLACK);
             propTextLinear.addView(mPropsTextView);
 
             //main
@@ -200,39 +216,36 @@ public class PlayerAnalys {
             main.setPadding(0,0,0,20);
             main.setHorizontalGravity(Gravity.CENTER);
             ImageView imageView = new ImageView(MyApplication.getContext());
-            imageView.setImageBitmap(mPlayerBitmap);
             imageView.setPadding(0,0,0,2);
             main.addView(imageView);
             main.addView(sub);
             main.addView(propLinear);
             main.addView(textLinear);
             main.addView(propTextLinear);
-            return main;
-/*
 //            if (mPlayerIndex.equals("友方二")) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        StringBuilder stringBuilder = new StringBuilder();
-                        for(int i = 0; i < mProps.size(); i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    for(int i = 0; i < mProps.size(); i++) {
 //                        for (Bitmap bitmap : mProps) {
-                            stringBuilder.append(BitmapRecognizeUtils.getInstance().getBitmapName(mProps.get(i), i+1));
-                            if (i < mProps.size()-1) {
-                                stringBuilder.append('-');
-                            }
+                        stringBuilder.append(BitmapRecognizeUtils.getInstance().getBitmapName(mProps.get(i), i+1));
+                        if (i < mProps.size()-1) {
+                            stringBuilder.append('-');
                         }
-                        final String text = stringBuilder.toString();
-                        mHandler.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                mPropsTextView.setText(text);
-                            }
-                        });
                     }
-                }).start();
+                    final String text = stringBuilder.toString();
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mPropsTextView.setText(text);
+                        }
+                    });
+                }
+            }).start();
 //            }
-*/
 
+            return main;
         } else {
             TextView textView = new TextView(MyApplication.getContext());
             textView.setText(mPlayerIndex+"为空");
@@ -241,9 +254,7 @@ public class PlayerAnalys {
         }
     }
 
-    public Bitmap getPlayerBitmap() {
-        return mPlayerBitmap;
-    }
+
 
     public void analyzeName() {
         new Thread(new Runnable() {
@@ -289,7 +300,7 @@ public class PlayerAnalys {
         final String killNum = res[2];
         final String deadNum = res[3];
         final String helpNum = res[4];
-        final String moneyNum = res[5];
+        final String moneyNum =res[5];
         mHandler.post(new Runnable() {
             @Override
             public void run() {
@@ -405,6 +416,7 @@ public class PlayerAnalys {
     // 参数决定识别效果
     private static final Rect BREAK = new Rect(0, 0, 120, 42);
     public static Bitmap mHorizontalBreak = null;
+    private static final int FRAGMENT_HEIGHT = 42;
     public static Bitmap mVerticalBreak = null;
     public static int HEIGHT_DELTA =  FRAGMENT_HEIGHT + (BREAK.bottom-BREAK.top);
     private static int totalWidth = 0;

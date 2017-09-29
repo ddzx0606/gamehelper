@@ -13,6 +13,7 @@ import android.graphics.RectF;
 import android.util.Log;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.PlayerAnalysRatio;
 
 import org.opencv.android.Utils;
 import org.opencv.core.CvType;
@@ -56,7 +57,6 @@ public class BitmapRecognizeUtils {
             Log.i(TAG, "initBitmapList = bitmap = "+bitmap+", index = "+i);
             mList.add(scaleBitmap(bitmap));
 
-//            PlayerAnalys.saveBitmap(mList.get(i-1), "index = "+i+".jpg");
         }
 
         AssetManager assetManager = MyApplication.getContext().getAssets();
@@ -101,7 +101,7 @@ public class BitmapRecognizeUtils {
     public void saveRoundBitmap(Bitmap bitmap) {
         Bitmap round = toRoundBitmap(bitmap);
 
-        PlayerAnalys.saveBitmap(round, "null_bitmap");
+        PlayerAnalysRatio.saveBitmap(round, "null_bitmap");
     }
 
     public Bitmap toRoundBitmap(Bitmap bitmap) {
@@ -175,16 +175,10 @@ public class BitmapRecognizeUtils {
         bitmap = scaleBitmap(bitmap);
         bitmap = toRoundBitmap(bitmap);
 
-//        PlayerAnalys.saveBitmap(bitmap, "b"+ (i++)+".jpg");
 
         double maxSimilar = 0;
         int maxSimilarIndex = 0;
         int index = 0;
-
-//        if (id > 0) {
-//            PlayerAnalys.saveBitmap(bitmap, "bitmap1_"+id+".jpg");
-//            PlayerAnalys.saveBitmap(origin, "bitmap2_"+id+".jpg");
-//        }
 
         double similar = 0;
         for(Bitmap bitDest : mList) {
@@ -203,7 +197,7 @@ public class BitmapRecognizeUtils {
         Log.i(TAG, "end to compare = "+mListName.get(maxSimilarIndex));
 
         if (!"空".equals(mListName.get(maxSimilarIndex))) {
-            PlayerAnalys.saveBitmap(bitmap, "kong"+(i++)+".png");
+            PlayerAnalysRatio.saveBitmap(bitmap, "kong"+(i++)+".png");
         }
 
         return mListName.get(maxSimilarIndex);

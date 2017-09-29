@@ -12,6 +12,7 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.PlayerAnalysRatio;
 import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
 import com.youtu.Youtu;
 
@@ -54,36 +55,27 @@ public class BattleSituation {
     String mPlayersIndex[] = {"友方一", "友方二", "友方三", "友方四","友方五",
                             "敌方一", "敌方二", "敌方三", "敌方四", "敌方五"};
 
-    PlayerAnalys mPlayers[] = new PlayerAnalys[10];
+    PlayerAnalysRatio mPlayersRatio[] = new PlayerAnalysRatio[10];
 
     private BattleSituation() {
-        Log.i(TAG, "BattleSituation mPlayers = "+mPlayers.length);
-//        for(PlayerAnalys player : mPlayers) {
-//            player = new PlayerAnalys();
-//        }
-        for(int i = 0; i < mPlayers.length; i++) {
-            mPlayers[i] = new PlayerAnalys();
+        for(int i = 0; i < mPlayersRatio.length; i++) {
+            mPlayersRatio[i] = new PlayerAnalysRatio();
         }
     }
 
-    public void analys(@NotNull Bitmap bitmap) {
-        // 检查Bitmap
-        bitmap = ResolveUtil.checkBitmap(bitmap);
-        String path = Environment.getExternalStorageDirectory().getAbsolutePath().concat("/newBitmap.jpeg");
-        ResolveUtil.writeBitmap(path, bitmap);
 
-        Log.i(TAG, "start to anlys bitmap = "+bitmap);
-
-        for (int i = 0; i < mPlayers.length; i++) {
-            Log.i(TAG, "start to analys mPlayers[i] = "+mPlayers[i]+", mPlayesRect[i] = "+mPlayesRect[i]+", mPlayersIndex[i] = "+mPlayersIndex[i]);
-            mPlayers[i].analys(bitmap, mPlayesRect[i], mPlayersIndex[i]);
+    public void analysForRatio(@NotNull Bitmap bitmap) {
+        bitmap  = PlayerAnalysRatio.initData(bitmap);
+        for (int j = 0; j < 2; j++) {
+            for (int i = 0; i < 5; i++) {
+                mPlayersRatio[j*5+i].analys(bitmap, i, j);
+            }
         }
         // 解析
         //Toast.makeText(MyApplication.getContext(), "识别中...", Toast.LENGTH_SHORT).show();
-        ResolveUtil.resolve(mPlayers);
+        ResolveUtil.resolve(mPlayersRatio);
 
     }
-
     public View getView() {
         ScrollView scrollView = new ScrollView(MyApplication.getContext());
 
@@ -91,8 +83,8 @@ public class BattleSituation {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         scrollView.addView(linearLayout);
 
-        for (int i = 0; i < mPlayers.length; i++) {
-            linearLayout.addView(mPlayers[i].getView());
+        for (int i = 0; i < mPlayersRatio.length; i++) {
+            linearLayout.addView(mPlayersRatio[i].getView());
         }
 
 //        analysWholePic();
@@ -104,56 +96,14 @@ public class BattleSituation {
             public void run() {
                 super.run();
                 ResolveUtil.getData();
-                for (int i = 0; i < mPlayers.length; i++) {
-                    mPlayers[i].analyzeName(i);
+                for (int i = 0; i < mPlayersRatio.length; i++) {
+                    mPlayersRatio[i].analyzeName(i);
                 }
                 // 增强识别效果，对于错误数据单独请求，直到正确
 
             }
         }.start();
         return scrollView;
-    }
-
-    private void analysWholePic() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Log.i(TAG, "analysWholePic");
-
-                Bitmap bitmap = Bitmap.createBitmap(PLAYER_WIDTH, PLAYER_HEIGHT*10, Bitmap.Config.ARGB_8888);
-                Canvas canvas = new Canvas(bitmap);
-
-                for(int i = 0; i < 10; i++){
-                    canvas.drawBitmap(mPlayers[i].getPlayerBitmap(), 0, PLAYER_HEIGHT*i, new Paint());
-                }
-
-                PlayerAnalys.saveBitmap(bitmap, "pingjie.png");
-
-                Youtu faceYoutu = new Youtu("10096205", "AKIDXtzJOEaAG7jAMJaUiOtACzWqysXxn2h7", "KPFqFSQBftrY4MPCiyxf7JI174mEWfYH", Youtu.API_YOUTU_END_POINT, "");
-                JSONObject respose = null;
-                //respose= faceYoutu.FaceCompareUrl("http://open.youtu.qq.com/content/img/slide-1.jpg","http://open.youtu.qq.com/content/img/slide-1.jpg");
-                try {
-                    //respose = faceYoutu.GeneralOcrWithBitmap(BitmapFactory.decodeResource(MyApplication.getContext().getResources(), R.drawable.text_wenzi));
-                    respose = faceYoutu.GeneralOcrWithBitmap(bitmap);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    Log.i(TAG, "Exception = "+e.toString());
-                }
-
-                try {
-                    JSONArray jasonArray = respose.getJSONArray("items");
-
-                    Log.i(TAG, "jasonArray size = "+jasonArray.length());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-                if (!bitmap.isRecycled()) {
-                    bitmap.recycle();
-                }
-                Log.i(TAG, "respose = "+respose);
-            }
-        }).start();
     }
 
 }

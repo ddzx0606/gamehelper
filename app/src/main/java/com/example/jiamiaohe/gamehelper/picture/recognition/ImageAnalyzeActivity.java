@@ -34,7 +34,13 @@ public class ImageAnalyzeActivity extends Activity {
 
         // 初始化
         ResolveUtil.getYoutuInstance();
-        BattleSituation.getInstance().analys(BitmapFactory.decodeFile(path));
+
+
+        // 注释掉原来的方法
+        //BattleSituation.getInstance().analys(BitmapFactory.decodeFile(path));
+
+        // 根据分辨率计算的版本
+        BattleSituation.getInstance().analysForRatio(BitmapFactory.decodeFile(path));
         setContentView(BattleSituation.getInstance().getView());
 
 //        LinearLayout linearLayout = new LinearLayout(this);
