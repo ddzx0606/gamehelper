@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
+import com.example.jiamiaohe.gamehelper.http.HttpUtils;
 import com.example.jiamiaohe.gamehelper.picture.recognition.BattleSituation;
 import com.example.jiamiaohe.gamehelper.picture.recognition.BitmapRecognizeUtils;
 import com.youtu.Youtu;
@@ -334,32 +335,6 @@ public class PlayerAnalysRatio {
             main.addView(propLinear);
             main.addView(textLinear);
             main.addView(propTextLinear);
-//            if (mPlayerIndex.equals("友方二")) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    StringBuilder stringBuilder = new StringBuilder();
-                    for (int i = 0; i < mProps.size(); i++) {
-//                        for (Bitmap bitmap : mProps) {
-                        stringBuilder.append(BitmapRecognizeUtils.getInstance().getBitmapName(mProps.get(i), i + 1));
-                        if (i < mProps.size() - 1) {
-                            stringBuilder.append('-');
-                        }
-                    }
-//                    if ("00".equals(mPlayerIndex)) {
-                    stringBuilder.append("---" + BitmapRecognizeUtils.getInstance().getSkillName(mSkillBitmap));
-//                    }
-
-                    final String text = stringBuilder.toString();
-                    mHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            mPropsTextView.setText(text);
-                        }
-                    });
-                }
-            }).start();
-//            }
 
             return main;
         } else {
@@ -417,6 +392,24 @@ public class PlayerAnalysRatio {
         final String helpNum = res[4];
         final String level = res[5];
         final String moneyNum = res[6];
+
+        //mProps and skill
+        ArrayList<String> propArray = new ArrayList<String>();
+        StringBuilder stringBuilder = new StringBuilder();
+        String skillName = BitmapRecognizeUtils.getInstance().getSkillName(mSkillBitmap);
+        for (int i = 0; i < mProps.size(); i++) {
+            String propName = BitmapRecognizeUtils.getInstance().getBitmapName(mProps.get(i), i + 1);
+            stringBuilder.append(propName);
+            propArray.add(propName);
+            if (i < mProps.size() - 1) {
+                stringBuilder.append('-');
+            }
+        }
+        stringBuilder.append("---" + skillName);
+        final String text = stringBuilder.toString();
+
+        HttpUtils.getInstance().fillPersonArray(index, name, skillName, moneyNum, index==0?1:0, propArray);
+
         mHandler.post(new Runnable() {
             @Override
             public void run() {
@@ -427,6 +420,7 @@ public class PlayerAnalysRatio {
                 mHelpText.setText("--" + helpNum);
                 mMoneyText.setText("--" + moneyNum);
                 mLevelText.setText("--" + level);
+                mPropsTextView.setText(text);
             }
         });
 

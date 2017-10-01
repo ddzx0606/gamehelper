@@ -29,6 +29,7 @@ import com.example.administrator.endcall.NotificationUtils;
 import com.example.jiamiaohe.gamehelper.bluetooth.Constants;
 import com.example.jiamiaohe.gamehelper.bluetooth.DeviceListActivity;
 import com.example.jiamiaohe.gamehelper.bluetooth.IconProxy;
+import com.example.jiamiaohe.gamehelper.http.HttpUtils;
 import com.tutorials.hp.listviewimagessdcard.ImageActivity;
 
 import java.util.ArrayList;
@@ -303,6 +304,8 @@ public class MainActivity extends AppCompatActivity {
          */
         menu.add(Menu.NONE, Menu.FIRST+10, 1+10, "建立蓝牙连接");
         menu.add(Menu.NONE, Menu.FIRST+11, 1+11, "开启设备可见性");
+        //hjm add
+        menu.add(Menu.NONE, Menu.FIRST+12, 1+12, "发送网络请求");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -353,6 +356,10 @@ public class MainActivity extends AppCompatActivity {
             case Menu.FIRST+11: {
                 iconProxy = IconProxy.getInstance();
                 iconProxy.ensureDiscoverable(this);
+            }
+            case Menu.FIRST+12: {
+                HttpUtils.getInstance().requestInThread();
+                break;
             }
             default:
                 break;
