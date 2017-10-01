@@ -4,6 +4,7 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
@@ -13,6 +14,7 @@ import android.graphics.RectF;
 import android.util.Log;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
+import com.example.jiamiaohe.gamehelper.R;
 import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.PlayerAnalysRatio;
 
 import org.opencv.android.Utils;
@@ -44,6 +46,9 @@ public class BitmapRecognizeUtils {
 
     ArrayList<Bitmap> mSkillList = new ArrayList<Bitmap>();
     ArrayList<String> mSkillNameList = new ArrayList<String>();
+
+    Bitmap mHostTrue;
+    Bitmap mHostFalse;
 
     public static BitmapRecognizeUtils getInstance() {
         if (mBitmapRecognizeUtils == null) {
@@ -105,6 +110,8 @@ public class BitmapRecognizeUtils {
         }
         Log.i(TAG, "skill list name size = "+mSkillNameList.size());
 
+        mHostTrue = scaleBitmap(BitmapFactory.decodeResource(MyApplication.getContext().getResources(), R.drawable.host1), 64, 64);
+        mHostFalse = scaleBitmap(BitmapFactory.decodeResource(MyApplication.getContext().getResources(), R.drawable.host0), 64, 64);
     }
 
     private Bitmap scaleBitmap(Bitmap bitmap, float tWidh, float tHeight) {
@@ -190,6 +197,8 @@ public class BitmapRecognizeUtils {
         return getBitmapName(origin, 0);
     }
 
+
+    //this flowing 3 method must run in the same thread
     public static int i = 1;
     Mat mat1 = new Mat();
     Mat mat2 = new Mat();
@@ -208,10 +217,10 @@ public class BitmapRecognizeUtils {
         int index = 0;
 
         double similar = 0;
+        Utils.bitmapToMat(bitmap, mat1);
+        Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);  //COLOR_RGB2HSV  COLOR_BGR2GRAY
         for(Bitmap bitDest : mList) {
-            Utils.bitmapToMat(bitmap, mat1);
             Utils.bitmapToMat(bitDest, mat2);
-            Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);  //COLOR_RGB2HSV  COLOR_BGR2GRAY
             Imgproc.cvtColor(mat2, mat22, Imgproc.COLOR_BGR2GRAY);
             similar = comPareHist(mat11, mat22, index);
             if (similar > maxSimilar) {
@@ -231,6 +240,41 @@ public class BitmapRecognizeUtils {
 
     }
 
+    public synchronized boolean isHost(Bitmap origin) {
+        //Log.i(TAG, "start to compare");
+
+        Bitmap bitmap = Bitmap.createBitmap(origin);
+        bitmap = scaleBitmap(bitmap, 64, 64);
+
+        float trueSimilar = 0;
+        float falseSimilar = 0;
+
+        int center = mHostTrue.getWidth()/2;
+
+
+        for(int x = center - 5, y = center; x < center + 5; x ++) {
+            int colorOrigin = bitmap.getPixel(x, y);
+            int redOrigin = (colorOrigin & 0xff0000) >> 16;
+            int greenOrigin = (colorOrigin & 0x00ff00) >> 8;
+            int blueOrigin = (colorOrigin & 0x0000ff);
+
+            int colorTrue = mHostTrue.getPixel(x, y);
+            int redTrue = (colorTrue & 0xff0000) >> 16;
+            int greenTrue = (colorTrue & 0x00ff00) >> 8;
+            int blueTrue = (colorTrue & 0x0000ff);
+
+            int colorFalse = mHostFalse.getPixel(x, y);
+            int redFalse = (colorFalse & 0xff0000) >> 16;
+            int greenFalse = (colorFalse & 0x00ff00) >> 8;
+            int blueFalse = (colorFalse & 0x0000ff);
+
+            trueSimilar += Math.abs(redTrue - redOrigin) + Math.abs(greenTrue - greenOrigin) + Math.abs(blueTrue - blueOrigin);
+            falseSimilar += Math.abs(redFalse - redOrigin) + Math.abs(greenFalse - greenOrigin) + Math.abs(blueFalse - blueOrigin);
+        }
+
+        return trueSimilar < falseSimilar;
+    }
+
     public synchronized String getSkillName(Bitmap origin) {
         Bitmap bitmap = Bitmap.createBitmap(origin);
         bitmap = scaleBitmap(bitmap, 58, 58);
@@ -242,10 +286,11 @@ public class BitmapRecognizeUtils {
         int index = 0;
 
         double similar = 0;
+
+        Utils.bitmapToMat(bitmap, mat1);
+        Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);  //COLOR_RGB2HSV  COLOR_BGR2GRAY
         for(Bitmap bitDest : mSkillList) {
-            Utils.bitmapToMat(bitmap, mat1);
             Utils.bitmapToMat(bitDest, mat2);
-            Imgproc.cvtColor(mat1, mat11, Imgproc.COLOR_BGR2GRAY);  //COLOR_RGB2HSV  COLOR_BGR2GRAY
             Imgproc.cvtColor(mat2, mat22, Imgproc.COLOR_BGR2GRAY);
             similar = comPareHist(mat11, mat22, index);
             Log.i(TAG, "getSkillName index = "+index+", similar = "+similar);

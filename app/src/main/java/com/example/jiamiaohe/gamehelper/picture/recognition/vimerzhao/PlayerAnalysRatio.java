@@ -48,6 +48,7 @@ public class PlayerAnalysRatio {
 
     Bitmap mSkillBitmap = null;
     Bitmap mLevelBitmap = null;
+    Bitmap mHostBitmap = null;
 
     ArrayList<Bitmap> mProps = new ArrayList<Bitmap>();
     TextView mPropsTextView = null;
@@ -204,13 +205,18 @@ public class PlayerAnalysRatio {
         mSkillBitmap = Bitmap.createBitmap(bitmap, xSkill.get(j), ySkill.get(i), size, size);
 
         mProps.clear();
-        for (int k = 0; k < 6; k++) {
-            mProps.add(Bitmap.createBitmap(bitmap,
-                    xImgArr.get(k) + j * (xImg2 - xImgArr.get(0)), yImgArr.get(i), imgSize, imgSize));
-//            if (index.equals("友方五") || index.equals("敌方三")) {
-//                saveBitmap(mProps.get(temp++), System.currentTimeMillis()+""+ new Random().nextInt()+".jpg");
-//            }
+        Bitmap tempProp = null;
+        for (int k = 0; k < 7; k++) {
+            tempProp = Bitmap.createBitmap(bitmap,
+                    xImgArr.get(k) + j * (xImg2 - xImgArr.get(0)), yImgArr.get(i), imgSize, imgSize);
+            if (k < 6) {
+                mProps.add(tempProp);
+            } else {
+                mHostBitmap = tempProp;
+            }
         }
+
+        //saveBitmap(mHostBitmap, "host"+i+""+j+".png");
     }
 
     public View getView() {
@@ -316,6 +322,11 @@ public class PlayerAnalysRatio {
             imageProp.setPadding(0,0,2,0);
             imageProp.setImageBitmap(mSkillBitmap);
             propLinear.addView(imageProp);
+            //add host image
+            ImageView hostProp = new ImageView(MyApplication.getContext());
+            imageProp.setPadding(0,0,2,0);
+            imageProp.setImageBitmap(mHostBitmap);
+            propLinear.addView(hostProp);
 
             mPropsTextView = new TextView(MyApplication.getContext());
             mPropsTextView.setText("装备");
@@ -408,7 +419,9 @@ public class PlayerAnalysRatio {
         stringBuilder.append("---" + skillName);
         final String text = stringBuilder.toString();
 
-        HttpUtils.getInstance().fillPersonArray(index, name, skillName, moneyNum, index==0?1:0, propArray);
+        boolean isHost = BitmapRecognizeUtils.getInstance().isHost(mHostBitmap);
+
+        HttpUtils.getInstance().fillPersonArray(index, name, skillName, moneyNum, isHost ? 1 : 0, propArray);
 
         mHandler.post(new Runnable() {
             @Override

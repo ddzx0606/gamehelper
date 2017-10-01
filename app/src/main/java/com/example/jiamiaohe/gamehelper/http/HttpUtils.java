@@ -227,7 +227,7 @@ public class HttpUtils {
     public void fillPersonArray(int index, String name, String skill, String level, int host, List<String> equipList) {
         String numLevel = level.replaceAll("[^0-9]", "");
         int levelInt = Integer.parseInt(numLevel);
-        Log.i(TAG, "fillPersonArray level = "+level+", numLevel = "+numLevel+", levelInt = "+levelInt);
+        Log.i(TAG, "fillPersonArray host = "+host+" level = "+level+", numLevel = "+numLevel+", levelInt = "+levelInt);
 
         mPersonArray[index].name = name;
         mPersonArray[index].skill = skill;

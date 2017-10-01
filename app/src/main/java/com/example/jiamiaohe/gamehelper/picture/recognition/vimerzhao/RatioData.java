@@ -100,12 +100,13 @@ public class RatioData {
         set1920_1080.put(wText, dataArr);
 
         dataArr = new ArrayList<>();
-        dataArr.add(0, 276);
-        dataArr.add(1, 366);
-        dataArr.add(2, 455);
-        dataArr.add(3, 544);
-        dataArr.add(4, 634);
-        dataArr.add(5, 723);
+        dataArr.add(0, 276);   //prop1
+        dataArr.add(1, 366);   //prop2
+        dataArr.add(2, 455);   //prop3
+        dataArr.add(3, 544);   //prop4
+        dataArr.add(4, 634);   //prop5
+        dataArr.add(5, 723);   //prop6
+        dataArr.add(6, 813);   //prop6
         set1920_1080.put(xImg, dataArr);
 
         dataArr = new ArrayList<>();
@@ -142,11 +143,6 @@ public class RatioData {
         set1920_1080.put(xSkill, dataArr);
 
         dataArr = new ArrayList<>();
-        dataArr.add(0, 140);
-        dataArr.add(1, 1087);
-        set1920_1080.put(xSkill, dataArr);
-
-        dataArr = new ArrayList<>();
         dataArr.add(0, 351);
         dataArr.add(1, 482);
         dataArr.add(1, 614);
@@ -158,7 +154,7 @@ public class RatioData {
         dataArr.add(0, 58);  //width or height
         set1920_1080.put(sizeSkill, dataArr);
 
-        //等级
+        //判断哪个是自己
 
     }
 }
