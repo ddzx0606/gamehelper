@@ -22,6 +22,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLDecoder;
+import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -225,8 +226,14 @@ public class HttpUtils {
     }
 
     public void fillPersonArray(int index, String name, String skill, String level, int host, List<String> equipList) {
-        String numLevel = level.replaceAll("[^0-9]", "");
-        int levelInt = Integer.parseInt(numLevel);
+//        String numLevel = level.replaceAll("[^0-9]", "");
+        int levelInt = 1;
+        try {
+            levelInt = Integer.parseInt(level);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
         Log.i(TAG, "fillPersonArray host = "+host+" level = "+level+", numLevel = "+numLevel+", levelInt = "+levelInt);
 
         mPersonArray[index].name = name;

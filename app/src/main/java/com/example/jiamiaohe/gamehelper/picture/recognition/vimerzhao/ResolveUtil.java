@@ -9,6 +9,7 @@ import android.graphics.Matrix;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
@@ -288,14 +289,21 @@ public class ResolveUtil {
             }
         }
         for (int i = 0; i < NUMBER; i++) {
-            for (int j = 2; j < 5; j++) {
-                sReturnData[i][j].data = sReturnData[i][j].data.trim().substring(0, (sReturnData[i][j].data.length()+1) / 2);
-                if (!TextUtils.isDigitsOnly(sReturnData[i][j].data)) {
-                    if (modifyTable.get(sReturnData[i][j].data) != null) {
-                        sReturnData[i][j].data = String.valueOf(modifyTable.get(sReturnData[i][j].data));
-                    } else {
-                        sReturnData[i][j].data = "空";
+            for (int j = 2; j < 7; j++) {
+                if (j < 5) {  //exclude money and include level
+                    sReturnData[i][j].data = sReturnData[i][j].data.trim().substring(0, (sReturnData[i][j].data.length() + 1) / 2);
+                    if (!TextUtils.isDigitsOnly(sReturnData[i][j].data)) {
+                        if (modifyTable.get(sReturnData[i][j].data) != null) {
+                            sReturnData[i][j].data = String.valueOf(modifyTable.get(sReturnData[i][j].data));
+                        } else {
+                            sReturnData[i][j].data = "空";
+                        }
                     }
+                } else if (j == 6) {
+                    String tmpLevel = sReturnData[i][j].data;
+                    tmpLevel = tmpLevel.replaceAll("[^0-9]", "");
+                    Log.i("hjm", "before = "+sReturnData[i][j].data+", after = "+tmpLevel);
+                    sReturnData[i][j].data = tmpLevel.substring(0, tmpLevel.length() > 2 ? 2 : 1);
                 }
             }
         }
