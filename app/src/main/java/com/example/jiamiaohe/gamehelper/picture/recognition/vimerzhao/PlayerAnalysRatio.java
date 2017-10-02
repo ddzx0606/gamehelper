@@ -64,15 +64,17 @@ public class PlayerAnalysRatio {
     private static Rect BREAK = new Rect(0, 0, 120, 42);
     public static int HEIGHT_DELTA = FRAGMENT_HEIGHT + (BREAK.bottom - BREAK.top);
     public static Bitmap initData(Bitmap bitmap) {
-
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
+
+        Log.i(TAG, "initData width = "+width+", height = "+height);
         if (width == 1280 && height == 768) {
             set = RatioData.set1280_768;
         } else if (width * 9 == height * 16) {//16:9 比例
             bitmap = scaleBitmap(bitmap, 1920, 1080);
             set = RatioData.set1920_1080;
         }
+
         BREAK = new Rect(0, 0, 120, set.get(RatioData.OTHERS).get(3));//文字高度是变化的
         HEIGHT_DELTA = FRAGMENT_HEIGHT + (BREAK.bottom - BREAK.top);
         // 添加其他分辨率

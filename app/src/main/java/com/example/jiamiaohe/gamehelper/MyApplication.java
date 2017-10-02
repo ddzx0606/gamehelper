@@ -3,6 +3,7 @@ package com.example.jiamiaohe.gamehelper;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 
 import com.example.administrator.endcall.BlockCallHelper;
 import com.example.administrator.endcall.NotificationUtils;
@@ -14,6 +15,7 @@ import com.example.administrator.endcall.NotificationUtils;
 public class MyApplication extends Application{
 
     private static Context mContext = null;
+    private static Handler mHandler = new Handler();
 
     @Override
     public void onCreate() {
@@ -32,5 +34,9 @@ public class MyApplication extends Application{
 
     public static Context getContext () {
         return mContext;
+    }
+
+    public static Handler getHandler () {
+        return mHandler;
     }
 }

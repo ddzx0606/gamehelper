@@ -12,7 +12,9 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.jiamiaohe.gamehelper.MyApplication;
+import com.example.jiamiaohe.gamehelper.http.HttpUtils;
 import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.PlayerAnalysRatio;
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.RatioData;
 import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
 import com.youtu.Youtu;
 
@@ -95,6 +97,9 @@ public class BattleSituation {
             @Override
             public void run() {
                 super.run();
+
+                HttpUtils.getInstance().clearInformation();
+
                 ResolveUtil.getData();
                 for (int i = 0; i < mPlayersRatio.length; i++) {
                     mPlayersRatio[i].analyzeName(i);
@@ -104,6 +109,18 @@ public class BattleSituation {
             }
         }.start();
         return scrollView;
+    }
+
+    public boolean hasRadio(Bitmap bitmap) {
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+
+        Log.i(TAG, "initData width = "+width+", height = "+height);
+        if (width * 9 == height * 16) {//16:9 比例
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

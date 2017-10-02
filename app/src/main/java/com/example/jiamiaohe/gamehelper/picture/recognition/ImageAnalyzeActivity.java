@@ -32,8 +32,8 @@ public class ImageAnalyzeActivity extends Activity {
 
         BitmapRecognizeUtils.getInstance();
 
-        // 初始化
-        ResolveUtil.getYoutuInstance();
+        // 初始化, move it to MainActitiy
+        //ResolveUtil.getYoutuInstance();
 
 
         // 注释掉原来的方法
@@ -47,11 +47,12 @@ public class ImageAnalyzeActivity extends Activity {
 //        linearLayout.addView();
     }
 
-    static {
-        if (!OpenCVLoader.initDebug()) {
-            Log.i(TAG, "opencv not load");
-        } else {
-            Log.i(TAG, "opencv load");
-        }
-    }
+    //move it to main activity
+//    static {
+//        if (!OpenCVLoader.initDebug()) {
+//            Log.i(TAG, "opencv not load");
+//        } else {
+//            Log.i(TAG, "opencv load");
+//        }
+//    }
 }

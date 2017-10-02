@@ -301,9 +301,19 @@ public class ResolveUtil {
                     }
                 } else if (j == 6) {
                     String tmpLevel = sReturnData[i][j].data;
+                    char[] tmpLevelArray = tmpLevel.toCharArray();
+                    for(int iLevelArray = 0; iLevelArray < tmpLevelArray.length; iLevelArray++) {
+                        if (modifyTable.containsKey(tmpLevelArray[iLevelArray])) {
+                            tmpLevelArray[iLevelArray] = String.valueOf(modifyTable.get(tmpLevelArray[iLevelArray])).charAt(0);
+                        }
+                    }
                     tmpLevel = tmpLevel.replaceAll("[^0-9]", "");
                     Log.i("hjm", "before = "+sReturnData[i][j].data+", after = "+tmpLevel);
-                    sReturnData[i][j].data = tmpLevel.substring(0, tmpLevel.length() > 2 ? 2 : 1);
+                    if (tmpLevel.length() >= 2) {
+                        sReturnData[i][j].data = tmpLevel.substring(0, tmpLevel.length() > 2 ? 2 : 1);
+                    } else {
+                        sReturnData[i][j].data = tmpLevel;
+                    }
                 }
             }
         }

@@ -231,7 +231,7 @@ public class ScreenShotterUtils implements ImageReader.OnImageAvailableListener{
             Bitmap bitmapTmp = Bitmap.createBitmap(width + rowPadding / pixelStride, height,
                     Bitmap.Config.ARGB_8888);
             bitmapTmp.copyPixelsFromBuffer(buffer);
-            Bitmap bitmap = Bitmap.createBitmap(bitmapTmp, 0, 0, width, height);
+            final Bitmap bitmap = Bitmap.createBitmap(bitmapTmp, 0, 0, width, height);
 
             image.close();
             bitmapTmp.recycle();
@@ -241,7 +241,6 @@ public class ScreenShotterUtils implements ImageReader.OnImageAvailableListener{
             File fileImage = null;
             if (bitmap != null) {
                 try {
-
 //                    if (TextUtils.isEmpty(mLocalUrl)) {
                         mLocalUrl = getContext().getExternalFilesDir("screenshot").getAbsoluteFile()
                                 +
@@ -272,15 +271,27 @@ public class ScreenShotterUtils implements ImageReader.OnImageAvailableListener{
                     fileImage = null;
                 }
             }
+
+            mHanler.post(new Runnable() {
+                @Override
+                public void run() {
+                    if (bitmap != null) {
+                        Log.i(TAG, "start to analys bitmap");
+                        if (BattleSituation.getInstance().hasRadio(bitmap)) {
+                            BattleSituation.getInstance().analysForRatio(bitmap);
+                            BattleSituation.getInstance().getView();
+                        } else {
+                            //Toast.makeText(getContext(), "分辨率不支持", Toast.LENGTH_SHORT).show();
+                            Log.i(TAG, "radio is not support");
+                        }
+                    }
+
+                    Toast.makeText(getContext(), "截图成功", Toast.LENGTH_SHORT).show();
+                    mScreenShotAreSaving = false;
+                }
+            });
         }
 
-        mHanler.post(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getContext(), "截图成功", Toast.LENGTH_SHORT).show();
-                mScreenShotAreSaving = false;
-            }
-        });
         //remove image reader
     }
 

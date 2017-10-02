@@ -114,6 +114,19 @@ public class BitmapRecognizeUtils {
         mHostFalse = scaleBitmap(BitmapFactory.decodeResource(MyApplication.getContext().getResources(), R.drawable.host0), 64, 64);
     }
 
+    public Bitmap getPropByName(String name) {
+        if (name == null || "".equals(name)) {
+            return null;
+        }
+        for(int i = 0; i < mListName.size(); i++) {
+            if (name.equals(mListName.get(i))) {
+                return  mList.get(i);
+            }
+        }
+
+        return null;
+    }
+
     private Bitmap scaleBitmap(Bitmap bitmap, float tWidh, float tHeight) {
         int with = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -293,18 +306,18 @@ public class BitmapRecognizeUtils {
             Utils.bitmapToMat(bitDest, mat2);
             Imgproc.cvtColor(mat2, mat22, Imgproc.COLOR_BGR2GRAY);
             similar = comPareHist(mat11, mat22, index);
-            Log.i(TAG, "getSkillName index = "+index+", similar = "+similar);
+            //Log.i(TAG, "getSkillName index = "+index+", similar = "+similar);
             if (similar > maxSimilar) {
                 maxSimilar = similar;
                 maxSimilarIndex = index;
             }
 
-            PlayerAnalysRatio.saveBitmap(bitDest, "dest"+index+".png");
+            //PlayerAnalysRatio.saveBitmap(bitDest, "dest"+index+".png");
 
             index++;
         }
-        PlayerAnalysRatio.saveBitmap(bitmap, "origin.png");
-        Log.i(TAG, "end to compare = "+mSkillNameList.get(maxSimilarIndex));
+        //PlayerAnalysRatio.saveBitmap(bitmap, "origin.png");
+        //Log.i(TAG, "end to compare = "+mSkillNameList.get(maxSimilarIndex));
 
 //        if (!"空".equals(mListName.get(maxSimilarIndex))) {
 //            PlayerAnalysRatio.saveBitmap(bitmap, "kong"+(i++)+".png");

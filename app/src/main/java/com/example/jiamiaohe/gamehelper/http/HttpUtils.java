@@ -1,8 +1,9 @@
 package com.example.jiamiaohe.gamehelper.http;
 
-import android.os.Environment;
-import android.os.Message;
 import android.util.Log;
+
+import com.example.jiamiaohe.gamehelper.GameHelperService;
+import com.example.jiamiaohe.gamehelper.MyApplication;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -10,19 +11,13 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.URLDecoder;
-import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,26 +100,26 @@ public class HttpUtils {
                 JSONObject person = new JSONObject();
 
                 //fill fake data
-//                person.put("hero_name", names[i]);
-//                person.put("skill", skills[i]);
-//                person.put("level", 15);
-//                person.put("host", i==0?1:0);
-//                JSONArray equip = new JSONArray();
-//                equip.put(0, "末世");
-//                person.put("equip_list", equip);
-
-                //fill true data
-                person.put("hero_name", mPersonArray[i].name);
-                person.put("skill", mPersonArray[i].skill);
-                person.put("level", mPersonArray[i].level);
-                person.put("host", mPersonArray[i].host);
+                person.put("hero_name", names[i]);
+                person.put("skill", skills[i]);
+                person.put("level", 15);
+                person.put("host", i==0?1:0);
                 JSONArray equip = new JSONArray();
-
-                for(int j = 0; j <  mPersonArray[i].equipList.size(); j++) {
-                    equip.put(j, mPersonArray[i].equipList.get(j));
-                }
+                equip.put(0, "末世");
                 person.put("equip_list", equip);
 
+                //fill true data
+//                person.put("hero_name", mPersonArray[i].name);
+//                person.put("skill", mPersonArray[i].skill);
+//                person.put("level", mPersonArray[i].level);
+//                person.put("host", mPersonArray[i].host);
+//                JSONArray equip = new JSONArray();
+//
+//                for(int j = 0; j <  mPersonArray[i].equipList.size(); j++) {
+//                    equip.put(j, mPersonArray[i].equipList.get(j));
+//                }
+//                person.put("equip_list", equip);
+//
                 if (i < 5) {
                     groupA.put(i, person);
                 } else {
@@ -148,9 +143,24 @@ public class HttpUtils {
                     lines = URLDecoder.decode(lines, "utf-8");
                     sb.append(lines);
                 }
-                Log.i(TAG, "" + ascii2native(sb.toString()));
-                //System.out.print(ascii2native(sb.toString()));
-                //JSONObject jsStr = new JSONObject(sb.toString());
+                String resultString = sb.toString();
+                Log.i(TAG, "" + ascii2native(resultString));
+
+                JSONObject resultMain = new JSONObject(resultString);
+                if ("succ".equals(resultMain.get("msg"))) {
+                    Log.i(TAG, "result resolve success");
+                    JSONArray resultProp = resultMain.getJSONArray("equip_list");
+                    final ArrayList<String> resultPropArray = new ArrayList<String>();
+                    for(int i = 0; i < resultProp.length(); i++) {
+                        resultPropArray.add(resultProp.getString(i));
+                    }
+
+
+                    GameHelperService.getInstance().updatePropLinearInThread(resultPropArray, true);
+
+                } else {
+
+                }
 
                 reader.close();
             }
@@ -234,7 +244,7 @@ public class HttpUtils {
             e.printStackTrace();
         }
 
-        Log.i(TAG, "fillPersonArray host = "+host+" level = "+level+", numLevel = "+numLevel+", levelInt = "+levelInt);
+        Log.i(TAG, "fillPersonArray host = "+host+" level = "+level+", levelInt = "+levelInt);
 
         mPersonArray[index].name = name;
         mPersonArray[index].skill = skill;

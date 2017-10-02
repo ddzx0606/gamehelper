@@ -24,9 +24,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.endcall.BlockCallHelper;
+import com.example.jiamiaohe.gamehelper.picture.recognition.BitmapRecognizeUtils;
 import com.wenming.library.BackgroundUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jiamiaohe on 2017/8/1.
@@ -34,11 +36,15 @@ import java.util.ArrayList;
 
 public class GameHelperService extends Service{
 
+    private final String TAG = "GameHelperService";
+
     private static boolean mForground = false;
     LinearLayout mLinearLayout = null;
     ImageView mSmallIcon = null;
     TextView mTextView = null;
     Handler mHandler = new Handler();
+
+    LinearLayout mPropLinear = null;
 
     private static GameHelperService mGameHelperService = null;
     public static GameHelperService getInstance() {
@@ -103,24 +109,24 @@ public class GameHelperService extends Service{
             }
         });
 
-        new Thread(new Runnable() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-            @Override
-            public void run() {
-
-                while (true) {
-                    try {
-                        Thread.sleep(2000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                    judgeForeground(BackgroundUtil.getUsageStats(MyApplication.getContext(), "com.tencent.tmgp.sgame"));
-//                    judgeForeground(BackgroundUtil.getLinuxCoreInfo(MyApplication.getContext(), "com.tencent.tmgp.sgame"));
-                }
-
-            }
-        }).start();
+//        new Thread(new Runnable() {
+//            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//            @Override
+//            public void run() {
+//
+//                while (true) {
+//                    try {
+//                        Thread.sleep(2000);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//
+//                    judgeForeground(BackgroundUtil.getUsageStats(MyApplication.getContext(), "com.tencent.tmgp.sgame"));
+////                    judgeForeground(BackgroundUtil.getLinuxCoreInfo(MyApplication.getContext(), "com.tencent.tmgp.sgame"));
+//                }
+//
+//            }
+//        }).start();
     }
 
     @Override
@@ -144,17 +150,63 @@ public class GameHelperService extends Service{
 
     int mImageIndex = 0;
     int mImageArray[] = {R.drawable.battle_skill, R.drawable.detail_1, R.drawable.detail_2, R.drawable.detail_3, R.drawable.detail_4};
-//    Thread myThread = null;
+
+    public void updatePropLinearInThread(final List<String> props, final boolean visible) {
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                updatePropLinear(props, visible);
+            }
+        });
+    }
+
+    private void updatePropLinear(List<String> props, boolean visible) {
+        Log.i(TAG, "updatePropLinear props.size = "+((props != null) ? props.size() : 0)+", visible = "+visible);
+        if (props != null && mPropLinear != null) {
+            int length = props.size() > mPropLinear.getChildCount() ? mPropLinear.getChildCount() : props.size();
+            for(int i = 0; i < 6; i++) {
+
+                View child = mPropLinear.getChildAt(i);
+                ImageView childImage = (ImageView)child;
+                if (child instanceof ImageView) {
+                    if (i < length) {
+                        childImage.setImageBitmap(BitmapRecognizeUtils.getInstance().getPropByName(props.get(i)));
+                    } else {
+                        childImage.setImageBitmap(null);
+                    }
+                }
+            }
+        }
+
+        if (mPropLinear != null) {
+            mPropLinear.setVisibility(visible ? View.VISIBLE : View.GONE);
+        }
+    }
+
+    public void changePropLinearVisible() {
+        if (mPropLinear != null) {
+            mPropLinear.setVisibility(mPropLinear.getVisibility() != View.VISIBLE ? View.VISIBLE : View.GONE);
+        }
+    }
+
     public void addView() {
         if (mTextView == null) {
             mTextView = new TextView(MyApplication.getContext());
             mTextView.setText("王者处于后台");
-//            mTextView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    ScreenShotterUtils.getInstance().startScreenShot(null);
-//                }
-//            });
+        }
+
+        if (mPropLinear == null) {
+            mPropLinear = new LinearLayout(MyApplication.getContext());
+            mPropLinear.setOrientation(LinearLayout.HORIZONTAL);
+
+            for(int i = 0; i < 6; i++) {
+                ImageView imageProp = new ImageView(MyApplication.getContext());
+                imageProp.setPadding(0, 0, 2, 0);
+                imageProp.setImageBitmap(null);
+                mPropLinear.addView(imageProp);
+            }
+
+            updatePropLinear(null, false);
         }
 
         if (mSmallIcon == null) {
@@ -166,9 +218,10 @@ public class GameHelperService extends Service{
             mSmallIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mImageIndex++;
-                    mImageIndex = mImageIndex % mImageArray.length;
-                    mSmallIcon.setImageResource(mImageArray[mImageIndex]);
+                    changePropLinearVisible();
+//                    mImageIndex++;
+//                    mImageIndex = mImageIndex % mImageArray.length;
+//                    mSmallIcon.setImageResource(mImageArray[mImageIndex]);
                 }
             });
             mSmallIcon.setOnLongClickListener(new View.OnLongClickListener() {
@@ -199,7 +252,8 @@ public class GameHelperService extends Service{
         if (mLinearLayout  == null ) {
             mLinearLayout = new LinearLayout(MyApplication.getContext());
             mLinearLayout.addView(mSmallIcon);
-            mLinearLayout.setOrientation(LinearLayout.VERTICAL);
+            mLinearLayout.addView(mPropLinear);
+            mLinearLayout.setOrientation(LinearLayout.HORIZONTAL);
         }
 
         if (mWindowOn) {

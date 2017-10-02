@@ -30,7 +30,10 @@ import com.example.jiamiaohe.gamehelper.bluetooth.Constants;
 import com.example.jiamiaohe.gamehelper.bluetooth.DeviceListActivity;
 import com.example.jiamiaohe.gamehelper.bluetooth.IconProxy;
 import com.example.jiamiaohe.gamehelper.http.HttpUtils;
+import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.ResolveUtil;
 import com.tutorials.hp.listviewimagessdcard.ImageActivity;
+
+import org.opencv.android.OpenCVLoader;
 
 import java.util.ArrayList;
 
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     Context mContext = null;
 
-    private final String TAG = "MainActivity";
+    private final static String TAG = "MainActivity";
 
 
     boolean mDisableRecent = false;
@@ -207,6 +210,9 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityCompat.requestPermissions(MainActivity.this, new String[]{android
                 .Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+
+        // 初始化
+        ResolveUtil.getYoutuInstance();
     }
 
 
@@ -377,6 +383,14 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             Log.i(TAG, "版本过低,无法截屏");
+        }
+    }
+
+    static {
+        if (!OpenCVLoader.initDebug()) {
+            Log.i(TAG, "opencv not load");
+        } else {
+            Log.i(TAG, "opencv load");
         }
     }
 }
