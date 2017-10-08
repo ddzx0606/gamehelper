@@ -10,6 +10,7 @@ import android.graphics.PixelFormat;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -45,6 +46,8 @@ public class GameHelperService extends Service{
     Handler mHandler = new Handler();
 
     LinearLayout mPropLinear = null;
+    LinearLayout mImformationLinear = null;
+    TextView mStatusText = null;  //用于显示截图到请求网络到获取装备列表的过程
 
     private static GameHelperService mGameHelperService = null;
     public static GameHelperService getInstance() {
@@ -160,6 +163,20 @@ public class GameHelperService extends Service{
         });
     }
 
+    public void updateStatusText(final String text) {
+        Log.i(TAG, "updateStatusText = "+text+", mStatusText == "+mStatusText);
+        if (Looper.getMainLooper() == Looper.myLooper()) {
+            if (mStatusText != null) mStatusText.setText(text);
+        } else {
+            mHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    if (mStatusText != null) mStatusText.setText(text);
+                }
+            });
+        }
+    }
+
     private void updatePropLinear(List<String> props, boolean visible) {
         Log.i(TAG, "updatePropLinear props.size = "+((props != null) ? props.size() : 0)+", visible = "+visible);
         if (props != null && mPropLinear != null) {
@@ -178,14 +195,14 @@ public class GameHelperService extends Service{
             }
         }
 
-        if (mPropLinear != null) {
-            mPropLinear.setVisibility(visible ? View.VISIBLE : View.GONE);
+        if (mImformationLinear != null) {
+            mImformationLinear.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
     }
 
     public void changePropLinearVisible() {
-        if (mPropLinear != null) {
-            mPropLinear.setVisibility(mPropLinear.getVisibility() != View.VISIBLE ? View.VISIBLE : View.GONE);
+        if (mImformationLinear != null) {
+            mImformationLinear.setVisibility(mImformationLinear.getVisibility() != View.VISIBLE ? View.VISIBLE : View.GONE);
         }
     }
 
@@ -193,6 +210,12 @@ public class GameHelperService extends Service{
         if (mTextView == null) {
             mTextView = new TextView(MyApplication.getContext());
             mTextView.setText("王者处于后台");
+        }
+
+        if (mStatusText == null) {
+            mStatusText = new TextView(MyApplication.getContext());
+            mStatusText.setTextSize(10);
+            mStatusText.setTextColor(Color.YELLOW);
         }
 
         if (mPropLinear == null) {
@@ -207,6 +230,11 @@ public class GameHelperService extends Service{
             }
 
             updatePropLinear(null, false);
+        }
+
+        if (mImformationLinear == null) {
+            mImformationLinear = new LinearLayout(MyApplication.getContext());
+            mImformationLinear.setOrientation(LinearLayout.VERTICAL);
         }
 
         if (mSmallIcon == null) {
@@ -228,22 +256,6 @@ public class GameHelperService extends Service{
                 @Override
                 public boolean onLongClick(View view) {
                     ScreenShotterUtils.getInstance().startScreenShot(null);
-//                    if (myThread == null) {
-//                        myThread = new Thread(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                while(true) {
-//                                    ScreenShotterUtils.getInstance().startScreenShot(null);
-//                                    try {
-//                                        Thread.sleep(1000);
-//                                    } catch (InterruptedException e) {
-//                                        e.printStackTrace();
-//                                    }
-//                                }
-//                            }
-//                        });
-//                        myThread.start();
-//                    }
                     return true;
                 }
             });
@@ -251,8 +263,13 @@ public class GameHelperService extends Service{
 
         if (mLinearLayout  == null ) {
             mLinearLayout = new LinearLayout(MyApplication.getContext());
-            mLinearLayout.addView(mSmallIcon);
-            mLinearLayout.addView(mPropLinear);
+            if (mSmallIcon != null) mLinearLayout.addView(mSmallIcon);
+
+            if (mImformationLinear != null) {
+                if (mPropLinear != null) mImformationLinear.addView(mPropLinear);
+                if (mStatusText != null) mImformationLinear.addView(mStatusText);
+                mLinearLayout.addView(mImformationLinear);
+            }
             mLinearLayout.setOrientation(LinearLayout.HORIZONTAL);
         }
 

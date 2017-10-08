@@ -100,25 +100,25 @@ public class HttpUtils {
                 JSONObject person = new JSONObject();
 
                 //fill fake data
-                person.put("hero_name", names[i]);
-                person.put("skill", skills[i]);
-                person.put("level", 15);
-                person.put("host", i==0?1:0);
-                JSONArray equip = new JSONArray();
-                equip.put(0, "末世");
-                person.put("equip_list", equip);
+//                person.put("hero_name", names[i]);
+//                person.put("skill", skills[i]);
+//                person.put("level", 15);
+//                person.put("host", i==0?1:0);
+//                JSONArray equip = new JSONArray();
+//                equip.put(0, "末世");
+//                person.put("equip_list", equip);
 
                 //fill true data
-//                person.put("hero_name", mPersonArray[i].name);
-//                person.put("skill", mPersonArray[i].skill);
-//                person.put("level", mPersonArray[i].level);
-//                person.put("host", mPersonArray[i].host);
-//                JSONArray equip = new JSONArray();
-//
-//                for(int j = 0; j <  mPersonArray[i].equipList.size(); j++) {
-//                    equip.put(j, mPersonArray[i].equipList.get(j));
-//                }
-//                person.put("equip_list", equip);
+                person.put("hero_name", mPersonArray[i].name);
+                person.put("skill", mPersonArray[i].skill);
+                person.put("level", mPersonArray[i].level);
+                person.put("host", mPersonArray[i].host);
+                JSONArray equip = new JSONArray();
+
+                for(int j = 0; j <  mPersonArray[i].equipList.size(); j++) {
+                    equip.put(j, mPersonArray[i].equipList.get(j));
+                }
+                person.put("equip_list", equip);
 //
                 if (i < 5) {
                     groupA.put(i, person);
@@ -149,6 +149,7 @@ public class HttpUtils {
                 JSONObject resultMain = new JSONObject(resultString);
                 if ("succ".equals(resultMain.get("msg"))) {
                     Log.i(TAG, "result resolve success");
+                    GameHelperService.getInstance().updateStatusText("后台访问成功，获取出装策略");
                     JSONArray resultProp = resultMain.getJSONArray("equip_list");
                     final ArrayList<String> resultPropArray = new ArrayList<String>();
                     for(int i = 0; i < resultProp.length(); i++) {
@@ -159,24 +160,19 @@ public class HttpUtils {
                     GameHelperService.getInstance().updatePropLinearInThread(resultPropArray, true);
 
                 } else {
-
+                    GameHelperService.getInstance().updateStatusText("后台访问成功，没有对应策略");
                 }
 
                 reader.close();
+            } else {
+                GameHelperService.getInstance().updateStatusText("无法连接后台");
             }
             // 断开连接
             connection.disconnect();
-        } catch (MalformedURLException e) {
+        } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
+            GameHelperService.getInstance().updateStatusText("后台访问成功，json解析失败");
         }
 
     }
@@ -258,6 +254,7 @@ public class HttpUtils {
         Log.i(TAG, "equipList.size = "+equipList.size()+", mPersonArray[index].equipList.size = "+mPersonArray[index].equipList.size());
 
         if (index == 9) {
+            GameHelperService.getInstance().updateStatusText("图像分析完成，开始请求后台");
             requestInThread();
         }
     }

@@ -153,6 +153,8 @@ public class ScreenShotterUtils implements ImageReader.OnImageAvailableListener{
             return;
         }
 
+        GameHelperService.getInstance().updateStatusText("开始截图");
+
         mOnShotListener = onShotListener;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -277,6 +279,7 @@ public class ScreenShotterUtils implements ImageReader.OnImageAvailableListener{
                 public void run() {
                     if (bitmap != null) {
                         Log.i(TAG, "start to analys bitmap");
+                        GameHelperService.getInstance().updateStatusText("图像保存完成");
                         if (BattleSituation.getInstance().hasRadio(bitmap)) {
                             BattleSituation.getInstance().analysForRatio(bitmap);
                             BattleSituation.getInstance().getView();

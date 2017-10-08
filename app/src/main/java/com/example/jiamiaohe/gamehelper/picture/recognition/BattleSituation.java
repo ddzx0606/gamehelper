@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.example.jiamiaohe.gamehelper.GameHelperService;
 import com.example.jiamiaohe.gamehelper.MyApplication;
 import com.example.jiamiaohe.gamehelper.http.HttpUtils;
 import com.example.jiamiaohe.gamehelper.picture.recognition.vimerzhao.PlayerAnalysRatio;
@@ -98,6 +99,7 @@ public class BattleSituation {
             public void run() {
                 super.run();
 
+                GameHelperService.getInstance().updateStatusText("开始图像分析");
                 HttpUtils.getInstance().clearInformation();
 
                 ResolveUtil.getData();
